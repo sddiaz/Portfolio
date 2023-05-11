@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Testing.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clippit - Online Clipboard</title>
+    <link rel="shortcut icon" type="image/x-icon" href="Images/copy_paste_documents_files_icon_178877.ico" />
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+</head>
+<body>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <hr />
+
+            <footer>
+            <span>
+                <a href="https://www.linkedin.com/in/santiagoddiaz/" target="_blank">
+                    <img class="logo" src="Images/linkedin-3-xxl.png" />
+                </a>
+                <a href="https://github.com/sddiaz" target="_blank">
+                    <img class="logo" src="Images/GitHub-Mark-Light-32px.png" />
+                </a>
+            </span>
+            <p style="font-size: 20px; font-family: Ametuer; color: white; "><%: DateTime.Now.Year %> - Built with ♡ by SD </p>
+        </footer>
+        </div>
+</body>
+</html>
