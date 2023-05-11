@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html style="min-height: 100%" lang="en">
+  <head>
+    <meta charset="UTF" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="https://i.postimg.cc/DzC5VLJs/website-Icon.png" />
+    <title>Password Generator</title>
+  </head>
+  <body style="min-height: 100%">
+    <div class="title">
+      Password
+      <div class="title box">Generator</div>
+    </div>
+    <div class="alignEverything">
+      <div class="container">
+        <div class="alertArea">
+          <div id="alertMessage" class="alertMessage">
+            <span>You need at least one selection</span>
+            <span id="closeBtn" class="closeBtn" onclick="closeAlert(this);"
+              >&times;</span
+            >
+          </div>
+        </div>
+        <div class="mainSection">
+          <div class="passwordTitle">
+            Grab your
+            <span class="passwordTitle secondary">Password</span>
+          </div>
+          <div class="passwordAndCopy">
+            <input class="passwordBox" type="text" id="passwordBox" />
+            <div
+              class="buttonDiv"
+              style="margin-top: 10px; margin-bottom: 10px"
+            >
+              <button
+                type="submit"
+                title="Generate Password!"
+                class="generateBtn"
+                onclick="generateClick()"
+              >
+                Generate!
+              </button>
+              <button
+                title="Paste to Clipboard"
+                class="passIcons"
+                onclick="copyToClipboard()"
+              >
+                <i style="color: white" class="fa-2x fa-solid fa-clipboard"></i>
+              </button>
+              <button
+                title="Reverse!"
+                class="passIcons"
+                onclick="reversePass()"
+              >
+                <i style="color: white" class="fa-2x fa-solid fa-refresh"></i>
+              </button>
+            </div>
+            <hr
+              style="margin-top: 15px; width: 50%; border: 1px solid #8b82ff"
+            />
+            <div class="passwordTitle">
+              <span class="passwordTitle secondary">Customize</span> your
+              settings
+            </div>
+          </div>
+          <div class="settings">
+            <label id="firstCheckbox" style="margin-bottom: 35px">
+              <!-- Uppercase label -->
+              <span class="spanContainer">
+                <span class="firstSetting">U</span>
+                <span class="firstSetting">p</span>
+                <span class="firstSetting">p</span>
+                <span class="firstSetting">e</span>
+                <span class="firstSetting">r</span>
+                <span class="firstSetting">c</span>
+                <span class="firstSetting">a</span>
+                <span class="firstSetting">s</span>
+                <span class="firstSetting">e</span>
+              </span>
+              <label class="switch">
+                <input
+                  onchange="checkInputs(this)"
+                  type="checkbox"
+                  id="upperCase"
+                />
+                <span class="slider"></span>
+              </label>
+            </label>
+            <label id="secondCheckbox" style="margin-bottom: 35px">
+              <!-- Lowercase label -->
+              <span class="spanContainer">
+                <span class="secondSetting">L</span>
+                <span class="secondSetting">o</span>
+                <span class="secondSetting">w</span>
+                <span class="secondSetting">e</span>
+                <span class="secondSetting">r</span>
+                <span class="secondSetting">c</span>
+                <span class="secondSetting">a</span>
+                <span class="secondSetting">s</span>
+                <span class="secondSetting">e</span>
+              </span>
+              <label class="switch">
+                <input
+                  onchange="checkInputs(this)"
+                  type="checkbox"
+                  id="lowerCase"
+                  checked
+                />
+                <span class="slider"></span>
+              </label>
+            </label>
+            <label id="thirdCheckbox" style="margin-bottom: 35px">
+              <!-- Symbols label -->
+              <span class="spanContainer">
+                <span class="thirdSetting">S</span>
+                <span class="thirdSetting">y</span>
+                <span class="thirdSetting">m</span>
+                <span class="thirdSetting">b</span>
+                <span class="thirdSetting">o</span>
+                <span class="thirdSetting">l</span>
+                <span class="thirdSetting">s</span>
+              </span>
+              <label class="switch">
+                <input
+                  onchange="checkInputs(this)"
+                  type="checkbox"
+                  id="symbols"
+                />
+                <span class="slider"></span>
+              </label>
+            </label>
+            <label id="fourthCheckbox" style="margin-bottom: 35px">
+              <!-- Numbers label -->
+              <span class="spanContainer">
+                <span class="fourthSetting">N</span>
+                <span class="fourthSetting">u</span>
+                <span class="fourthSetting">m</span>
+                <span class="fourthSetting">b</span>
+                <span class="fourthSetting">e</span>
+                <span class="fourthSetting">r</span>
+                <span class="fourthSetting">s</span>
+              </span>
+              <label class="switch">
+                <input
+                  onchange="checkInputs(this)"
+                  type="checkbox"
+                  id="numbers"
+                />
+                <span class="slider"></span>
+              </label>
+            </label>
+            <label class="passLength" id="passLength">
+              <!-- Length label -->
+              <span class="spanContainer">
+                <span class="firstSetting">L</span>
+                <span class="firstSetting">e</span>
+                <span class="firstSetting">n</span>
+                <span class="firstSetting">g</span>
+                <span class="firstSetting">t</span>
+                <span class="firstSetting">h</span>
+              </span>
+              <!-- Length slider -->
+              <div class="range">
+                <span class="field">
+                  <input
+                    class="sliderInput"
+                    id="sliderInput"
+                    type="range"
+                    min="8"
+                    max="128"
+                    value="8"
+                    step="1"
+                  />
+                </span>
+                <span class="sliderValue">
+                  <span id="sliderValue">8</span>
+                </span>
+              </div>
+            </label>
+          </div>
+          <hr style="width: 50%; border: 1px solid #8b82ff" />
+        </div>
+        <div class="rightSection">
+          <h1 class="passwordTitle">
+            <span class="passwordTitle secondary">Store</span> it
+            <span class="passwordTitle secondary">Safely</span>
+          </h1>
+          <h1 class="passwordTitle storeSubTitle">
+            We recommend these managers.
+          </h1>
+          <div class="carouselContainer">
+            <div id="carousel" class="carousel">
+              <div class="carouselSlider">
+                <!-- Bitwarden -->
+                <section>
+                  <div>
+                    <div class="sectionTitle">Bitwarden</div>
+                    <div>
+                      <a href="https://bitwarden.com/" target="_blank">
+                        <img
+                          class="managers"
+                          src="Images/bitwarden-icon-256x256-pvtcmom9.png"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </section>
+                <!-- LastPass -->
+                <section>
+                  <div>
+                    <div class="sectionTitle">LastPass</div>
+                    <div>
+                      <a href="https://www.lastpass.com/" target="_blank">
+                        <img class="managers" src="Images/images.png" />
+                      </a>
+                    </div>
+                  </div>
+                </section>
+                <!-- 1password -->
+                <section>
+                  <div>
+                    <div class="sectionTitle">1-Password</div>
+                    <div>
+                      <a href="https://1password.com/" target="_blank">
+                        <img
+                          class="managers"
+                          src="Images/png-clipart-computer-icons-encapsulated-postscript-pointer-1password-icon-trademark-logo-thumbnail.png"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </section>
+                <!-- NordPass -->
+                <section>
+                  <div>
+                    <div class="sectionTitle">NordPass</div>
+                    <div>
+                      <a href="https://nordpass.com/" target="_blank">
+                        <img class="managers" src="Images/0x0.png" />
+                      </a>
+                    </div>
+                  </div>
+                </section>
+                <!-- Google Password Manager -->
+                <section>
+                  <div>
+                    <div class="sectionTitle">Google</div>
+                    <div>
+                      <a href="https://passwords.google.com/">
+                        <img
+                          class="managers"
+                          src="Images/880-8808512_png-file-svg-google-icon-svg-white.png"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </section>
+                <!-- RoboForm -->
+                <section>
+                  <div>
+                    <div class="sectionTitle">RoboForm</div>
+                    <div>
+                      <a href="https://www.roboform.com/">
+                        <img
+                          class="managers"
+                          src="Images/png-clipart-web-browser-roboform-computer-software-computer-program-browser-extension-upscale-letter-miscellaneous-computer-program.png"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </section>
+                <!-- Keepass -->
+                <section>
+                  <div>
+                    <div class="sectionTitle">Keepass</div>
+                    <div>
+                      <a href="https://keepass.info/">
+                        <img class="managers" src="Images/keepass.png" />
+                      </a>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="mobileAlign">
+                <div class="controls">
+                  <span id="prev" class="arrow prev">&#xab;</span>
+                  <span id="next" class="arrow next">&#xbb;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="strengthTitle">
+            Check your
+            <span class="strengthTitle secondary">Strength</span>
+          </div>
+          <h1 class="passwordTitle storeSubTitle">
+            Press Generate to try it out!
+          </h1>
+          <div class="strengthChecker">
+            <svg
+              class="mySVG"
+              width="250"
+              height="250"
+              transform="rotate(270, 0, 0)"
+            >
+              <g class="newOrigin">
+                <circle r="100" cx="125" cy="125" class="track"></circle>
+                <circle r="100" cx="125" cy="125" class="progress"></circle>
+              </g>
+            </svg>
+            <div id="percentage" class="percentage">0%</div>
+          </div>
+          <h1 class="chanceTitle">
+            There's a 1 in
+            <span id="chance" class="chanceTitle secondary">x</span
+            ><sup id="myExponent" class="chanceTitle secondary">x</sup>
+            chance your password would be randomly guessed.
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="footerClass">
+      <div class="bottomAlign">
+        <span>
+          <a href="https://www.linkedin.com/in/santiagoddiaz/" target="_blank">
+            <img class="logo" src="Images/linkedin.png" />
+          </a>
+          <a href="https://github.com/sddiaz" target="_blank">
+            <img class="logo" src="Images/github.png" />
+          </a>
+        </span>
+        <p class="bottomText">
+          2022 - Built by
+          <span class="bottomText heart">S. Diaz</span>
+        </p>
+      </div>
+    </div>
+  </body>
+  <script src="scripts.js"></script>
+  <script
+    src="https://kit.fontawesome.com/8da304837c.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
