@@ -4,7 +4,7 @@ The infamous calculator project. Simple, small, with plenty of room for improvem
 Not much else to it. Dark mode and some extra flashiness for brownie points.  
 
 I highly considered not putting this project anywhere near my
-GitHub account, but I know it'll be a good reminder of where I came from after my skills have developed.
+GitHub account, but I know it'll be a good reminder of where I came from after my skills have developed!
 
 ## Overview
 
@@ -42,7 +42,7 @@ GitHub account, but I know it'll be a good reminder of where I came from after m
 
 ### What I learned
 
-- Clean, well commented, maintainable code is a *must*
+- Clean, well commented, maintainable code is a *must*... something I wouldn't say was perfected here.
 - Responsive layouts are easier said than done! This being my first design didn't use them, but all of my other projects do / will. 
 
 
