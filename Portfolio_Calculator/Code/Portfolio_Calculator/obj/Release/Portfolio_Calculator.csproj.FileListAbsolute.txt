@@ -1,2 +1,0 @@
-C:\Users\salty\source\repos\Portfolio_Calculator\Portfolio_Calculator\obj\Release\Portfolio_Calculator.csproj.AssemblyReference.cache
-C:\Users\salty\source\repos\Portfolio_Calculator\Portfolio_Calculator\obj\Release\Portfolio_Calculator.csproj.SuggestedBindingRedirects.cache
