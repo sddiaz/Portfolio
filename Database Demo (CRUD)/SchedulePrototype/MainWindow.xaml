@@ -1,0 +1,228 @@
+﻿<Window x:Class="SchedulePrototype.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SchedulePrototype"
+        mc:Ignorable="d" WindowState="Maximized"
+        Title="ScheduleDB">
+    <Grid x:Name="mainGrid">
+        <Grid x:Name="topSection">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid x:Name="creationGrid" Grid.Column="0">
+                <TextBlock FontSize="27" FontWeight="Bold" Margin="0, 10, 0, 0" HorizontalAlignment="Center">Cable Creation</TextBlock>
+
+                <Grid Background="MintCream"
+                    x:Name="formGrid" Margin="0, 50, 0, 10" >
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Border BorderBrush="Black" BorderThickness="0, 1, 0, 0">
+                        <Grid Grid.Row="0" x:Name="OtiID_grid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0, 0, 1, 0" CornerRadius="2">
+                                <TextBlock Grid.Column="0" VerticalAlignment="Center" FontSize="25" Margin="0,5,0,0" FontWeight="Bold" HorizontalAlignment="Center">Oti ID</TextBlock>
+                            </Border>
+                            <TextBox x:Name="otiIdTxt"  Grid.Column="1" VerticalAlignment="Center" FontSize="20"  Width="250" Margin="0,10,0,0">NULL</TextBox>
+                        </Grid>
+                    </Border>
+                    <Grid Grid.Row="1" x:Name="EquipmentID_grid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0, 0, 1, 0"  CornerRadius="2">
+                            <TextBlock Grid.Column="0" VerticalAlignment="Center" FontSize="25" Margin="0,5,0,0" FontWeight="Bold" HorizontalAlignment="Center">Equipment ID</TextBlock>
+                        </Border>
+                        <TextBox x:Name="equipmentTxt"  Grid.Column="1" VerticalAlignment="Center" FontSize="20"  Width="250" Margin="0,10,0,0">NULL</TextBox>
+                    </Grid>
+                    <Grid Grid.Row="2" x:Name="Source_grid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0, 0, 1, 0"  CornerRadius="2">
+                            <TextBlock Grid.Column="0" VerticalAlignment="Center" FontSize="25" Margin="0,5,0,0" FontWeight="Bold" HorizontalAlignment="Center">Source</TextBlock>
+                        </Border>
+                        <TextBox x:Name="sourceTxt"  Grid.Column="1" VerticalAlignment="Center" FontSize="20"  Width="250" Margin="0,10,0,0">NULL</TextBox>
+                    </Grid>
+                    <Grid Grid.Row="3" x:Name="Destination_grid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0, 0, 1, 0" CornerRadius="2">
+                            <TextBlock Grid.Column="0" VerticalAlignment="Center" FontSize="25" Margin="0,5,0,0" FontWeight="Bold" HorizontalAlignment="Center">Destination</TextBlock>
+                        </Border>
+                        <TextBox x:Name="destinationTxt"  Grid.Column="1" VerticalAlignment="Center" FontSize="20"  Width="250" Margin="0,10,0,0">NULL</TextBox>
+                    </Grid>
+                    <Grid Grid.Row="4" x:Name="Load_grid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0, 0, 1, 0"  CornerRadius="2">
+                            <TextBlock Grid.Column="0" VerticalAlignment="Center" FontSize="25" Margin="0,5,0,0" FontWeight="Bold" HorizontalAlignment="Center">Load (Watts)</TextBlock>
+                        </Border>
+                        <TextBox x:Name="loadTxt"  Grid.Column="1" VerticalAlignment="Center" FontSize="20"  Width="250" Margin="0,10,0,0">NULL</TextBox>
+                    </Grid>
+                    <Grid Grid.Row="5" x:Name="VoltageLevel_grid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0, 0, 1, 0"  CornerRadius="2">
+                            <TextBlock Grid.Column="0" VerticalAlignment="Center" FontSize="25" Margin="0,5,0,0" FontWeight="Bold" HorizontalAlignment="Center">Voltage (Volts)</TextBlock>
+                        </Border>
+                        <TextBox x:Name="voltageTxt" Grid.Column="1" VerticalAlignment="Center" FontSize="20"  Width="250" Margin="0,10,0,0">NULL</TextBox>
+                    </Grid>
+                    <Grid Grid.Row="6" x:Name="InsulationType_grid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0, 0, 1, 1" CornerRadius="2">
+                            <TextBlock Grid.Column="0" VerticalAlignment="Center" FontSize="25" Margin="0,5,0,0" FontWeight="Bold" HorizontalAlignment="Center">Insulation Type</TextBlock>
+                        </Border>
+                        <Border Grid.Column="1" BorderBrush="Black" BorderThickness="0, 0, 0, 1" CornerRadius="2">
+                            <TextBox x:Name="insulationTxt" Grid.Column="1" VerticalAlignment="Center" FontSize="20"  Width="250" Margin="0,10,0,0">NULL</TextBox>
+                        </Border>
+
+                    </Grid>
+                    <Border Grid.Row="7" BorderBrush="Black" BorderThickness="0, 0, 0, 1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Button Grid.Column="0"  Click="CreateBtn_Click"  FontSize="25" FontWeight="Bold"  Background="MediumSpringGreen" BorderThickness="1"
+                             VerticalAlignment="Center" Width="170" Height="40">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="20"/>
+                                    </Style>
+                                </Button.Resources>
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
+                                                <Setter Property="RenderTransform">
+                                                    <Setter.Value>
+                                                        <ScaleTransform ScaleX="1.05" ScaleY="1.05"/>
+                                                    </Setter.Value>
+                                                </Setter>
+                                                <Setter Property="Background" Value="SpringGreen" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                                Create
+                            </Button>
+                            <Button Grid.Column="1" Margin="5,0,0,0" Click="DeleteBtn_Click"  FontSize="25" FontWeight="Bold"  
+                                    Background="IndianRed"  BorderThickness="1"
+                                    VerticalAlignment="Center" Width="170" Height="40">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="20"/>
+                                    </Style>
+                                </Button.Resources>
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
+                                                <Setter Property="RenderTransform">
+                                                    <Setter.Value>
+                                                        <ScaleTransform ScaleX="1.05" ScaleY="1.05"/>
+                                                    </Setter.Value>
+                                                </Setter>
+                                                <Setter Property="Background" Value="SpringGreen" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                                Delete
+                            </Button>
+                            <Button Grid.Column="2" Margin="5,0,0,0" Click="ImportBtn_Click"  FontSize="25" FontWeight="Bold"  
+                                    Background="Gold"  BorderThickness="1"
+                                    VerticalAlignment="Center" Width="170" Height="40">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="20"/>
+                                    </Style>
+                                </Button.Resources>
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
+                                                <Setter Property="RenderTransform">
+                                                    <Setter.Value>
+                                                        <ScaleTransform ScaleX="1.05" ScaleY="1.05"/>
+                                                    </Setter.Value>
+                                                </Setter>
+                                                <Setter Property="Background" Value="SpringGreen" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                                Import
+                            </Button>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Grid>
+            <Grid x:Name="dataGrid"  Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="12*" />
+                </Grid.RowDefinitions>
+                <Border Grid.Row="1"  BorderBrush="Black" BorderThickness="1" Margin="0, -8, 0, 0">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock FontSize="15"   FontWeight="Normal" VerticalAlignment="Center" HorizontalAlignment="Center" >Search by OtiID</TextBlock>
+                        <TextBox TextChanged="searchTxt_TextChanged" TextAlignment="Center" x:Name="searchTxt"  Grid.Column="1"  FontSize="20"  Width="250" Margin="0,0,0,0">...</TextBox>
+                    </StackPanel>
+                </Border>
+                <TextBlock FontSize="27" FontWeight="Bold" Margin="0, 10, 0, 0" HorizontalAlignment="Center">Current Schedules</TextBlock>
+                <DataGrid x:Name="CableTable" MouseEnter="CableTable_MouseEnter" MouseLeave="CableTable_MouseLeave"
+                      BorderBrush="Gray" Grid.Row="2"
+                      BorderThickness="1" Margin="0,0,0,10"
+                      GridLinesVisibility="None" CellEditEnding="CableTable_CellEditEnding" 
+                      CanUserResizeColumns="False" CanUserAddRows="False" CanUserResizeRows="False"
+                      RowBackground="MintCream" SelectionMode="Extended"
+                      AlternatingRowBackground="LightGray" 
+                      HeadersVisibility="Column">
+                    <DataGrid.CellStyle>
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Setter Property="FontSize" Value="25"/>
+                            <Setter Property="Foreground" Value="DarkBlue"/>
+                        </Style>
+                    </DataGrid.CellStyle>
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="FontWeight" Value="Bold" />
+                            <Setter Property="FontSize" Value="20"/>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+                </DataGrid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
