@@ -5,6 +5,7 @@ This simple password generator is nothing that hasn't been done a thousand times
 
 ### Project Requirements
 
+- Password Generation with numerous customization options. 
 - Appealing Design (Focal Point)
 - Responsive Layout 
 - Error Checking and Handling All Edge Cases
