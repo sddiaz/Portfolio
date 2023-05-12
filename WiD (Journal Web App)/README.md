@@ -1,37 +1,34 @@
-# Portfolio Projects - Clippit
-
-The idea of this application is web-based message retrieval. It can be used from any device via a web browser. The goal here was to implement a database and make the UI look appealing (albeit simple) as well! Once again, small and simple, but something I was very proud of as it was my first personal HTML/CSS project!
+# Portfolio Projects - WiD
 
 ## Overview
 
+This will (hopefully) be my largest project to date. It is very much in-progress as of now (5/12/23)! I wanted to build a full-stack web application that acts as a daily journal app. This project will test my ability to handle larger application, dealing with every end of the lifecycle of a software project myself. 
+
 ### Project Requirements
 
-- Data Base Integration and Information Retrieval
-- Unique ID Generator (1000 - 9999) 
-- Error Checking
-- Appealing / Responsive Layout
+- User login system.
+- Database to store user info
+- Users create daily journal entries.
+- Users can edit past entry content, but not future ones. 
+- Lots more found in the documentation!
 
 ### Technologies Utilized
 
-- ASP.NET 
-- Microsoft SQL 
-- HTML 
-- CSS 
-- C#
+- ReactJS
+- Firebase Authentication
+- Firebase Real-Time Database
+- HTML (no framework/library)
+- CSS (no framework/library)
 
 ### Screenshots
 
-<img src="https://user-images.githubusercontent.com/101738608/197719421-a2647341-fe8b-4753-b377-5989eec35c6c.png" width="500">
+<img src="" width="500">
 
 ### Links
 
-* Site URL: [@Somee](http://clippit.somee.com/)
+* Site URL: #TBD
 
 ### What I learned
-
-- Introduced to Flexbox & Layout Responsiveness
-- First Time Constructing / Setting up a Database
-
 
 ### Useful resources
 
