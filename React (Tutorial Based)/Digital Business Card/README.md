@@ -11,4 +11,4 @@ The first project is extremely basic, but as the course progresses, they will ge
 
 Thanks for reading! Visit my first react site below! 
 
-[Click Me!!](https://sweet-sfogliatella-5f2c33.netlify.app/)
+[Click Me!!](https://myreactbusinesscard.netlify.app/)
