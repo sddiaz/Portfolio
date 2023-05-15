@@ -26,10 +26,21 @@ body {
     min-width: 400px;
     background: var(--background);
 }
+.errorDiv {
+  background-color: red;
+  color: white;
+  padding: 4px;
+  border-radius: 7px;
+  font-size: 10px;
+  font-weight: bolder;
+  display: inline-block;
+}
 .mainDiv {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  min-width: 250px;
 }
 textarea:focus, input:focus{
   outline: none;
