@@ -1,12 +1,13 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import axios, * as others from 'axios';
-import Events from "./components/Events.js"
+import Event from "./components/Event.js"
 import Error from './components/Error';
 
-
+// TODO: clear input, create and map Event element, add more filters / search stuff...
 const App = () => {
   // -- VARIABLES -- \\ 
+  const [listItem, setListItems] = useState(null);
   const [events, setEvents] = useState(null);
   const [hasError, setError] = useState(false);
   const [userInput, setUserInput] = useState('');
@@ -18,8 +19,18 @@ const App = () => {
     event.preventDefault();
 
     if (userInput) {
-      alert(userInput);
-    } 
+      const options = {
+        method: 'GET',
+        url: 'https://events-api-kappa.vercel.app/',
+        params: {
+          q: `Events in ${userInput}`,
+          no_cache: false,
+        }
+      }
+      axios.request(options).then((response) => {
+        setEvents(response.data);
+      })
+    }
     // If no input, show error for 5 seconds.
     else {
       setError(true);
@@ -29,7 +40,9 @@ const App = () => {
     }
   }
 
-
+  useEffect(() => {
+    console.log(`Events in ${userInput}:` + JSON.stringify(events)) // This will log the updated value of `events` when it changes
+  }, [events]);
 
   // -- LAYOUT -- \\
   return (
@@ -38,7 +51,7 @@ const App = () => {
         <Error message={hasError ? "Please Enter a Location" : ""} />
         <form onSubmit={grabEvents}>
           <span>
-            <input
+            <input id="input-el"
               placeholder="Where to? (City, State, Country...)"
               type="text"
               value={userInput}
@@ -49,7 +62,7 @@ const App = () => {
             </button>
           </span>
         </form>
-        <ol id="list"></ol>
+        
       </div>
     </div>
   );
