@@ -5,6 +5,7 @@ This simple password generator is nothing that hasn't been done a thousand times
 
 ### Project Requirements
 
+- Password Generation with numerous customization options. 
 - Appealing Design (Focal Point)
 - Responsive Layout 
 - Error Checking and Handling All Edge Cases
@@ -26,7 +27,7 @@ This simple password generator is nothing that hasn't been done a thousand times
 ### What I learned
 
 - Don't leave any "[Broken Windows](https://medium.com/@learnstuff.io/broken-window-theory-in-software-development-bef627a1ce99)" so to speak (I.E. tackle ALL edge cases for the best user experience!)
-- Introducted to JavaScript and connecting it to DOM elements to behave as described (already familiar with OOP in C#/C++)
+- Introduced to JavaScript and connecting it to DOM elements to behave as described (already familiar with OOP in C#/C++)
 
 
 ### Useful resources

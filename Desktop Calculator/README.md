@@ -1,4 +1,4 @@
-# Portfolio Projects - Desktop Calendar
+# Portfolio Projects - Desktop Calculator
 
 The infamous calculator project. Simple, small, with plenty of room for improvements (such as resizing).
 Not much else to it. Dark mode and some extra flashiness for brownie points.  
