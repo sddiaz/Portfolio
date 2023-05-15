@@ -1,0 +1,58 @@
+/* Dark / Light Mode Settings */
+@media (prefers-color-scheme: light) {
+  :root {
+    --mainText: #2b283a;
+    --lightText: #918e9b;
+    --background: #fdfeff;
+    --accent: #5af5e3;
+    --darkAccent: #40c2bb;
+  }
+}
+  
+@media (prefers-color-scheme: dark) {
+  :root {
+    --mainText: #E0E0E0;
+    --lightText: #E0E0E0;
+    --background: #2e2e2e;
+    --accent: #9b72c1;
+    --darkAccent: #72538e;
+  }
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 400px;
+    background: var(--background);
+}
+.mainDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+textarea:focus, input:focus{
+  outline: none;
+}
+input[type=text] {
+  color: var(--mainText);
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid var(--accent);
+  width: 250px;
+}
+#searchBtn {
+  vertical-align: bottom;
+  background: var(--background);
+  color: white;
+  border-color: var(--accent);
+  border-radius: 50px;
+  transition: transform 0.2s ease-in-out;
+}
+
+#searchBtn:active {
+  transform: scale(0.95);
+}
+#searchImg{
+  height: 30px;
+}

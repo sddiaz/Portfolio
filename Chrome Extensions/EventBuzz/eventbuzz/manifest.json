@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "name": "EventBuzz",
+    "description": "For the activity-goers and fun-lovers! Quickly find events in your local area.",
+    "action": {
+        "default_popup": "./public/index.html",
+        "default_icon": "/icon.png"
+    },
+    "permissions": [
+        "tabs"
+    ]
+}
