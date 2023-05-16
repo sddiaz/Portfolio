@@ -41,7 +41,9 @@ const App = () => {
   }
 
   useEffect(() => {
-    console.log(`Events in ${userInput}:` + JSON.stringify(events)) // This will log the updated value of `events` when it changes
+    if (events) {
+      alert('Events Found!');
+    }
   }, [events]);
 
   // -- LAYOUT -- \\
@@ -51,7 +53,9 @@ const App = () => {
         <Error message={hasError ? "Please Enter a Location" : ""} />
         <form onSubmit={grabEvents}>
           <span>
-            <input id="input-el"
+            <input 
+              autocomplete="off"
+              id="input-el"
               placeholder="Where to? (City, State, Country...)"
               type="text"
               value={userInput}

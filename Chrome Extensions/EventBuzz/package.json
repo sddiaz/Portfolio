@@ -18,7 +18,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start:backend": "nodemon backend.js",
     "start:frontend": "react-scripts start",
     "build": "react-scripts build --watch",
     "test": "react-scripts test",
