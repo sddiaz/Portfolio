@@ -7,6 +7,6 @@ export default function Error(props) {
   }
 
   return (<div className="errorDiv">
-            <div>{message}</div>
+            <div className="error">{message}</div>
         </div>);
 }

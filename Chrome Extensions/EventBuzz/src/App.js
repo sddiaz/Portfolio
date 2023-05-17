@@ -1,13 +1,16 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import axios, * as others from 'axios';
-import Event from "./components/Event.js"
 import Error from './components/Error';
+import Settings from './components/Settings';
+import Event from "./components/Event.js"
+import Title from './components/Title';
+import { eventWrapper } from '@testing-library/user-event/dist/utils';
 
 // TODO: clear input, create and map Event element, add more filters / search stuff...
 const App = () => {
   // -- VARIABLES -- \\ 
-  const [listItem, setListItems] = useState(null);
+  const [listItems, setListItems] = useState(null);
   const [events, setEvents] = useState(null);
   const [hasError, setError] = useState(false);
   const [userInput, setUserInput] = useState('');
@@ -23,7 +26,7 @@ const App = () => {
         method: 'GET',
         url: 'https://events-api-kappa.vercel.app/',
         params: {
-          q: `Events in ${userInput}`,
+          q: `${userInput}`,
           no_cache: false,
         }
       }
@@ -42,21 +45,30 @@ const App = () => {
 
   useEffect(() => {
     if (events) {
-      alert('Events Found!');
+      console.log(JSON.stringify({events}));
+      setListItems(events.map(item => {
+        return (
+            <div>
+            <Event 
+            {...item}
+            />
+            </div>
+        )
+    }) );
     }
   }, [events]);
 
   // -- LAYOUT -- \\
   return (
     <div className="mainDiv">
-      <div>
+      <div className="wrapper">
         <Error message={hasError ? "Please Enter a Location" : ""} />
-        <form onSubmit={grabEvents}>
-          <span>
+        <Title/>
+        <form className="mainDiv" onSubmit={grabEvents}>
+          <span className="event--search">
             <input 
-              autocomplete="off"
-              id="input-el"
-              placeholder="Where to? (City, State, Country...)"
+              className="input-el"
+              placeholder="Search by location, group, etc..."
               type="text"
               value={userInput}
               onChange={(e) => setUserInput(e.target.value)}
@@ -66,7 +78,12 @@ const App = () => {
             </button>
           </span>
         </form>
-        
+        <div>
+          <Settings/>
+        </div>
+        <div className="listDiv">
+          {listItems}
+        </div>
       </div>
     </div>
   );
