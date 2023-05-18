@@ -8,6 +8,9 @@
     --darkAccent: #78dfdf;
     --darkestAccent: #68d7d6;
     --reverse: #9b72c1;
+    --filter: hue-rotate(0deg);
+    --filterBorder: black;
+
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -19,6 +22,9 @@
     --darkAccent: #72538e;
     --darkestAccent: #42176a;
     --reverse: #5af5e3;
+    --filter: hue-rotate(90deg);
+    --filterBorder: white;
+    --sortFilter: hue-rotate(140deg);
   }
 }
 /* Load In Animation */
@@ -32,6 +38,9 @@
     transform: translateX(Y);
   }
 }
+* {
+  animation: 1s ease-in-out 0s 1 loadAnimation;
+}
 html {
   overflow: hidden;
   margin-bottom: -15px;
@@ -43,6 +52,8 @@ body {
   min-width: 300px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* ERROR */
 .errorDiv {
   display: flex;
   justify-content: center;
@@ -59,19 +70,13 @@ body {
   font-weight: bolder;
   text-align: center;
 }
-.event--search {
-  height: 35px;
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  width: 295px;
-}
+/* TITLE */
 .title {
   background: var(--background);
   font-size: 20px;
   text-align: center;
   color: var(--mainText);
-  font-weight: bolder;
+  font-weight: bold;
   border-radius: 15px;
 }
 .title--box {
@@ -81,16 +86,15 @@ body {
 .title--slogan {
   font-size: 17px;
   color: var(--lightText);
-  font-weight: lighter;
+  font-weight: bold;
 }
-.mainDiv {
-  border-radius: 15px;
-  display: flex;
+/* SEARCH BAR */
+.event--search {
+  height: 35px;
+  display: flex; 
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  min-width: 275px;
-  overflow: hidden;
+  width: 295px;
 }
 textarea:focus,
 input:focus {
@@ -124,11 +128,90 @@ input[type="text"] {
 .input-el::placeholder {
   font-size: 17px;
 }
+
 .wrapper {
   background: var(--background);}
+
+
+.mainDiv {
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 275px;
+  overflow: hidden;
+}
+
+/* SETTINGS */
 .settings--main {
   color: var(--mainText);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.settings--left {
+  display: flex;
+  align-items: center;
+}
+
+.settings--btn {
+  border: none;
+  background: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.settings--img {
+  filter: var(--filter);
+  border-radius: 50px;
+  border: 1px solid var(--filterBorder);
+  height: 20px;
+}
+
+.settings--btn:hover {
+  transform: scale(1.1);
+}
+
+.settings--btn:active {
+  transform: scale(0.95);
+}
+
+.filter--btn {
+  height: 27px;
+  background: none;
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+
+.filter--img {
+  filter: var(--sortFilter);
+  transition: 0.2s ease-in-out;
+  height: 23px;
+}
+
+.filter--img:hover {
+  transform: scale(1.1);
+}
+
+.filter--img:active {
+  transform: scale(0.95);
+}
+
+.settings--right {
+  display: flex;
+}
+
+.save--btn {
+  background: none;
+  border: none;
+}
+
+.save--img {
+  height: 35px;
+}
+
+/* EVENT LIST */
 .listDiv {
   overflow-y: scroll;
   max-height: 500px;
@@ -154,7 +237,6 @@ input[type="text"] {
 }
 
 .eventDiv {
-  animation: 1s ease-in-out 0s 1 loadAnimation;
   width: 270px;
   border-radius: 1px;
   overflow: hidden;

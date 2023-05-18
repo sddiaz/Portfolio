@@ -2,12 +2,12 @@ import React from "react";
 
 export default function Title() {
     return (
-    <div class="title">
+    <div className="title">
       Event
-      <span class="title--box">
+      <span className="title--box">
         {"Buzz "}
         </span>
-        <span class="title--slogan">
+        <span className="title--slogan">
         - Adventure in Seconds
         </span>
     </div>
