@@ -6,6 +6,7 @@ import Settings from './components/Settings';
 import Event from "./components/Event.js"
 import Title from './components/Title';
 import { PropagateLoader } from 'react-spinners';
+import { v4 as uuidv4 } from 'uuid';
 // TODO: clear input, create and map Event element, add more filters / search stuff...
 const App = () => {
   const loaderCSS = {
@@ -24,6 +25,7 @@ const App = () => {
   const [sorted, setSorted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [max, setMax] = useState(0); // maximum pages reach (for loading on page flip)
+  const [toggleFavorites, setToggleFavorites] = useState(false);
   // -- FUNCTIONS -- \\
   function grabEvents(event) {
     if (event) {
@@ -127,8 +129,14 @@ const App = () => {
       }, 3000);
     }
   }
-  function setFavorite(){
-    alert('hi');
+  function showFavorites(){
+    if (toggleFavorites) {
+      setToggleFavorites(false);
+    }
+    else {
+        setToggleFavorites(true);
+        const favorites = JSON.parse(localStorage.getItem('favorites'));
+    }
   }
   // Show Events When Changed
   useEffect(() => {
@@ -136,11 +144,12 @@ const App = () => {
       setLoading(false);
       console.log(JSON.stringify({events}));
       setListItems(events.map(item => {
+      const eventID = uuidv4(); 
         return (
             <div>
             <Event 
-            configureFavorite={setFavorite}
             {...item}
+            id={`${item.title}_${item.date.when}_${item.address.join('_')}`}
             />
             </div>
         )
@@ -174,7 +183,8 @@ const App = () => {
         <div>
           <Settings onLeftClick={leftClick} 
                     onRightClick={rightClick}
-                    onSort={sort} />
+                    onSort={sort} 
+                    onFavoriteClick={showFavorites}/>
         </div>
         
         <div className="listDiv">
@@ -184,7 +194,7 @@ const App = () => {
         cssOverride={loaderCSS} 
          color="var(--accent)" />
       </div>}
-          {listItems}
+          {!toggleFavorites && listItems}
         </div>
       </div>
     </div>

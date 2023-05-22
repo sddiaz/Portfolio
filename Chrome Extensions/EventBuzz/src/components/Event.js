@@ -1,6 +1,7 @@
 import React from 'react';
-import { useState } from 'react';
-const Event = (event, {configureFavorite}) => {
+import { useState, useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+const Event = (event) => {
   // -- VARIABLES -- \\ 
   const { title, date, address, link, image, description } = event;
   const { start_date, when } = date;
@@ -22,6 +23,50 @@ const Event = (event, {configureFavorite}) => {
       setPopup(true);
     }
   }
+  function configureFavorite() {
+    if (!favorite) {
+      setFavorite(true);
+      const eventWithoutCircularRefs = removeCircularReferences(event);
+      addToFavorites(eventWithoutCircularRefs);
+      alert(event.id);
+    } else {
+      setFavorite(false);
+      removeFromFavorites(event.id); // Pass eventID directly
+      alert('Event Removed From Favorites');
+    }
+  }
+  function removeCircularReferences(obj) {
+    const cache = new Set();
+    const newObj = JSON.parse(JSON.stringify(obj, (key, value) => {
+      if (typeof value === 'object' && value !== null) {
+        if (cache.has(value)) {
+          return;
+        }
+        cache.add(value);
+      }
+      return value;
+    }));
+    cache.clear();
+    return newObj;
+  }
+  function addToFavorites() {
+    const favoritesFromLocalStorage = JSON.parse(localStorage.getItem('favorites')) || [];
+    const updatedFavorites = [...favoritesFromLocalStorage, event];
+    localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+  }
+  function removeFromFavorites(eventID) {
+    const favoritesFromLocalStorage = JSON.parse(localStorage.getItem('favorites')) || [];
+    const updatedFavorites = favoritesFromLocalStorage.filter((item) => item.id !== eventID);
+    localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+  }
+  useEffect(() => {
+    const favoritesFromLocalStorage = JSON.parse(localStorage.getItem('favorites')) || [];
+    const isFavorite = favoritesFromLocalStorage.some((favoriteItem) => {
+      const favoriteIdentifier = `${favoriteItem.title}_${favoriteItem.date.when}_${favoriteItem.address.join('_')}`;
+      return favoriteIdentifier === event.id;
+    });
+    setFavorite(isFavorite);
+  }, [event.id]);
   // -- DESIGN -- \\
   return (
       <div className="eventDiv">
