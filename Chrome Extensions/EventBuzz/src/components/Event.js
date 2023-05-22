@@ -1,12 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
-const Event = (event) => {
+const Event = (event, {configureFavorite}) => {
   // -- VARIABLES -- \\ 
   const { title, date, address, link, image, description } = event;
   const { start_date, when } = date;
   const [addressLine1, addressLine2] = address;
   const [popup, setPopup] = useState(false);
-
+  const [favorite, setFavorite] = useState(false);
+  const starSource = favorite ? "https://i.ibb.co/1m3Mw8d/star.png" : "https://i.ibb.co/cxd4GqK/image.png";
   // -- FUNCTIONS -- \\ 
   function generateGoogleMapsLink(address) {
     const encodedAddress = encodeURIComponent(address);
@@ -32,7 +33,14 @@ const Event = (event) => {
                 <div>
                 <span>
                 <div className="event--title">
+                  <span className="event--favorite">
                   {title}
+                  <span className="event--star">
+                    <button onClick={configureFavorite} className="event--button" title='Favorite'>
+                      <img className="event--favorite--img"  src={starSource} />
+                    </button>
+                </span>
+                  </span>
                     <div className="event--date">
                       {start_date}
                       </div>

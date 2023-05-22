@@ -127,6 +127,9 @@ const App = () => {
       }, 3000);
     }
   }
+  function setFavorite(){
+    alert('hi');
+  }
   // Show Events When Changed
   useEffect(() => {
     if (events) {
@@ -136,6 +139,7 @@ const App = () => {
         return (
             <div>
             <Event 
+            configureFavorite={setFavorite}
             {...item}
             />
             </div>
@@ -179,8 +183,7 @@ const App = () => {
       <PropagateLoader
         cssOverride={loaderCSS} 
          color="var(--accent)" />
-      </div>
-}
+      </div>}
           {listItems}
         </div>
       </div>

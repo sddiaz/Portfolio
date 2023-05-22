@@ -293,6 +293,23 @@ input[type="text"] {
   justify-content: center;
   align-items: center;
 }
+.event--star {
+  display: inline-block;
+  justify-content: flex-end  
+}
+.event--favorite {
+  display: flex;
+  justify-content: space-between;
+}
+.event--favorite--img {
+  height: 15px;
+  top: 0;
+  right: 0;
+}
+.event--favorite--img:hover {
+  transform: scale(1.2);
+  cursor:pointer;
+}
 .event--img {
   width: 70px; 
   height: 70px; 
@@ -325,14 +342,15 @@ input[type="text"] {
 .event--button {
   background: none;
   border: none;
-  width: 0px;
+  height: 20px;
+  transition: 0.3s;
 }
 .event--icon--image {
   fill: var(--mainText);
   height: 20px;
   width: 20px;
   transition: 0.3s;
-  margin: 0px 15px 0px 15px;
+  margin: 0px 10px 0px 10px;
   text-decoration: none;
 }
 .event--icon--image:hover {
