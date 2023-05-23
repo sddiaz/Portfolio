@@ -37,4 +37,5 @@ This weekend project was desigtned to give me practice in utilizing APIs! It's a
 
 
 ### Useful resources!
-- 
+- [Deploy an Express API to Vercel](https://www.youtube.com/watch?v=B-T69_VP2Ls)
+- [Basic Chrome Extension Setup](https://www.youtube.com/watch?v=WvnZPwq4dJs)
