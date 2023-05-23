@@ -95,7 +95,7 @@ const App = () => {
     }
     else {
       if (userInput) {
-        if (start >= max) {
+        if (start > max) {
           setLoading(true);
         }
         setStart(start + 10);    
