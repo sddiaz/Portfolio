@@ -24,7 +24,7 @@ const App = () => {
   const [previousInput, setPreviousInput] = useState(userInput);
   const [start, setStart] = useState(0);
   const [error, setError] = useState(false);
-  const [sorted, setSorted] = useState(false);
+  const [sorted, setSorted] = useState(true);
   const [loading, setLoading] = useState(false);
   const [empty, setEmpty] = useState(false);
   const [max, setMax] = useState(0); // maximum pages reach (for loading on page flip)
@@ -252,7 +252,7 @@ const App = () => {
           <span className="event--search">
             <input 
               className="input-el"
-              placeholder="'Events in Las Vegas', 'Music Fests in London'.."
+              placeholder="Events in Las Vegas, Music Fests in London..."
               type="text"
               value={userInput}
               onChange={(e) => setUserInput(e.target.value)}
@@ -277,7 +277,7 @@ const App = () => {
             color="var(--accent)" />
           </div>}
           {/* Switch Between Favorites and Events */}
-          {empty && <div className="empty">Favorite Something First :)</div>}
+          {empty && <div className="empty">Favorite something first :)</div>}
           {toggleFavorites && favoriteList}
           {!toggleFavorites && eventList}
         </div>

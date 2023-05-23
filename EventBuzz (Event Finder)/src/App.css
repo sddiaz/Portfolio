@@ -41,10 +41,8 @@
 * {
   animation: 1s ease-in-out 0s 1 loadAnimation;
 }
-html {
-  overflow: hidden;
-}
 body {
+  margin: 0px;
   animation: 1s ease-in-out 0s 1 loadAnimation;
   background: var(--background);
   border-radius: 15px;
@@ -157,7 +155,6 @@ input[type="text"] {
   align-items: center;
   flex-direction: column;
   min-width: 275px;
-  overflow: hidden;
 }
 
 /* SETTINGS */
@@ -249,7 +246,7 @@ input[type="text"] {
 /* EVENT LIST */
 .listDiv {
   overflow-y: scroll;
-  max-height: 500px;
+  max-height: 450px;
   flex-direction: column;
   scrollbar-width: thin;
   scrollbar-color: var(--accent);
@@ -274,7 +271,6 @@ input[type="text"] {
 .eventDiv {
   width: 270px;
   border-radius: 1px;
-  overflow: hidden;
   color: var(--mainText);
   background: var(--darkestAccent);
   padding: 10px;
