@@ -1,6 +1,6 @@
 # Portfolio Projects - EventBuzz
 
-This weekend project was desigtned to give me practice in utilizing APIs! It's a lightweight chrome extension with numerous features listed below, with the main one being grabbing events from Google Events using SerpAPI. More details below. 
+This project was designed to give me practice utilizing APIs in the form of a Chrome-Extension build! It's a lightweight chrome extension with numerous features listed below, with the main one being grabbing events from Google Events using SerpAPI. More details below. 
 
 ## Overview
 
