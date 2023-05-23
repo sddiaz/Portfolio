@@ -16,14 +16,17 @@ const App = () => {
     borderColor: "red",
   };
   // -- VARIABLES -- \\ 
-  const [listItems, setListItems] = useState(null);
-  const [events, setEvents] = useState(null);
+  const [events, setEvents] = useState([]);
+  const [eventList, setEventList] = useState([]);
+  const [favorites, setFavorites] = useState([]);
+  const [favoriteList, setFavoriteList] = useState([]);
   const [userInput, setUserInput] = useState('');
   const [previousInput, setPreviousInput] = useState(userInput);
   const [start, setStart] = useState(0);
   const [error, setError] = useState(false);
   const [sorted, setSorted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [empty, setEmpty] = useState(false);
   const [max, setMax] = useState(0); // maximum pages reach (for loading on page flip)
   const [toggleFavorites, setToggleFavorites] = useState(false);
   // -- FUNCTIONS -- \\
@@ -32,6 +35,8 @@ const App = () => {
       event.preventDefault();
     }
     if (userInput) {
+      setEmpty(false);
+      setToggleFavorites(false);
       if (userInput != previousInput) {
         setLoading(true);
       }
@@ -46,54 +51,73 @@ const App = () => {
         } 
       }
       axios.request(options).then((response) => {
+        setToggleFavorites(false);
         setEvents(response.data);
       })
     }
     // If no input, show error for 5 seconds.
     else {
-      setError("Please Enter Something First.");
-      setTimeout(() => {
-        setError(false);
-      }, 3000);
+      if (event && event.type === 'submit') {
+        setError("Please Enter Something First.");
+        setTimeout(() => {
+          setError(false);
+        }, 3000);
+      }
     }
   }
   // Decrement Results by 10 (previous page)
   function leftClick() {
-    if (start != 0 && userInput) {
-      setStart(start - 10);
-    }
-    else if (!error) {
-      setError("Cannot Go Back.");
-      setTimeout(() => {
-        setError(false);
-      }, 3000);
-    }
-  }
-  // Increment Results by 10 (next page)
-  function rightClick() {
-    if (userInput) {
-      if (start > max) {
-        setLoading(true);
-      }
-      setStart(start + 10);    
-      setMax(Math.max(max, start));
-    }
-    else if (!error) {
-        setError("Please Search First.");
+    if (toggleFavorites) {
+      setError("Can't flip through favorites.");
         setTimeout(() => {
           setError(false);
         }, 3000);
     }
+    else {
+      if (start != 0 && userInput) {
+        setStart(start - 10);
+      }
+      else if (!error) {
+        setError("Cannot Go Back.");
+        setTimeout(() => {
+          setError(false);
+        }, 3000);
+      }
+    }
+  }
+  // Increment Results by 10 (next page)
+  function rightClick() {
+    if (toggleFavorites) {
+      setError("Can't flip through favorites.");
+        setTimeout(() => {
+          setError(false);
+        }, 3000);
+    }
+    else {
+      if (userInput) {
+        if (start >= max) {
+          setLoading(true);
+        }
+        setStart(start + 10);    
+        setMax(Math.max(max, start));
+      }
+      else if (!error) {
+          setError("Please Search First.");
+          setTimeout(() => {
+            setError(false);
+          }, 3000);
+      }
+    }
   }
   function sort() {
-    if (events) {
+    if (events && !toggleFavorites) {
         if (!sorted) {
           setEvents(events.sort(function(a, b) {
             var dateA = new Date("2000 " + a.date.start_date);
             var dateB = new Date("2000 " + b.date.start_date);
             return dateB - dateA;
           }))
-          setListItems(events.map(item => {
+          setEventList(events.map(item => {
             return (
                 <div>
                 <Event 
@@ -110,7 +134,7 @@ const App = () => {
           var dateB = new Date("2000 " + b.date.start_date);
           return dateA - dateB;
         }))
-        setListItems(events.map(item => {
+        setEventList(events.map(item => {
           return (
               <div>
               <Event 
@@ -122,6 +146,42 @@ const App = () => {
         setSorted(false);
       }
     }
+    else if (favorites && toggleFavorites) {
+      if (!sorted) {
+        setFavorites(favorites.sort(function(a, b) {
+          var dateA = new Date("2000 " + a.date.start_date);
+          var dateB = new Date("2000 " + b.date.start_date);
+          return dateB - dateA;
+        }))
+        setFavoriteList(favorites.map(item => {
+          return (
+              <div>
+              <Event 
+              {...item}
+              />
+              </div>
+          )
+         }) );
+         setSorted(true);
+      }
+    else {
+      setFavorites(favorites.sort(function(a, b) {
+        var dateA = new Date("2000 " + a.date.start_date);
+        var dateB = new Date("2000 " + b.date.start_date);
+        return dateA - dateB;
+      }))
+      setFavoriteList(favorites.map(item => {
+        return (
+            <div>
+            <Event 
+            {...item}
+            />
+            </div>
+        )
+      }) );
+      setSorted(false);
+    }
+    }
     else if (!error) {
       setError("Please Search before Sorting.");
       setTimeout(() => {
@@ -130,20 +190,26 @@ const App = () => {
     }
   }
   function showFavorites(){
-    if (toggleFavorites) {
-      setToggleFavorites(false);
-    }
-    else {
-        setToggleFavorites(true);
-        const favorites = JSON.parse(localStorage.getItem('favorites'));
-    }
+      if (toggleFavorites) {
+        setToggleFavorites(false);
+      }
+      else {
+        const favs = JSON.parse(localStorage.getItem('favorites'));
+        if (favs.length !== 0) {
+          setEmpty(false);
+          setToggleFavorites(true);
+          setFavorites(favs);
+        }
+        else {
+          setEmpty(true);
+        }
+      }
   }
   // Show Events When Changed
   useEffect(() => {
     if (events) {
       setLoading(false);
-      console.log(JSON.stringify({events}));
-      setListItems(events.map(item => {
+      setEventList(events.map(item => {
       const eventID = uuidv4(); 
         return (
             <div>
@@ -160,6 +226,22 @@ const App = () => {
   useEffect (() => {
     grabEvents();
   }, [start])
+  // Update Favorites
+  useEffect(() => {
+  if (favorites.length !== 0) {
+    setFavoriteList(favorites.map(item => {
+      const eventID = uuidv4(); 
+        return (
+            <div>
+            <Event 
+            {...item}
+            id={`${item.title}_${item.date.when}_${item.address.join('_')}`}
+            />
+            </div>
+        )
+    }) );
+  }
+  }, [favorites])
   // -- LAYOUT -- \\
   return (
     <div className="mainDiv">
@@ -170,7 +252,7 @@ const App = () => {
           <span className="event--search">
             <input 
               className="input-el"
-              placeholder="Search by location, group, etc..."
+              placeholder="'Events in Las Vegas', 'Music Fests in London'.."
               type="text"
               value={userInput}
               onChange={(e) => setUserInput(e.target.value)}
@@ -190,11 +272,14 @@ const App = () => {
         <div className="listDiv">
         {loading && 
         <div className="loader">
-      <PropagateLoader
-        cssOverride={loaderCSS} 
-         color="var(--accent)" />
-      </div>}
-          {!toggleFavorites && listItems}
+          <PropagateLoader
+            cssOverride={loaderCSS} 
+            color="var(--accent)" />
+          </div>}
+          {/* Switch Between Favorites and Events */}
+          {empty && <div className="empty">Favorite Something First :)</div>}
+          {toggleFavorites && favoriteList}
+          {!toggleFavorites && eventList}
         </div>
       </div>
     </div>

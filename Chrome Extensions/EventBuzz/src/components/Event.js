@@ -28,11 +28,9 @@ const Event = (event) => {
       setFavorite(true);
       const eventWithoutCircularRefs = removeCircularReferences(event);
       addToFavorites(eventWithoutCircularRefs);
-      alert(event.id);
     } else {
       setFavorite(false);
       removeFromFavorites(event.id); // Pass eventID directly
-      alert('Event Removed From Favorites');
     }
   }
   function removeCircularReferences(obj) {

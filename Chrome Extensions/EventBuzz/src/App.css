@@ -39,7 +39,6 @@
   }
 }
 * {
-  transition: 0.3s;
   animation: 1s ease-in-out 0s 1 loadAnimation;
 }
 html {
@@ -126,9 +125,18 @@ input[type="text"] {
   height: 30px;
 }
 .input-el::placeholder {
-  font-size: 17px;
+  font-size: 12px;
 }
-
+/* Empty Favorites */
+.empty {
+  animation: none;
+  transition: 0.3s;
+  font-weight: bolder;
+  font-size: 15px;
+  text-align: center;
+  color: var(--mainText);
+  opacity: 0.5;
+}
 /* POPUP */
 .popup--Dimmer {
   position: fixed;
