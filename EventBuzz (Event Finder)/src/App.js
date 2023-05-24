@@ -6,7 +6,6 @@ import Settings from './components/Settings';
 import Event from "./components/Event.js"
 import Title from './components/Title';
 import { PropagateLoader } from 'react-spinners';
-import { v4 as uuidv4 } from 'uuid';
 // TODO: clear input, create and map Event element, add more filters / search stuff...
 const App = () => {
   const loaderCSS = {
@@ -210,7 +209,6 @@ const App = () => {
     if (events) {
       setLoading(false);
       setEventList(events.map(item => {
-      const eventID = uuidv4(); 
         return (
             <div>
             <Event 
@@ -230,7 +228,6 @@ const App = () => {
   useEffect(() => {
   if (favorites.length !== 0) {
     setFavoriteList(favorites.map(item => {
-      const eventID = uuidv4(); 
         return (
             <div>
             <Event 
