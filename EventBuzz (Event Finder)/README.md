@@ -1,7 +1,7 @@
 # Portfolio Projects - EventBuzz
 
-**Important Preface: ** This code utilizes SerpAPI. As of 2023, their services are not free, and users are limited to 100 API requests per month. If for some reason you are stuck on a loading animation, that means the searches have expired for the month as I have not paid for an account with extra searches.
-
+**Important Preface: This code utilizes SerpAPI. As of 2023, their services are not free, and users are limited to 100 API requests per month. If for some reason you are stuck on a loading animation, that means the searches have expired for the month as I have not paid for an account with extra searches.**
+ 
 This project was designed to give me practice utilizing APIs in the form of a Chrome-Extension build! It's a lightweight chrome extension with numerous features listed below, with the main one being grabbing events from Google Events using SerpAPI. More details below. 
 
 ## Overview
