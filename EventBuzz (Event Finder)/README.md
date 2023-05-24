@@ -1,5 +1,7 @@
 # Portfolio Projects - EventBuzz
 
+**Important Preface: ** This code utilizes SerpAPI. As of 2023, their services are not free, and users are limited to 100 API requests per month. If for some reason you are stuck on a loading animation, that means the searches have expired for the month as I have not paid for an account with extra searches.
+
 This project was designed to give me practice utilizing APIs in the form of a Chrome-Extension build! It's a lightweight chrome extension with numerous features listed below, with the main one being grabbing events from Google Events using SerpAPI. More details below. 
 
 ## Overview
@@ -25,9 +27,11 @@ This project was designed to give me practice utilizing APIs in the form of a Ch
 
 <img src="https://github.com/sddiaz/Portfolio/assets/101738608/4745d92b-b1d0-47cb-b719-d5bfe96ca3dc" height="500">
 
-### Links 
+### Links / Usage (Test it yourself)
 
-* While a site URL is not up at the moment, instructions to download will be posted shortly...
+* As of now (05/24/23) I am working on getting the chrome extension up, though right now there are two options!
+- Option 1: Web Version -> [Click Here to be Redirected to the Web Application Version of the Program](https://eventbuzzz.netlify.app/)
+- Option 2: Chrome Upload. Download the code files. Click the chrome extensions button in the top of the browser, and click "Manage Extensions". Toggle on "Developer Mode" (top right), and click "Load Unpacked". Find the "build" folder in the code you downloaded, and you'll be good to go! Your extension should appear. 
 
 ### What I learned
 
