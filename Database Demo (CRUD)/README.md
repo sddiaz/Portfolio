@@ -1,6 +1,6 @@
 # Portfolio Projects - Database Demo (CRUD)
 
-This one-day desktop application was designed as a piece of my senior design project for University. It's simply a demo of how one might create and connect a Microsoft SQL database to a simple, CRUD-based application.
+This one-day desktop application was designed as a piece of my senior design project for University. I's been added for enhanced proof data skills within my portfolio. It's simply a demo of how one might create and connect a Microsoft SQL database to a simple, CRUD-based application.
 
 ## Overview
 
