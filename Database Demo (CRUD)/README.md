@@ -7,7 +7,7 @@ This simple desktop application was designed as a piece of my senior design proj
 ### Project Requirements
 
 - Data Base Integration and Connnection
-- CRUD operations
+- SQL that performs CRUD operations
 - Search Bar Functionality
 
 ### Technologies Utilized
