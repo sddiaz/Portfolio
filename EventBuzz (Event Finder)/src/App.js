@@ -49,10 +49,16 @@ const App = () => {
           start: start,
         } 
       }
-      axios.request(options).then((response) => {
-        setToggleFavorites(false);
-        setEvents(response.data);
-      })
+      axios.request(options)
+        .then((response) => {
+          console.log("Response:" + response.data);
+          setToggleFavorites(false);
+          setEvents(response.data);
+        })
+        .catch((error) => {
+          console.error('Error fetching events:', error);
+          // Handle error state or display an error message
+        });
     }
     // If no input, show error for 5 seconds.
     else {

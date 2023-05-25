@@ -1,0 +1,286 @@
+C:\Users\salty\source\programs\SchedulePrototype\SchedulePrototype\bin\Debug\SchedulePrototype.exe.config
+C:\Users\salty\source\programs\SchedulePrototype\SchedulePrototype\bin\Debug\SchedulePrototype.exe
+C:\Users\salty\source\programs\SchedulePrototype\SchedulePrototype\bin\Debug\SchedulePrototype.pdb
+C:\Users\salty\source\programs\SchedulePrototype\SchedulePrototype\obj\Debug\SchedulePrototype.csproj.AssemblyReference.cache
+C:\Users\salty\source\programs\SchedulePrototype\SchedulePrototype\obj\Debug\SchedulePrototype.csproj.SuggestedBindingRedirects.cache
+C:\Users\salty\source\programs\SchedulePrototype\SchedulePrototype\obj\Debug\MainWindow.g.cs
+C:\Users\salty\source\programs\SchedulePrototype\SchedulePrototype\obj\Debug\App.g.cs
+C:\Users\salty\source\programs\SchedulePrototype\SchedulePrototype\obj\Debug\SchedulePrototype_MarkupCompile.cache
+C:\Users\salty\source\programs\SchedulePrototype\SchedulePrototype\obj\Debug\SchedulePrototype_MarkupCompile.lref
+C:\Users\salty\source\programs\SchedulePrototype\SchedulePrototype\obj\Debug\MainWindow.baml
+C:\Users\salty\source\programs\SchedulePrototype\SchedulePrototype\obj\Debug\SchedulePrototype.g.resources
+C:\Users\salty\source\programs\SchedulePrototype\SchedulePrototype\obj\Debug\SchedulePrototype.Properties.Resources.resources
+C:\Users\salty\source\programs\SchedulePrototype\SchedulePrototype\obj\Debug\SchedulePrototype.csproj.GenerateResource.cache
+C:\Users\salty\source\programs\SchedulePrototype\SchedulePrototype\obj\Debug\SchedulePrototype.csproj.CoreCompileInputs.cache
+C:\Users\salty\source\programs\SchedulePrototype\SchedulePrototype\obj\Debug\SchedulePrototype.exe
+C:\Users\salty\source\programs\SchedulePrototype\SchedulePrototype\obj\Debug\SchedulePrototype.pdb
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\SchedulePrototype.exe.config
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\SchedulePrototype.exe
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\SchedulePrototype.pdb
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\SchedulePrototype.csproj.AssemblyReference.cache
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\SchedulePrototype.csproj.SuggestedBindingRedirects.cache
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\MainWindow.g.cs
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\App.g.cs
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\SchedulePrototype_MarkupCompile.cache
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\SchedulePrototype_MarkupCompile.lref
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\MainWindow.baml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\SchedulePrototype.g.resources
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\SchedulePrototype.Properties.Resources.resources
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\SchedulePrototype.csproj.GenerateResource.cache
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\SchedulePrototype.csproj.CoreCompileInputs.cache
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\SchedulePrototype.exe
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\SchedulePrototype.pdb
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Azure.Core.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Azure.Identity.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Dapper.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\EntityFramework.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.Data.SqlClient.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.Identity.Client.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Buffers.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Memory.Data.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Memory.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Security.AccessControl.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Security.Cryptography.ProtectedData.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Security.Permissions.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Text.Json.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.ValueTuple.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Azure.Core.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Azure.Identity.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Dapper.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\EntityFramework.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.Data.SqlClient.pdb
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.Data.SqlClient.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.Identity.Client.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Abstractions.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Protocols.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Buffers.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Memory.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Memory.Data.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Security.AccessControl.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Security.Cryptography.ProtectedData.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Security.Permissions.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Text.Json.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.ValueTuple.xml
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\OneDrive\Documents\Github\Portfolio Projects\Portfolio_WID\wid\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\SchedulePrototype.csproj.CopyComplete
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\SchedulePrototype.exe.config
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\SchedulePrototype.exe
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\SchedulePrototype.pdb
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Azure.Core.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Azure.Identity.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Dapper.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\EntityFramework.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.Data.SqlClient.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.Identity.Client.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Buffers.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Memory.Data.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Memory.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Security.AccessControl.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Security.Cryptography.ProtectedData.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Security.Permissions.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Text.Json.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.ValueTuple.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Azure.Core.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Azure.Identity.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Dapper.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\EntityFramework.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.Data.SqlClient.pdb
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.Data.SqlClient.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.Identity.Client.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Abstractions.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Protocols.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Buffers.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Memory.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Memory.Data.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Security.AccessControl.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Security.Cryptography.ProtectedData.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Security.Permissions.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Text.Json.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\System.ValueTuple.xml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\SchedulePrototype.csproj.AssemblyReference.cache
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\SchedulePrototype.csproj.SuggestedBindingRedirects.cache
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\MainWindow.g.cs
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\App.g.cs
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\SchedulePrototype_MarkupCompile.cache
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\SchedulePrototype_MarkupCompile.lref
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\MainWindow.baml
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\SchedulePrototype.g.resources
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\SchedulePrototype.Properties.Resources.resources
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\SchedulePrototype.csproj.GenerateResource.cache
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\SchedulePrototype.csproj.CoreCompileInputs.cache
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\SchedulePrototype.csproj.CopyComplete
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\SchedulePrototype.exe
+C:\Users\salty\Source\Repos\sddiaz\ScheduleDB-Prototype\SchedulePrototype\obj\Debug\SchedulePrototype.pdb
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\SchedulePrototype.exe.config
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\SchedulePrototype.exe
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\SchedulePrototype.pdb
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Azure.Core.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Azure.Identity.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Dapper.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\EntityFramework.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Microsoft.Data.SqlClient.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Microsoft.Identity.Client.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Buffers.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Memory.Data.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Memory.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Security.AccessControl.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Security.Cryptography.ProtectedData.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Security.Permissions.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Text.Json.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.ValueTuple.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Azure.Core.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Azure.Identity.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Dapper.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\EntityFramework.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Microsoft.Data.SqlClient.pdb
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Microsoft.Data.SqlClient.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Microsoft.Identity.Client.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Abstractions.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Protocols.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Buffers.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Memory.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Memory.Data.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Security.AccessControl.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Security.Cryptography.ProtectedData.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Security.Permissions.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Text.Json.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\System.ValueTuple.xml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\obj\Debug\SchedulePrototype.csproj.AssemblyReference.cache
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\obj\Debug\SchedulePrototype.csproj.SuggestedBindingRedirects.cache
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\obj\Debug\MainWindow.g.cs
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\obj\Debug\App.g.cs
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\obj\Debug\SchedulePrototype_MarkupCompile.cache
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\obj\Debug\SchedulePrototype_MarkupCompile.lref
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\obj\Debug\MainWindow.baml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\obj\Debug\SchedulePrototype.g.resources
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\obj\Debug\SchedulePrototype.Properties.Resources.resources
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\obj\Debug\SchedulePrototype.csproj.GenerateResource.cache
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\obj\Debug\SchedulePrototype.csproj.CoreCompileInputs.cache
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\obj\Debug\SchedulePrototype.csproj.CopyComplete
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\obj\Debug\SchedulePrototype.exe
+C:\Users\salty\OneDrive\Desktop\Portfolio\Database Demo (CRUD)\SchedulePrototype\obj\Debug\SchedulePrototype.pdb
