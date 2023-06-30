@@ -66,3 +66,24 @@ C:\Users\admin\Documents\GitHub\Portfolio-Projects\Portfolio_Calculator\Portfoli
 C:\Users\admin\Documents\GitHub\Portfolio-Projects\Portfolio_Calculator\Portfolio_Calculator\bin\Debug\Portfolio_Calculator.application
 C:\Users\admin\Documents\GitHub\Portfolio-Projects\Portfolio_Calculator\Portfolio_Calculator\obj\Debug\Portfolio_Calculator.exe.manifest
 C:\Users\admin\Documents\GitHub\Portfolio-Projects\Portfolio_Calculator\Portfolio_Calculator\obj\Debug\Portfolio_Calculator.application
+C:\Users\salty\OneDrive\Desktop\Portfolio\Desktop Calculator\Portfolio_Calculator\bin\Debug\Portfolio_Calculator.exe.config
+C:\Users\salty\OneDrive\Desktop\Portfolio\Desktop Calculator\Portfolio_Calculator\bin\Debug\Portfolio_Calculator.exe.manifest
+C:\Users\salty\OneDrive\Desktop\Portfolio\Desktop Calculator\Portfolio_Calculator\bin\Debug\Portfolio_Calculator.application
+C:\Users\salty\OneDrive\Desktop\Portfolio\Desktop Calculator\Portfolio_Calculator\bin\Debug\Portfolio_Calculator.exe
+C:\Users\salty\OneDrive\Desktop\Portfolio\Desktop Calculator\Portfolio_Calculator\bin\Debug\Portfolio_Calculator.pdb
+C:\Users\salty\OneDrive\Desktop\Portfolio\Desktop Calculator\Portfolio_Calculator\obj\Debug\Portfolio_Calculator.csproj.AssemblyReference.cache
+C:\Users\salty\OneDrive\Desktop\Portfolio\Desktop Calculator\Portfolio_Calculator\obj\Debug\Portfolio_Calculator.csproj.SuggestedBindingRedirects.cache
+C:\Users\salty\OneDrive\Desktop\Portfolio\Desktop Calculator\Portfolio_Calculator\obj\Debug\MainWindow.g.cs
+C:\Users\salty\OneDrive\Desktop\Portfolio\Desktop Calculator\Portfolio_Calculator\obj\Debug\App.g.cs
+C:\Users\salty\OneDrive\Desktop\Portfolio\Desktop Calculator\Portfolio_Calculator\obj\Debug\Portfolio_Calculator_MarkupCompile.cache
+C:\Users\salty\OneDrive\Desktop\Portfolio\Desktop Calculator\Portfolio_Calculator\obj\Debug\Portfolio_Calculator_MarkupCompile.lref
+C:\Users\salty\OneDrive\Desktop\Portfolio\Desktop Calculator\Portfolio_Calculator\obj\Debug\App.baml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Desktop Calculator\Portfolio_Calculator\obj\Debug\MainWindow.baml
+C:\Users\salty\OneDrive\Desktop\Portfolio\Desktop Calculator\Portfolio_Calculator\obj\Debug\Portfolio_Calculator.g.resources
+C:\Users\salty\OneDrive\Desktop\Portfolio\Desktop Calculator\Portfolio_Calculator\obj\Debug\Portfolio_Calculator.Properties.Resources.resources
+C:\Users\salty\OneDrive\Desktop\Portfolio\Desktop Calculator\Portfolio_Calculator\obj\Debug\Portfolio_Calculator.csproj.GenerateResource.cache
+C:\Users\salty\OneDrive\Desktop\Portfolio\Desktop Calculator\Portfolio_Calculator\obj\Debug\Portfolio_Calculator.csproj.CoreCompileInputs.cache
+C:\Users\salty\OneDrive\Desktop\Portfolio\Desktop Calculator\Portfolio_Calculator\obj\Debug\Portfolio_Calculator.exe.manifest
+C:\Users\salty\OneDrive\Desktop\Portfolio\Desktop Calculator\Portfolio_Calculator\obj\Debug\Portfolio_Calculator.application
+C:\Users\salty\OneDrive\Desktop\Portfolio\Desktop Calculator\Portfolio_Calculator\obj\Debug\Portfolio_Calculator.exe
+C:\Users\salty\OneDrive\Desktop\Portfolio\Desktop Calculator\Portfolio_Calculator\obj\Debug\Portfolio_Calculator.pdb
