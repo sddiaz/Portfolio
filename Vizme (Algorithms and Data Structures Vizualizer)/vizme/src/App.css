@@ -1,0 +1,35 @@
+/* Dark / Light Mode Settings */
+@media (prefers-color-scheme: light) {
+  :root {
+    --main: #ffffff;
+    --lightMain: #E0E0E0;
+    --accent: #111119;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main: #000000;
+    --lightMain: #141414;
+    --accent: #ffffff;
+  }
+}
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  color: var(--accent);
+  background: var(--main);
+}
+.loader {
+  color: white;
+  width: 100vw;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  transition: 0.4s;
+}
