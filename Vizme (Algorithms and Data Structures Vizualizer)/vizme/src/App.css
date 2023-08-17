@@ -14,22 +14,19 @@
   }
 }
 .App {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-body {
+.App > * {
+  text-align: center;
+  width: 100vw; /* 100% of viewport width */
+  height: 100vh; /* 100% of viewport height */
+}
+body, html {
+  margin: 0;
+  padding: 0;
   color: var(--accent);
   background: var(--main);
-}
-.loader {
-  color: white;
-  width: 100vw;
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  transition: 0.4s;
 }

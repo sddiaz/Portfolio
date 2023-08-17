@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ClimbingBoxLoader } from 'react-spinners'
 import './Loader.css';
 
 function Loader() {
+    const [loading, setLoading] = useState(true);
+    
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false); 
+        }, 3000);
+    }, []);
+
     return (
-        <div className="loader">
+        <div className={`loader ${loading ? 'visible' : 'hidden'}`}>
             <ClimbingBoxLoader
-            size={20}
-            color="white" />
+                color="white"
+                loading={loading}
+                size={20}
+            />
         </div>
     );
 }

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import './App.css';
 import Loader from "./components/Loader/Loader";
-import Navbar from "./components/Navbar/Navbar";
 import Welcome from "./components/Welcome/Welcome";
 import Sorting from "./components/Sorting/Sorting";
 import Graphs from "./components/Graphs/Graphs";
@@ -12,12 +11,11 @@ function App() {
   return (
     <div className="App">
        <Loader/>
-       <Navbar/>
-       <Welcome/>
-       <Sorting/>
-       <Graphs/>
-       <DataStructures/>
-       <Footer/>
+       <Welcome className="child"/>
+       <Sorting className="child"/>
+       <Graphs className="child"/>
+       <DataStructures className="child"/>
+       <Footer className="child"/>
     </div>
   );
 }

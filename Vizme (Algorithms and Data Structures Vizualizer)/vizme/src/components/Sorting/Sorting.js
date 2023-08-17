@@ -2,7 +2,7 @@ import React from "react";
 
 function Sorting() {
     return (
-        <div>
+        <div className="sorting">
             I'm Sorting
         </div>
     );
