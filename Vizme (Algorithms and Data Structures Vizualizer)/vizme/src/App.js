@@ -6,16 +6,31 @@ import Sorting from "./components/Sorting/Sorting";
 import Graphs from "./components/Graphs/Graphs";
 import DataStructures from "./components/Data Structures/DataStructures";
 import Footer from "./components/Footer/Footer";
+import Cursor from "./components/Cursor/Cursor";
+import Arrows from "./components/Arrows/Arrows";
 
 function App() {
   return (
     <div className="App">
-       <Loader/>
-       <Welcome className="child"/>
-       <Sorting className="child"/>
-       <Graphs className="child"/>
-       <DataStructures className="child"/>
-       <Footer className="child"/>
+      <Cursor />
+      <Loader />
+      <Arrows />
+      <div className="sectionContainer">
+        <Welcome className="child" />
+      </div>
+      <div className="sectionContainer">
+        <Sorting className="child" />
+      </div>
+      <div className="sectionContainer">
+        <Graphs className="child" />
+      </div>
+      <div className="sectionContainer">
+        <DataStructures className="child" />
+      </div>
+      <div className="sectionContainer">
+        <Footer className="child" />
+      </div>
+      
     </div>
   );
 }
