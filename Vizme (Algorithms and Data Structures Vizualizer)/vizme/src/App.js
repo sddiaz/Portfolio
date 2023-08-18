@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './App.css';
 import Loader from "./components/Loader/Loader";
 import Welcome from "./components/Welcome/Welcome";
@@ -10,11 +10,26 @@ import Cursor from "./components/Cursor/Cursor";
 import Arrows from "./components/Arrows/Arrows";
 
 function App() {
+  const [scrollValue, setScrollValue] = useState(0);
+
+  const handleScroll = () => {
+    const scrollX = document.querySelector(".App").scrollLeft;
+    setScrollValue(scrollX);
+  };
+
+  useEffect(() => {
+    const appElement = document.querySelector(".App");
+    appElement.addEventListener("scroll", handleScroll);
+    return () => {
+      appElement.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="App">
       <Cursor />
       <Loader />
-      <Arrows />
+      <Arrows scrollValue={scrollValue} />
       <div className="sectionContainer">
         <Welcome className="child" />
       </div>
@@ -30,7 +45,6 @@ function App() {
       <div className="sectionContainer">
         <Footer className="child" />
       </div>
-      
     </div>
   );
 }

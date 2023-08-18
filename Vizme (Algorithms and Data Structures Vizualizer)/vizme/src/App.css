@@ -166,8 +166,9 @@ body {
   transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
-  width: 100vw; 
+  width: 90vw; 
   padding: 25px;
+  transition: 0.3s;
 }
 .arrows .MuiSvgIcon-root {
   color: var(--accent);
@@ -178,6 +179,7 @@ body {
 .arrows .MuiSvgIcon-root:hover {
   transform: scale(1.1);
 }
+
 /* Sorting */
 .sorting, .graphs, .dataStructures, .footer {
   width: 100vw;
