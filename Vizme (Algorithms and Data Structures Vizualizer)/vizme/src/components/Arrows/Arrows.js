@@ -7,9 +7,11 @@ function Arrows() {
 
     return (
         <div className="arrows">
-            <IconButton size="large" color="secondary">
+            <IconButton size="large" >
+                <ArrowCircleLeftIcon fontSize="inherit"/>
             </IconButton>
-            <IconButton size="large" color="secondary">
+            <IconButton size="large" >
+                <ArrowCircleRightIcon fontSize="inherit"/>
             </IconButton>
         </div>
     );

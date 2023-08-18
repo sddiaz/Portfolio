@@ -6,6 +6,7 @@
     --accent: #121212;
     --offAccent: grey;
     --darkOffAccent: rgb(126, 126, 126);
+    --glow: rgba(0, 0, 0, 1);
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -15,6 +16,7 @@
     --accent: #ffffff;
     --offAccent: rgb(201, 201, 201);
     --darkOffAccent: rgb(81, 81, 81);
+    --glow: rgba(255, 255, 255, 0.9);
   }
 }
 /* Animations */
@@ -25,7 +27,6 @@
   overflow-x: scroll; /* Enable horizontal scrolling */
   height: 100vh;
 }
-
 .sectionContainer {
   width: 100vw; 
   flex-shrink: 0; 
@@ -40,9 +41,10 @@ body {
   padding: 0;
   color: var(--accent);
   background: var(--main);
-  background-image: radial-gradient(circle at 90% 10%, rgba(143, 58, 196, 0.15), transparent),
+  background-image: radial-gradient(circle at 100% 100%, rgba(143, 58, 196, 0.15), transparent),
     radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.15), var(--main))
 }
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -126,12 +128,10 @@ body {
   background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13),       transparent),
   radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
 }
-
 .hidden {
   opacity: 0;
   pointer-events: none;
 }
-
 .visible {
   opacity: 1; 
 }
@@ -166,10 +166,18 @@ body {
   transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
-  width: 200px; /* Adjust the width as needed */
+  width: 100vw; 
   padding: 25px;
 }
-
+.arrows .MuiSvgIcon-root {
+  color: var(--accent);
+  font-size: 2em; 
+  filter: drop-shadow(0px 0px 30px var(--glow)); 
+  transition: 0.3s;
+}
+.arrows .MuiSvgIcon-root:hover {
+  transform: scale(1.1);
+}
 /* Sorting */
 .sorting, .graphs, .dataStructures, .footer {
   width: 100vw;
