@@ -8,12 +8,14 @@ import DataStructures from "./components/Data Structures/DataStructures";
 import Footer from "./components/Footer/Footer";
 import Cursor from "./components/Cursor/Cursor";
 import Arrows from "./components/Arrows/Arrows";
+import Progress from "./components/Progress/Progress";
 
 function App() {
   const [scrollValue, setScrollValue] = useState(0);
 
   const handleScroll = () => {
     const scrollX = document.querySelector(".App").scrollLeft;
+    console.log(scrollX);
     setScrollValue(scrollX);
   };
 
@@ -29,6 +31,7 @@ function App() {
     <div className="App">
       <Cursor />
       <Loader />
+      <Progress />
       <Arrows scrollValue={scrollValue} />
       <div className="sectionContainer">
         <Welcome className="child" />
