@@ -35,15 +35,25 @@ function Arrows(props) {
             behavior: "smooth",
         });
     }
+
+    function checkLeftArrow() {
+        const left = document.getElementById("leftArrow");
+        return left && left.classList.toString().includes("hidden");
+    }
+
+    function checkRightArrow() {
+        const right = document.getElementById("rightArrow");
+        return right && right.classList.toString().includes("hidden");
+    }
     
 
     return (
         <div className={`arrows ${waiting ? "hidden" : "visible"}`}>
-            <IconButton size="large" onClick={handleLeftClick}>
-                <ArrowCircleLeftIcon fontSize="inherit" className={props.scrollValue > window.innerWidth ? "visible" : "hidden"}/>
+            <IconButton size="large" onClick={handleLeftClick} className={checkLeftArrow() ? "hidden" : ""}>
+                <ArrowCircleLeftIcon id="leftArrow" fontSize="inherit" className={props.scrollValue > window.innerWidth - 1 ? "visible" : "hidden"}/>
             </IconButton>
-            <IconButton size="large" onClick={handleRightClick}>
-               <ArrowCircleRightIcon fontSize="inherit" className={props.scrollValue < window.innerWidth * 4 - 1 ? "visible" : "hidden"}/>
+            <IconButton size="large" onClick={handleRightClick} className={checkRightArrow() ? "hidden" : ""}>
+               <ArrowCircleRightIcon id="rightArrow" fontSize="inherit" className={props.scrollValue < window.innerWidth * 4 - 1 ? "visible" : "hidden"}/>
             </IconButton>
         </div>
     );
