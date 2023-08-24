@@ -12,7 +12,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --main: #000000;
-    --lightMain: #141414;
+    --lightMain: #393939;
     --accent: #ffffff;
     --offAccent: rgb(201, 201, 201);
     --darkOffAccent: rgb(81, 81, 81);
@@ -25,7 +25,7 @@
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
   }
   50% {
-    box-shadow: 0 0 20px rgba(0, 0, 255, 0.7);
+    box-shadow: 0 0 20px rgba(230, 0, 255, 0.7);
   }
   100% {
     box-shadow: 0 0 15px rgba(128, 0, 128, 0.6);
@@ -195,7 +195,7 @@ body {
 }
 
 .glow {
-  background: var(--main);
+  background: var(--lightMain);
   background-image: radial-gradient(circle at 40% 0%, rgba(143, 58, 196, 0.15), transparent),
     radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.15), var(--main));
   animation: glowAnimation 3s infinite alternate;

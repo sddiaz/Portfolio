@@ -36,6 +36,9 @@ function Welcome() {
                     repeat={Infinity}
                 />
             </div>
+            <div>
+                
+            </div>
         </div>
     );
 }
