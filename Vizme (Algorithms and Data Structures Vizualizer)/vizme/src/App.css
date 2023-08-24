@@ -152,7 +152,6 @@ body {
 
 /* Progress */
 .progress {
-  color: var(--accent);
   position: fixed; /* Set to fixed position to layer it on top of other content */
   top: 0;
   left: 0;
@@ -167,7 +166,7 @@ body {
 .progress--container {
   max-width: 75%;
   width: 75%;
-  background: var(--accent);
+  background: #000;
   border-radius: 10px;
   height: 7px;
   display: flex;
@@ -180,24 +179,24 @@ body {
   max-width: 75%;
   position: absolute;
   height: 7px;
-  background: var(--main);
+  background: #fff;
   background-image: radial-gradient(circle at 40% 0%, rgba(143, 58, 196, 0.15), transparent),
-    radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.15), var(--main));
+    radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.15), #fff);
 }
 
 .progress--notch {
   height: 25px; 
   width: 25px;
   border-radius: 50px;
-  background: var(--accent);
+  background: #000;
   transition: 0.3s;
   z-index: 9999;
 }
 
 .glow {
-  background: var(--lightMain);
+  background: #fefefe;
   background-image: radial-gradient(circle at 40% 0%, rgba(143, 58, 196, 0.15), transparent),
-    radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.15), var(--main));
+    radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.15), #fff);
   animation: glowAnimation 3s infinite alternate;
 }
 
