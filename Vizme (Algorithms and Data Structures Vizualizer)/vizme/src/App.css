@@ -20,29 +20,37 @@
   }
 }
 /* Animations */
+@keyframes glowAnimation {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(128, 0, 128, 0.6);
+  }
+}
 /* Main Content */
 .App {
   display: flex;
-  flex-direction: row; /* Change flex-direction to row */
-  overflow-x: scroll; /* Enable horizontal scrolling */
-  height: 100vh;
-}
-.sectionContainer {
-  width: 100vw; 
-  flex-shrink: 0; 
-  scroll-snap-type: x mandatory;
-  scroll-snap-align: start;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 * {
   cursor: none; /* Hide the cursor */
+}
+html { 
+  overflow:auto; 
 }
 body {
   margin: 0;
   padding: 0;
   color: var(--accent);
   background: var(--main);
-  background-image: radial-gradient(circle at 100% 100%, rgba(143, 58, 196, 0.15), transparent),
-    radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.15), var(--main))
+  background-image: radial-gradient(circle at 40% 0%, rgba(143, 58, 196, 0.15), transparent),
+    radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.15), var(--main));
 }
 
 /* Custom Scrollbar */
@@ -53,10 +61,13 @@ body {
 ::-webkit-scrollbar-track {
   border-radius: 10px;
   cursor: none;
+  background: var(--main);
+  background-image: radial-gradient(circle at 100% 100%, rgba(143, 58, 196, 0.15), transparent),
+    radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.15), var(--main))
 }
 ::-webkit-scrollbar-thumb {
   z-index: -1;
-  background: var(--offAccent); 
+  background: var(--accent); 
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover{
@@ -96,6 +107,7 @@ body {
   pointer-events: none;
   z-index: 10000;
 }
+
 /* Cursor Hover Events */
 .large-cursor {
   width: 100px;
@@ -129,9 +141,10 @@ body {
   radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
 }
 .hidden {
-  opacity: 0;
+  opacity: 0 !important;
   cursor: none;
   pointer-events: none;
+  transition: opacity 0.5s ease-in-out; /* Add transition property here */
 }
 .visible {
   opacity: 1; 
@@ -140,16 +153,52 @@ body {
 /* Progress */
 .progress {
   color: var(--accent);
-  position: fixed;
+  position: fixed; /* Set to fixed position to layer it on top of other content */
+  top: 0;
+  left: 0;
   width: 100vw;
-  height: 75px; 
+  height: 50px; 
   display: flex;
   justify-content: center;
   align-items: center;
   transition: opacity 0.4s;
+}
+
+.progress--container {
+  max-width: 75%;
+  width: 75%;
+  background: var(--accent);
+  border-radius: 10px;
+  height: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress--bar {
+  z-index: 0;
+  max-width: 75%;
+  position: absolute;
+  height: 7px;
   background: var(--main);
-  background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.2),       transparent),
-  radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.2), transparent);
+  background-image: radial-gradient(circle at 40% 0%, rgba(143, 58, 196, 0.15), transparent),
+    radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.15), var(--main));
+}
+
+.progress--notch {
+  height: 25px; 
+  width: 25px;
+  border-radius: 50px;
+  background: var(--accent);
+  transition: 0.3s;
+  z-index: 9999;
+}
+
+.glow {
+  background: var(--main);
+  background-image: radial-gradient(circle at 40% 0%, rgba(143, 58, 196, 0.15), transparent),
+    radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.15), var(--main));
+  animation: glowAnimation 3s infinite alternate;
 }
 
 /* Welcome */
@@ -176,37 +225,62 @@ body {
 /* Welcome Arrows */
 .arrows {
   position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
-  justify-content: space-between;
-  width: 90vw; 
+  justify-content: center;
+  align-items: center;
+  bottom: 0px;
+  left: 50%; /* Using left instead of transform to center the element */
+  transform: translateX(-50%);
+  width: 100vw; 
   padding: 25px;
   transition: 0.3s;
 }
+
 .arrows .MuiSvgIcon-root {
   color: var(--accent);
   font-size: 2em; 
   filter: drop-shadow(0px 0px 30px var(--glow)); 
   transition: 0.3s;
 }
+
 .arrows .MuiSvgIcon-root:hover {
   transform: scale(1.1);
 }
 
-/* Sorting */
-.sorting, .graphs, .dataStructures, .footer {
+.fade-out {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+/* Center Each Page */
+.sorting, .graphs, .dataStructures {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+/* Sorting + Visualizer */
+.sorting--description {
+  height: 25vh;
+  width: 80vw;
+}
+.sorting--box {
+  height: 50vh;
+  width: 80vw;
+}
+.visualizer--bar {
+  color: var(--accent);
 }
 /* Graphs */
 
 /* Data Structures */
 
 /* Footer */
-
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* Back to Top */
