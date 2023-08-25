@@ -1,6 +1,6 @@
 # Portfolio Projects - WiD
 
-This will (hopefully) be my largest project to date. It is very much in-progress as of now (5/12/23)! I wanted to build a full-stack web application that acts as a daily journal app. This project will test my ability to handle larger applications, dealing with every end of the lifecycle of a software project by myself. 
+This will (hopefully) be my largest project to date. As of August 2023, it's progress has been postponed! I wanted to build a full-stack web application that acts as a daily journal app. This project will test my ability to handle larger applications, dealing with every end of the lifecycle of a software project by myself. 
 
 ## Overview
 
