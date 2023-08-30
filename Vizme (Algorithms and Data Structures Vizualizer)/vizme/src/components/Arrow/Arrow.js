@@ -60,10 +60,10 @@ function Arrows() {
     //#region App
 
     return (
-        <div className={`arrows ${waiting && scrollValue < window.innerHeight - 1 ? "hidden" : "visible"}`}>
-            <IconButton size="large" onClick={handleClick} className={scrollValue > window.innerHeight - 1? "hidden" : "visible"}  >
+        <div className={`arrows ${waiting && scrollValue < 0.1 * window.innerHeight - 1 ? "hidden" : "visible"}`}>
+            <IconButton size="large" onClick={handleClick} className={scrollValue > 0.1 * window.innerHeight - 1? "hidden" : "visible"}  >
                 <Tooltip placement="top" arrow title="Get Started">
-                <ArrowCircleDownIcon id="arrow" fontSize="inherit" className={scrollValue > window.innerHeight - 1 ? "hidden" : "visible"}  />
+                <ArrowCircleDownIcon id="arrow" fontSize="inherit" className={scrollValue > 0.1 * window.innerHeight - 1 ? "hidden" : "visible"}  />
                 </Tooltip>
             </IconButton>
         </div>
