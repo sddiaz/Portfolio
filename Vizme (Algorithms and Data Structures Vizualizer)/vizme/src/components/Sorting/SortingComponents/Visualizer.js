@@ -8,17 +8,14 @@ function Visualizer({ resetKey, length }) {
     const [arr, setArr] = useState([]);
     const [arrSize, setArrSize] = useState(length);
     const [width, setWidth] = useState(0);
-    
+    window.addEventListener("resize", handleResize);
+
     //#endregion
 
     //#region Methods
 
     useEffect(() => {
         resetArray();
-        window.addEventListener("resize", handleResize);
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
     }, []);
 
     useEffect(() => {
