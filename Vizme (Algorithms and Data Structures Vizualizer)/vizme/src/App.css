@@ -273,7 +273,17 @@ body {
 }
 .sorting--description {
   height: 100%;
-  width: 25%;
+  width: 33%;
+}
+.form--controls {
+  height: 50%;
+  width: 100%;
+  background: red;
+}
+.form--info {
+  height: 50%;
+  width: 100%;
+  background: green;
 }
 .sorting--box {
   display: flex;
@@ -287,10 +297,41 @@ body {
   align-items: flex-end;
   justify-content: center;
 }
+.bar--stack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .visualizer--bar {
-  height: 30px;
   background-color: var(--accent);
   box-shadow: 0 0 20px rgba(230, 0, 255, 0.7);
+}
+.form--slider {
+  color: white;
+}
+.form--slider .MuiSlider-thumb {
+  width: 8px;
+  height: 8px;
+  transition: 0.3s cubic-bezier(.47, 1.64, .41, .8);
+
+  &:before {
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.4);
+  }
+
+  &:hover,
+  &.Mui-focusVisible {
+    box-shadow: 0px 0px 0px 8px var(--accent);
+  }
+
+  &.Mui-active {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.form--slider .MuiSlider-rail {
+  opacity: 0.28;
 }
 /* Graphs */
 

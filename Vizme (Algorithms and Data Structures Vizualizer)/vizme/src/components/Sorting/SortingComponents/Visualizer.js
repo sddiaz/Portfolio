@@ -1,11 +1,12 @@
+import { Widgets } from "@mui/icons-material";
 import React, { useEffect, useState } from "react";
 
-function Visualizer() {
+function Visualizer({ resetKey, length }) {
 
     //#region Variables
 
     const [arr, setArr] = useState([]);
-    const [arrSize, setArrSize] = useState(100);
+    const [arrSize, setArrSize] = useState(length);
     const [width, setWidth] = useState(0);
     
     //#endregion
@@ -22,7 +23,16 @@ function Visualizer() {
 
     useEffect(() => {
         handleResize(); // Update width when arrSize changes
+        resetArray();
     }, [arrSize]);
+
+    useEffect(() => {
+        resetArray();
+    }, [resetKey])
+
+    useEffect(() => {
+      setArrSize(length);
+    }, [length])
 
     function resetArray() {
         const newArr = [];
@@ -38,7 +48,7 @@ function Visualizer() {
 
     function handleResize() {
         const newWidth = window.innerWidth < 1024 ? 
-            (window.innerWidth * 0.8) / arrSize :
+            (window.innerWidth * 0.85) / arrSize :
             (window.innerWidth * 0.9 * 0.75) / arrSize;
         setWidth(newWidth);
     }
@@ -51,14 +61,16 @@ function Visualizer() {
     <div className="visualizer--container">
       <div className="visualizer--bars">
         {arr.map((value, index) => (
-          <div
-            className="visualizer--bar"
-            key={index}
-            style={{
-              height: `${value}px`,
-              width: `${width}px`,
-            }}
-          ></div>
+          <div className="bar--stack">
+            <div
+              className="visualizer--bar"
+              key={index}
+              style={{
+                height: `${value}px`,
+                width: `${width}px`,
+              }}
+            ></div>
+          </div>
         ))}
       </div>
     </div>
