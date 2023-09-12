@@ -1,23 +1,32 @@
 import React, { useState, useEffect } from "react";
-import { Button, Slider } from "@mui/material";
-import { styled, useTheme } from '@mui/material/styles';
-import SortingAlgorithms, { getMergeSortAnimations } from "./Algorithms/SortingAlgorithms";
+import { Box, Button, Slider, Tab } from "@mui/material";
+import { useTheme } from '@mui/material/styles';
+import { getMergeSortAnimations } from "./Algorithms/SortingAlgorithms";
 
 function Sorting() {    
 
     //#region Variables
-
+    const [sorting, setSorting] = useState(false);
     const [arr, setArr] = useState([]);
     const [arrSize, setArrSize] = useState(10);
     const [width, setWidth] = useState(0);
     const [speed, setSpeed] = useState(100);
     const [resetKey, setResetKey] = useState(0.0);
     const [sliderPosition, setSliderPosition] = useState(10);
+    // const [sortValue, setSortValue] = useState(1);
     const theme = useTheme();
     // Reset array after Slider Changes
     const changeKey = () => {
         setResetKey((prevKey) => prevKey + .1);
     }
+
+    let buttonStyle = {
+      color: window.matchMedia('(prefers-color-scheme: dark)').matches ? '#fff' : '#000',
+      background: window.matchMedia('(prefers-color-scheme: dark)').matches ? '#000' : '#fff',
+      '&:hover': {
+        background: window.matchMedia('(prefers-color-scheme: dark)').matches ? '#333' : '#ccc',
+      },
+    };
 
     //#endregion
 
@@ -58,12 +67,51 @@ function Sorting() {
         setWidth(newWidth);
     }
 
-    function mergeSort(arr) {
-        const animations = getMergeSortAnimations(arr);
-        handleAnimations(animations);
+    function handleTabChange(event, newValue) {
+      setSortValue(newValue);
     }
+
+    // function bubbleSort(arr) {
+    //     const animations = getBubbleSortAnimations(arr);
+    //     handleAnimations(animations);
+    // }
+
+    // function selectionSort(arr) {
+    //   const animations = getSelectionSortAnimations(arr);
+    //   handleAnimations(animations);
+    // }
+    
+    // function insertionSort(arr) {
+    //   const animations = getInsertionSortAnimations(arr);
+    //   handleAnimations(animations);
+    // }
+
+    // function quickSort(arr) {
+    //   const animations = getQuickSortAnimations(arr);
+    //   handleAnimations(animations);
+    // }
+
+    function mergeSort(arr) {
+      let animations = getMergeSortAnimations(arr);
+      let animationTime = speed * animations.length;
+      handleAnimations(animations);
+      setTimeout(() => {
+            setSorting(false);
+        }, animationTime);
+    }
+
+    // function heapSort(arr) {
+    //   const animations = getHeapSortAnimations(arr);
+    //   handleAnimations(animations);
+    // }
+
+    // function timSort(arr) {
+    //   const animations = getTimSortAnimations(arr);
+    //   handleAnimations(animations);
+    // }
     // Function to change our bars based on the animations provided. 
     function handleAnimations(animations) {
+      setSorting(true);
       for (let i = 0; i < animations.length; i++) {
         const arrayBars = document.getElementsByClassName('visualizer--bar');
         const isColorChange = i % 3 !== 2;
@@ -71,7 +119,7 @@ function Sorting() {
           const [barOneIdx, barTwoIdx] = animations[i];
           const barOneStyle = arrayBars[barOneIdx].style;
           const barTwoStyle = arrayBars[barTwoIdx].style;
-          const color = i % 3 == 0 ? window.matchMedia('(prefers-color-scheme: dark)').matches ? '#800020' : '#000' : "rgba(0, 0, 0, 1)";
+          const color = i % 3 == 0 ? window.matchMedia('(prefers-color-scheme: dark)').matches ? '#000' : '#fff' : "#800020";
           // Finished Elements.
           setTimeout(() => {
             barOneStyle.backgroundColor = color;
@@ -85,8 +133,6 @@ function Sorting() {
           }, i * speed);
         }
       }
-      // Reset Styling 
-      resetStyling(); 
     }
 
     function randFromInterval(min, max) {
@@ -111,8 +157,13 @@ function Sorting() {
             <div className="sorting--container">
                 <div className="sorting--description">
                         <div className="form--controls">
-                            <Button className="form--generateBtn" variant="contained" onClick={changeKey}>New Array</Button>
+                            <Button disabled={sorting}
+                                    sx={buttonStyle} 
+                                    className="form--generateBtn" 
+                                    variant="contained" 
+                                    onClick={changeKey}>New Array</Button>
                             <Slider 
+                            disabled={sorting}
                                 defaultValue={10}
                                 aria-label="time-indicator"
                                 size="small"
@@ -149,10 +200,28 @@ function Sorting() {
                                     },
                                 }}
                             />
-                            <Button className="form--generateBtn" variant="contained" onClick={() => mergeSort(arr)}>Merge</Button>
+                            <Button 
+                            disabled={sorting}
+                            sx={buttonStyle} 
+                            className="form--generateBtn" 
+                            variant="contained" 
+                            onClick={() => mergeSort(arr)}>Sort</Button>
                         </div>
                         <div className="form--info">
-
+                          {/* <Box sx={{ width: '100%', typography: 'body1' }}>
+                            <TabContext value={value}>
+                              <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                                <TabList onChange={handleChange} aria-label="lab API tabs example">
+                                  <Tab label="Item One" value="1" />
+                                  <Tab label="Item Two" value="2" />
+                                  <Tab label="Item Three" value="3" />
+                                </TabList>
+                              </Box>
+                              <TabPanel value="1">Item One</TabPanel>
+                              <TabPanel value="2">Item Two</TabPanel>
+                              <TabPanel value="3">Item Three</TabPanel>
+                            </TabContext>
+                          </Box> */}
                         </div>
                     </div>
                 <div className="sorting--box">
