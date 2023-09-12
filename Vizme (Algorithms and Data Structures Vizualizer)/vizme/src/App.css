@@ -278,12 +278,22 @@ body {
 .form--controls {
   height: 50%;
   width: 100%;
-  background: red;
+  background: green;
+  display: flex; 
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
 }
 .form--info {
   height: 50%;
   width: 100%;
-  background: green;
+  background: rebeccapurple;
+}
+.form--generate {
+  
+}
+.form--nav {
+  width: 100%;
 }
 .sorting--box {
   display: flex;
@@ -305,7 +315,7 @@ body {
 }
 .visualizer--bar {
   background-color: var(--accent);
-  box-shadow: 0 0 20px rgba(230, 0, 255, 0.7);
+  box-shadow: 0 0 5px rgba(230, 0, 255, 0.7);
 }
 .form--slider {
   color: white;
