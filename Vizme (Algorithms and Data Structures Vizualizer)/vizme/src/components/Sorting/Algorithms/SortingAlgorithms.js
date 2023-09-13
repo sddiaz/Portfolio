@@ -25,6 +25,7 @@ function bubbleSortHelper(array, animations) {
                 animations.push({"Swap": [j, j + 1]});
             }
         }
+        animations.push({"Final Position": n - i - 1});
     }
 }
 
@@ -38,22 +39,23 @@ function selectionSortHelper(array, animations) {
   for (let i = 0; i < array.length; i++) {
     let min = i; 
     // Turn the initial minimum color. 
-    animations.push[{"Start Index": i}];
     for (let j = i + 1; j < array.length; j++) {
-      animations.push[{"Min Check": j}];
       if (array[j] < array[min]) {
           min = j; 
       }
+      animations.push({"Color Change": [i, j]});
+      animations.push({"Color Revert": [i, j]});
     }
     if (i != min) {
       // Swap
       let temp = array[i];
       array[i] = array[min];
       array[min] = temp;
-      animations.push[{"Swap": [i, min]}];
+      animations.push({"Swap": [i, min]});
     }
+    // Make our item green if we know it's in the right spot.
+    animations.push({"Final Position": i});
   }
-
 }
 
 //   Insertion Sort

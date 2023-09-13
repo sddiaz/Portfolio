@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Box, Button, Divider, FormControl, InputLabel, MenuItem, OutlinedInput, Select, Slider, Tab, Tabs } from "@mui/material";
 import { createTheme, useTheme } from '@mui/material/styles';
-import { getBubbleSortAnimations, getMergeSortAnimations } from "./Algorithms/SortingAlgorithms";
+import { getBubbleSortAnimations, getMergeSortAnimations, getSelectionSortAnimations } from "./Algorithms/SortingAlgorithms";
 
 import BubbleChartIcon from '@mui/icons-material/BubbleChart';
 import SwipeIcon from '@mui/icons-material/Swipe';
@@ -167,6 +167,14 @@ function Sorting() {
             barTwoStyle.backgroundColor = color;
           }, i * speed);
         }
+        else if (animationType == "Final Position") {
+          const barStyle = arrayBars[animationValues].style;
+          const color = 'green';
+          // Revert briefly after selecting. 
+          setTimeout(() => {
+            barStyle.backgroundColor = color;
+          }, i * speed);
+        }
         // The Swap animation is used for bubble sort, selection sort, insertion sort. 
         else if (animationType == "Swap") {
             setTimeout(() => {
@@ -197,7 +205,7 @@ function Sorting() {
           }, i * speed);
         }
       }
-      // Set color to green when done. 
+      // Set all colors to green when done. 
       setTimeout(() => {
         for (let i = 0; i < arrayBars.length; i++) {
             arrayBars[i].style.backgroundColor = 'green';
