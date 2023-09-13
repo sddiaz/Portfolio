@@ -163,7 +163,9 @@ function Sorting() {
             const [barOneIndex, newHeight] = animations[i];
             const barOneStyle = arrayBars[barOneIndex].style;
             barOneStyle.height = `${newHeight}px`;
-            barValues[barOneIndex].innerHTML = newHeight.toString();
+            if (arrSize < 35) {
+              barValues[barOneIndex].innerHTML = newHeight.toString();
+            }
           }, i * speed);
         }
       }
@@ -338,7 +340,7 @@ function Sorting() {
                         </div>
 
                           <Divider className="darkMode" />
-                          <div className="form--controlsTitle">Info <InfoIcon fontSize="large" /></div>
+                          <div className="form--controlsTitle">Learn <InfoIcon fontSize="large" /></div>
                           <Divider className="darkMode" />
                           <div className="form--info">
                             Description, 
