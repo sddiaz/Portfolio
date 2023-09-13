@@ -61,6 +61,25 @@ function selectionSortHelper(array, animations) {
 //   Insertion Sort
 export function getInsertionSortAnimations(array) {
     const animations = [];
+    insertionSortHelper(array, animations);
+    return animations; 
+}
+function insertionSortHelper(array, animations){
+  for (let i = 1; i < array.length; i++) {
+    let key = array[i];
+    let j = i - 1;
+    animations.push({"Color Change": [i, j]});
+    animations.push({"Color Revert": [i, j]});
+    while (j >= 0 && array[j] > key) {
+        animations.push({"Color Change": [i, j]});
+        animations.push({"Color Revert": [i, j]});
+        animations.push({"Overwrite": [j + 1, array[j]]});
+        array[j + 1] = array[j];
+        j--;
+    }
+    array[j + 1] = key;
+    animations.push({"Overwrite": [j + 1, key]});
+  }
 }
 
 //   Quick Sort

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Box, Button, Divider, FormControl, InputLabel, MenuItem, OutlinedInput, Select, Slider, Tab, Tabs } from "@mui/material";
 import { createTheme, useTheme } from '@mui/material/styles';
-import { getBubbleSortAnimations, getMergeSortAnimations, getSelectionSortAnimations } from "./Algorithms/SortingAlgorithms";
+import { getBubbleSortAnimations, getInsertionSortAnimations, getMergeSortAnimations, getSelectionSortAnimations } from "./Algorithms/SortingAlgorithms";
 
 import BubbleChartIcon from '@mui/icons-material/BubbleChart';
 import SwipeIcon from '@mui/icons-material/Swipe';
@@ -208,11 +208,13 @@ function Sorting() {
       // Set all colors to green when done. 
       setTimeout(() => {
         for (let i = 0; i < arrayBars.length; i++) {
+          setTimeout(() => {
             arrayBars[i].style.backgroundColor = 'green';
+          }, (i * speed - 1));
         }
-
+      
         setSorting(false);
-    }, animationTime);
+      }, animationTime);
     }
     // Get random number given interval
     function randFromInterval(min, max) {
