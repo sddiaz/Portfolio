@@ -27,7 +27,7 @@ function Sorting() {
     const [tabValue, setTabValue] = useState(1);
     const [mediaDark, setMediaDark] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches);
     const [tabOrientation, setTabOrientation] = useState('horizontal');
-
+    const [estimatedRuntime, setEstimatedRuntime] = useState(null);
     const theme = useTheme();
     // Reset array after Slider Changes
     const changeKey = () => {
@@ -53,12 +53,15 @@ function Sorting() {
         setSpeed(1000/arrSize);
         resetArray();
     }, [arrSize]);
+
     useEffect(() => {
         resetArray();
     }, [resetKey]);
+
     useEffect(() => {
       setArrSize(sliderPosition);
     }, [sliderPosition]);
+
     useEffect(() => {
       // Do this to order our function calls
       // In accordance with the current state
@@ -69,13 +72,14 @@ function Sorting() {
     }, [sorting]);
 
     function resetArray() {
-        const newArr = [];
-        for (let i = 0; i < arrSize; i++) {
-            // We use window.innerHeight/2 as the maximum height to keep bars from overflowing into our UI.
-            newArr.push(randFromInterval(5, window.innerHeight / 2));
-        }
-        setArr(newArr);
-        resetStyling();
+      let arrayBars = document.getElementsByClassName('')
+      const newArr = [];
+      for (let i = 0; i < arrSize; i++) {
+          // We use window.innerHeight/2 as the maximum height to keep bars from overflowing into our UI.
+          newArr.push(randFromInterval(5, window.innerHeight / 2));
+      }
+      setArr(newArr);
+      resetStyling();
     }
 
     function handleResize() {
@@ -141,55 +145,55 @@ function Sorting() {
 
     // Function to change our bars based on the animations provided. 
     function handleAnimations(animations) {
+      // Obtain Total Animation Time + DOM elements. 
       let animationTime = speed * animations.length;
       let arrayBars = document.getElementsByClassName('visualizer--bar');
       let barValues = document.getElementsByClassName('visualizer--barValues');
-      console.log(barValues);
+
       // Run Animations (Either Height Change / Color Change)
       for (let i = 0; i < animations.length; i++) {
-        // Every 3 animations is a swap / Non-color change.
-        const isColorChange = i % 3 !== 2;
-
-        if (isColorChange) {
-          const [barOneIdx, barTwoIdx] = animations[i];
+        const animationObject = animations[i];
+        const animationType = Object.keys(animationObject)[0]; // Obtain the type of the current animation.
+        const animationValues = animationObject[animationType]; // Grabs the indices of the current animation. 
+        // Color Change
+        if (animationType == "Color Change" || animationType == "Color Revert") {
+          const [barOneIdx, barTwoIdx] = animationValues;
           const barOneStyle = arrayBars[barOneIdx].style;
           const barTwoStyle = arrayBars[barTwoIdx].style;
-          const color = i % 3 == 0 ? window.matchMedia('(prefers-color-scheme: dark)').matches ? '#000' : '#fff' : "#800020";
-          // Finished Elements.
+          const color = animationType == "Color Change" ? window.matchMedia('(prefers-color-scheme: dark)').matches ? '#000' : '#fff' : "#800020";
+          // Revert briefly after selecting. 
           setTimeout(() => {
             barOneStyle.backgroundColor = color;
             barTwoStyle.backgroundColor = color;
           }, i * speed);
         }
-        
-        else {
-          setTimeout(() => {
-            let [barOneIndex, newHeight] = animations[i];
-              if (barOneIndex != -1)  {
-              // Tab Value: 1 -> Bubble Sort
-              if (tabValue == 1) {
-                const [barOneIndex, barTwoIndex] = animations[i];
-                console.log(barOneIndex, barTwoIndex);
-                const barOneStyle = arrayBars[barOneIndex].style;
-                const barTwoStyle = arrayBars[barTwoIndex].style;
-                let tempHeight = barValues[barOneIndex].innerHTML;
-                barOneStyle.height = `${barValues[barTwoIndex].innerHTML}px`;
-                barTwoStyle.height = `${tempHeight}px`;
-                if (arrSize < 35) {
-                  barValues[barOneIndex].innerHTML = barValues[barTwoIndex].innerHTML.toString();
-                  barValues[barTwoIndex].innerHTML = tempHeight.toString();
-                }
+        // The Swap animation is used for bubble sort, selection sort, insertion sort. 
+        else if (animationType == "Swap") {
+            setTimeout(() => {
+              const [barOneIndex, barTwoIndex] = animationValues;
+              // Swap!
+              const barOneStyle = arrayBars[barOneIndex].style;
+              const barTwoStyle = arrayBars[barTwoIndex].style;
+              let tempHeight = barValues[barOneIndex].innerHTML;
+              barOneStyle.height = `${barValues[barTwoIndex].innerHTML}px`;
+              barTwoStyle.height = `${tempHeight}px`;
+              
+              // Swap the values (text) too!
+              if (arrSize < 35) {
+                barValues[barOneIndex].innerHTML = barValues[barTwoIndex].innerHTML.toString();
+                barValues[barTwoIndex].innerHTML = tempHeight.toString();
               }
-              // For Merge Sort
-              else {
-                const [barOneIndex, newHeight] = animations[i];
+          }, i * speed);
+        }
+        // The Overwrite animation is used for merge sort, 
+        else if (animationType == "Overwrite") {
+          setTimeout(() => {
+                const [barOneIndex, newHeight] = animationValues;
                 const barOneStyle = arrayBars[barOneIndex].style;
                 barOneStyle.height = `${newHeight}px`;
                 if (arrSize < 35) {
                   barValues[barOneIndex].innerHTML = newHeight.toString();
                 }
-              }
-            }
           }, i * speed);
         }
       }
@@ -202,11 +206,11 @@ function Sorting() {
         setSorting(false);
     }, animationTime);
     }
-
+    // Get random number given interval
     function randFromInterval(min, max) {
       return Math.floor(Math.random() * (max - min + 1) + min);
     } 
-
+    // Revert to default bar styling.
     function resetStyling() {
       const arrayBars = document.getElementsByClassName('visualizer--bar');
       const defaultStyling = window.matchMedia('(prefers-color-scheme: dark)').matches ? '#fff' : '#000';
@@ -371,6 +375,10 @@ function Sorting() {
                             Pseudocode
                             Time/Space Complexity
                             Implementations
+                            {estimatedRuntime && 
+                            <div>
+                              Estimated Animation Time: {estimatedRuntime}s
+                              </div>}
                           </div>
 
                 </div>
@@ -379,8 +387,8 @@ function Sorting() {
                      <div className="visualizer--container">
                       <div className="visualizer--bars">
                         {arr.map((value, index) => (
-                          <div className="bar--stack">
-                            <div className="visualizer--barValues">
+                          <div className="bar--stack transition">
+                            <div className="visualizer--barValues transition">
                             {arrSize < 35 && value}
                             </div>
                             <div

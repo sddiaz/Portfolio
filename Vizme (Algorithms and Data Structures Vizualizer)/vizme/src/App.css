@@ -36,6 +36,12 @@
 .transition {
   transition: 0.1s ease;
 }
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
 /* Main Content */
 .App {
   display: flex;
