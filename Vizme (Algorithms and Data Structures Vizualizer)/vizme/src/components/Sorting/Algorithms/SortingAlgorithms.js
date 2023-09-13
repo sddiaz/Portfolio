@@ -1,7 +1,35 @@
 //   Bubble Sort
 export function getBubbleSortAnimations(array) {
     const animations = [];
-    
+    const helperArray = array.slice();
+    bubbleSortHelper(array, animations, helperArray);
+    return animations;
+}
+function bubbleSortHelper(array, animations, helperArray) {
+    let n = array.length;
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n - i - 1; j++) {
+            // These are the values that we're comparing; we push them once
+            // to change their color.
+            animations.push([j, j + 1]);
+            // These are the values that we're comparing; we push them a second
+            // time to revert their color.
+            animations.push([j, j + 1]);
+            
+            if (array[j] > array[j + 1]) {
+                // Swap values when comparing.
+                let temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+                // Animate our swawp for array values at j and j + 1.
+                animations.push([j, j + 1]);
+            }
+            // No animation if no swap. 
+            else {
+                animations.push([-1, -1]);
+            }
+        }
+    }
 }
 //   Selection Sort
 export function getSelectionSortAnimations(array) {

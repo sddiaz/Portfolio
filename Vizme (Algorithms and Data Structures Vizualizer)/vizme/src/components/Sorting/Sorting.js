@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Box, Button, Divider, FormControl, InputLabel, MenuItem, OutlinedInput, Select, Slider, Tab, Tabs } from "@mui/material";
 import { createTheme, useTheme } from '@mui/material/styles';
-import { getMergeSortAnimations } from "./Algorithms/SortingAlgorithms";
+import { getBubbleSortAnimations, getMergeSortAnimations } from "./Algorithms/SortingAlgorithms";
 
 import BubbleChartIcon from '@mui/icons-material/BubbleChart';
 import SwipeIcon from '@mui/icons-material/Swipe';
@@ -147,7 +147,9 @@ function Sorting() {
       console.log(barValues);
       // Run Animations (Either Height Change / Color Change)
       for (let i = 0; i < animations.length; i++) {
+        // Every 3 animations is a swap / Non-color change.
         const isColorChange = i % 3 !== 2;
+
         if (isColorChange) {
           const [barOneIdx, barTwoIdx] = animations[i];
           const barOneStyle = arrayBars[barOneIdx].style;
@@ -158,13 +160,35 @@ function Sorting() {
             barOneStyle.backgroundColor = color;
             barTwoStyle.backgroundColor = color;
           }, i * speed);
-        } else {
+        }
+        
+        else {
           setTimeout(() => {
-            const [barOneIndex, newHeight] = animations[i];
-            const barOneStyle = arrayBars[barOneIndex].style;
-            barOneStyle.height = `${newHeight}px`;
-            if (arrSize < 35) {
-              barValues[barOneIndex].innerHTML = newHeight.toString();
+            let [barOneIndex, newHeight] = animations[i];
+              if (barOneIndex != -1)  {
+              // Tab Value: 1 -> Bubble Sort
+              if (tabValue == 1) {
+                const [barOneIndex, barTwoIndex] = animations[i];
+                console.log(barOneIndex, barTwoIndex);
+                const barOneStyle = arrayBars[barOneIndex].style;
+                const barTwoStyle = arrayBars[barTwoIndex].style;
+                let tempHeight = barValues[barOneIndex].innerHTML;
+                barOneStyle.height = `${barValues[barTwoIndex].innerHTML}px`;
+                barTwoStyle.height = `${tempHeight}px`;
+                if (arrSize < 35) {
+                  barValues[barOneIndex].innerHTML = barValues[barTwoIndex].innerHTML.toString();
+                  barValues[barTwoIndex].innerHTML = tempHeight.toString();
+                }
+              }
+              // For Merge Sort
+              else {
+                const [barOneIndex, newHeight] = animations[i];
+                const barOneStyle = arrayBars[barOneIndex].style;
+                barOneStyle.height = `${newHeight}px`;
+                if (arrSize < 35) {
+                  barValues[barOneIndex].innerHTML = newHeight.toString();
+                }
+              }
             }
           }, i * speed);
         }
