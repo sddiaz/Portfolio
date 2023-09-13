@@ -23,13 +23,18 @@
 @keyframes glowAnimation {
   0% {
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    background-position: 0% 50%;
   }
   50% {
     box-shadow: 0 0 20px rgba(230, 0, 255, 0.7);
   }
   100% {
     box-shadow: 0 0 15px rgba(128, 0, 128, 0.6);
+    background-position: 100% 50%;
   }
+}
+.transition {
+  transition: 0.1s ease;
 }
 /* Main Content */
 .App {
@@ -161,6 +166,7 @@ body {
   justify-content: center;
   align-items: center;
   transition: opacity 0.4s;
+  z-index: -9999;
 }
 
 .progress--container {
@@ -275,13 +281,48 @@ body {
   height: 100%;
   width: 33%;
 }
+.form--controlsTitle {
+  color: var(--accent);
+  font-weight: bolder;
+  font-family: monospace;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.form--controlsTitle > * {
+  margin: 10px;
+}
 .form--controls {
-  height: 50%;
   width: 100%;
   display: flex; 
-  justify-content: flex-end;
+  justify-content: space-around;
+  align-items: center;
+}
+.form--controls > * {
+  margin: 10px 0px 10px 0px !important;
+}
+.form--slider {
+  display: flex; 
+  justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: 17px;
+  margin: 10px;
+}
+.form--generateBtn {
+  color: white !important;
+  font-weight: bold !;
+  background: linear-gradient(45deg, #ff0055, #0011ff, #aa00ff) !important;
+  background-size: 200% 200% !important;
+  animation: glowAnimation 3s infinite alternate !important;
+  transition: transform 0.3s ease-in-out !important;
+}
+.form--generateBtn:hover {
+  transform: scale(1.1) !important
 }
 .form--info {
   height: 50%;
@@ -307,36 +348,44 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: monospace;
 }
 .visualizer--bar {
   background-color: var(--accent);
   box-shadow: 0 0 5px rgba(230, 0, 255, 0.7);
 }
+.form--select {
+  color: var(--accent) !important;
+  border: 1px solid var(--accent) !important;
+}
 .form--slider {
-  color: white;
+  color: var(--accent) !important;
 }
-.form--slider .MuiSlider-thumb {
-  width: 8px;
-  height: 8px;
-  transition: 0.3s cubic-bezier(.47, 1.64, .41, .8);
-
-  &:before {
-    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.4);
-  }
-
-  &:hover,
-  &.Mui-focusVisible {
-    box-shadow: 0px 0px 0px 8px var(--accent);
-  }
-
-  &.Mui-active {
-    width: 20px;
-    height: 20px;
-  }
+.form--buttons {
+  width: 40% !important;
+  color: var(--main) !important;
+  background: var(--accent) !important;
 }
-
-.form--slider .MuiSlider-rail {
-  opacity: 0.28;
+.form--inputLabel {
+  color: black !important;
+  font-weight: bolder !important;
+  padding: 1.5px !important;
+  border-radius: 5px;
+  border: 1px solid var(--accent) !important;
+  background: #d5cfe8;
+}
+.form--algorithms {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.form--menuItem {
+  display: flex; 
+  width: 100%;
+  justify-content: space-between;
+}
+.darkMode {
+  background: var(--accent) !important;
 }
 /* Graphs */
 
@@ -358,6 +407,11 @@ body {
   }
   .sorting--box {
     width: 100%;
+  }
+  .form--algorithms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

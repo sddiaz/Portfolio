@@ -1,11 +1,29 @@
-  export function getMergeSortAnimations(array) {
+//   Bubble Sort
+export function getBubbleSortAnimations(array) {
+    const animations = [];
+    
+}
+//   Selection Sort
+export function getSelectionSortAnimations(array) {
+    const animations = [];
+}
+//   Insertion Sort
+export function getInsertionSortAnimations(array) {
+    const animations = [];
+}
+//   Quick Sort
+export function getQuickSortAnimations(array) {
+    const animations = [];
+}
+//   Merge Sort
+export function getMergeSortAnimations(array) {
     const animations = [];
     const helperArray = array.slice();
     mergeSortHelper(array, 0, array.length - 1, helperArray, animations);
     return animations;
   }
   
-  function mergeSortHelper(
+function mergeSortHelper(
     mainArray,
     startIdx,
     endIdx,
@@ -19,7 +37,7 @@
     doMerge(mainArray, startIdx, middleIdx, endIdx, helperArray, animations);
   }
   
-  function doMerge(
+function doMerge(
     mainArray,
     startIdx,
     middleIdx,
@@ -63,3 +81,11 @@
     }
   }
 
+//   Heap Sort
+export function getHeapSortAnimations(array) {
+    const animations = [];
+}
+//   Tim Sort
+export function getTimSortAnimations(array) {
+    const animations = [];
+}

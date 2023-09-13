@@ -9,23 +9,23 @@ function Welcome() {
             <div className="welcome--typing">
                 <TypeAnimation
                     sequence={[
-                        'For Software Engineers',
+                        'For Software Engineers...',
                         3000, 
-                        'For Data Scientists',
+                        'For Data Scientists..',
                         3000,
-                        'For the Inquisitive',
+                        'For the Inquisitive...',
                         3000,
-                        'For fun.',
+                        'For fun.. :)',
                         3000,
-                        'For Problem Solvers', // Types 'Four' without deleting 'Three'
+                        'For Problem Solvers..', // Types 'Four' without deleting 'Three'
                         3000,
-                        'For Innovators',
+                        'For Innovators...',
                         3000,
-                        'For Lifelong Learners',
+                        'For Lifelong Learners...',
                         3000,
-                        'For Tech Enthusiasts',
+                        'For Tech Enthusiasts...',
                         3000,
-                        'For Curious Minds',
+                        'For Curious Minds..',
                         3000,
                         () => {
                         console.log('Sequence completed');

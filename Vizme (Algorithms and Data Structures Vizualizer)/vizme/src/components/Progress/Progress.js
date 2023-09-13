@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
 
 function Progress() {
+
+    //#region Variables
+
     const [scrollPositions, setScrollPositions] = useState([false, false, false]);
     const [scrollProgress, setScrollProgress] = useState(0);
+    
+    //#endregion
 
     useEffect(() => {
         const handleScroll = () => {

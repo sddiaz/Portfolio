@@ -1,11 +1,22 @@
 import React, { useState, useEffect } from "react";
-import { Box, Button, Slider, Tab } from "@mui/material";
-import { useTheme } from '@mui/material/styles';
+import { Box, Button, Divider, FormControl, InputLabel, MenuItem, OutlinedInput, Select, Slider, Tab, Tabs } from "@mui/material";
+import { createTheme, useTheme } from '@mui/material/styles';
 import { getMergeSortAnimations } from "./Algorithms/SortingAlgorithms";
+
+import BubbleChartIcon from '@mui/icons-material/BubbleChart';
+import SwipeIcon from '@mui/icons-material/Swipe';
+import StyleIcon from '@mui/icons-material/Style';
+import BoltIcon from '@mui/icons-material/Bolt';
+import MergeIcon from '@mui/icons-material/Merge';
+import HorizontalSplitIcon from '@mui/icons-material/HorizontalSplit';
+import MoreTimeIcon from '@mui/icons-material/MoreTime';
+import SettingsIcon from '@mui/icons-material/Settings';
+import InfoIcon from '@mui/icons-material/Info';
 
 function Sorting() {    
 
     //#region Variables
+
     const [sorting, setSorting] = useState(false);
     const [arr, setArr] = useState([]);
     const [arrSize, setArrSize] = useState(10);
@@ -13,27 +24,26 @@ function Sorting() {
     const [speed, setSpeed] = useState(100);
     const [resetKey, setResetKey] = useState(0.0);
     const [sliderPosition, setSliderPosition] = useState(10);
-    // const [sortValue, setSortValue] = useState(1);
+    const [tabValue, setTabValue] = useState(1);
+    const [mediaDark, setMediaDark] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches);
+    const [tabOrientation, setTabOrientation] = useState('horizontal');
+
     const theme = useTheme();
     // Reset array after Slider Changes
     const changeKey = () => {
         setResetKey((prevKey) => prevKey + .1);
     }
-
-    let buttonStyle = {
-      color: window.matchMedia('(prefers-color-scheme: dark)').matches ? '#fff' : '#000',
-      background: window.matchMedia('(prefers-color-scheme: dark)').matches ? '#000' : '#fff',
-      '&:hover': {
-        background: window.matchMedia('(prefers-color-scheme: dark)').matches ? '#333' : '#ccc',
-      },
-    };
+    let dividerStyle = {
+      background: (window.matchMedia('(prefers-color-scheme: dark)').matches) ? '#fff' : 'rgba(0,0,0,0.87)',
+    }
+    
 
     //#endregion
 
     //#region Methods
 
     window.addEventListener("resize", handleResize);
-    // Reset Array on Component Mount
+    // Reset Array on Component Mount 
     useEffect(() => {
       resetArray();
     }, []);
@@ -45,10 +55,18 @@ function Sorting() {
     }, [arrSize]);
     useEffect(() => {
         resetArray();
-    }, [resetKey])
+    }, [resetKey]);
     useEffect(() => {
       setArrSize(sliderPosition);
-    }, [sliderPosition])
+    }, [sliderPosition]);
+    useEffect(() => {
+      // Do this to order our function calls
+      // In accordance with the current state
+      // ... otherwise errors will ensue.
+        if (sorting) {
+          chooseSort();
+        }
+    }, [sorting]);
 
     function resetArray() {
         const newArr = [];
@@ -64,56 +82,71 @@ function Sorting() {
         const newWidth = window.innerWidth < 1024 ? 
             (window.innerWidth * 0.85) / arrSize :
             (window.innerWidth * 0.9 * 0.75) / arrSize;
+        if (window.innerWidth < 1024) {
+          setTabOrientation("horizontal");
+        }
+        else {
+          setTabOrientation("vertical");
+        }
         setWidth(newWidth);
     }
 
-    function handleTabChange(event, newValue) {
-      setSortValue(newValue);
+    function handleTabChange(event) {
+      setTabValue(event.target.value);
     }
 
-    // function bubbleSort(arr) {
-    //     const animations = getBubbleSortAnimations(arr);
-    //     handleAnimations(animations);
-    // }
-
-    // function selectionSort(arr) {
-    //   const animations = getSelectionSortAnimations(arr);
-    //   handleAnimations(animations);
-    // }
-    
-    // function insertionSort(arr) {
-    //   const animations = getInsertionSortAnimations(arr);
-    //   handleAnimations(animations);
-    // }
-
-    // function quickSort(arr) {
-    //   const animations = getQuickSortAnimations(arr);
-    //   handleAnimations(animations);
-    // }
-
-    function mergeSort(arr) {
-      let animations = getMergeSortAnimations(arr);
-      let animationTime = speed * animations.length;
-      handleAnimations(animations);
-      setTimeout(() => {
-            setSorting(false);
-        }, animationTime);
+    function handleSort() {
+        setSorting(true);
     }
 
-    // function heapSort(arr) {
-    //   const animations = getHeapSortAnimations(arr);
-    //   handleAnimations(animations);
-    // }
+    function chooseSort() {
+      let animations;
+      switch (tabValue) {
+        case 1:
+            animations = getBubbleSortAnimations(arr);
+            handleAnimations(animations);
+          break;
+      
+        case 2:
+            animations = getSelectionSortAnimations(arr);
+            handleAnimations(animations);
+          break;
+        
+        case 3:
+            animations = getInsertionSortAnimations(arr);
+            handleAnimations(animations);
+          break;
 
-    // function timSort(arr) {
-    //   const animations = getTimSortAnimations(arr);
-    //   handleAnimations(animations);
-    // }
+        case 4:
+            animations = getQuickSortAnimations(arr);
+            handleAnimations(animations);
+          break;
+          
+        case 5:
+            animations = getMergeSortAnimations(arr);
+            handleAnimations(animations);
+          break;
+
+        case 6:
+            animations = getHeapSortAnimations(arr);
+            handleAnimations(animations); 
+          break;
+
+        case 7:
+            animations = getTimSortAnimations(arr);
+            handleAnimations(animations);
+          break;
+      }
+    }
+
     // Function to change our bars based on the animations provided. 
     function handleAnimations(animations) {
-      setSorting(true);
+      let animationTime = speed * animations.length;
+      let arrayBars = document.getElementsByClassName('visualizer--bar');
+      let barValues = document.getElementsByClassName('visualizer--barValues');
+      console.log(barValues);
+      // Run Animations (Either Height Change / Color Change)
       for (let i = 0; i < animations.length; i++) {
-        const arrayBars = document.getElementsByClassName('visualizer--bar');
         const isColorChange = i % 3 !== 2;
         if (isColorChange) {
           const [barOneIdx, barTwoIdx] = animations[i];
@@ -130,9 +163,18 @@ function Sorting() {
             const [barOneIndex, newHeight] = animations[i];
             const barOneStyle = arrayBars[barOneIndex].style;
             barOneStyle.height = `${newHeight}px`;
+            barValues[barOneIndex].innerHTML = newHeight.toString();
           }, i * speed);
         }
       }
+      // Set color to green when done. 
+      setTimeout(() => {
+        for (let i = 0; i < arrayBars.length; i++) {
+            arrayBars[i].style.backgroundColor = 'green';
+        }
+
+        setSorting(false);
+    }, animationTime);
     }
 
     function randFromInterval(min, max) {
@@ -156,81 +198,167 @@ function Sorting() {
         <div className="sorting">
             <div className="sorting--container">
                 <div className="sorting--description">
-                        <div className="form--controls">
-                            <Button disabled={sorting}
-                                    sx={buttonStyle} 
-                                    className="form--generateBtn" 
-                                    variant="contained" 
-                                    onClick={changeKey}>New Array</Button>
-                            <Slider 
-                            disabled={sorting}
-                                defaultValue={10}
-                                aria-label="time-indicator"
-                                size="small"
-                                value={sliderPosition}
-                                min={10}
-                                step={1}
-                                max={100}
-                                onChange={(_, value) => setSliderPosition(value)}
-                                sx={{
-                                    color: (window.matchMedia('(prefers-color-scheme: dark)').matches) ? '#fff' : 'rgba(0,0,0,0.87)',
-                                    height: 4,
-                                    width: 100,
-                                    '& .MuiSlider-thumb': {
-                                      width: 8,
-                                      height: 8,
-                                      transition: '0.3s cubic-bezier(.47,1.64,.41,.8)',
-                                      '&:before': {
-                                        boxShadow: '0 2px 12px 0 rgba(0,0,0,0.4)',
+                        <div>
+
+                          <div className="form--controlsTitle">Controls <SettingsIcon fontSize="large" /></div>
+                          <Divider className="darkMode" />
+                          {/* Select + Slider */}
+                          <div className="form--controls">
+                            <FormControl style={{width: '40%'}}>
+                              <InputLabel color="secondary" className="form--inputLabel">Algorithms</InputLabel>
+                              <Select
+                                className="form--select"
+                                variant="filled"
+                                value={tabValue}
+                                label="Algorithm"
+                                onChange={handleTabChange}
+                                color="secondary"
+                              >
+                                <MenuItem value={1} >
+                                  <div className="form--menuItem"> 
+                                    <div>
+                                      Bubble Sort
+                                    </div>
+                                    <BubbleChartIcon />
+                                  </div>
+                                </MenuItem>
+                                <MenuItem value={2} >
+                                  <div className="form--menuItem"> 
+                                    <div>
+                                      Selection Sort
+                                    </div>
+                                    <SwipeIcon />
+                                  </div>
+                                </MenuItem>
+                                <MenuItem value={3} >
+                                  <div className="form--menuItem"> 
+                                    <div>
+                                      Insertion Sort
+                                    </div>
+                                    <StyleIcon />
+                                  </div>
+                                </MenuItem>
+                                <MenuItem value={4} >
+                                  <div className="form--menuItem"> 
+                                    <div>
+                                      Quick Sort
+                                    </div>
+                                    <BoltIcon />
+                                  </div>
+                                </MenuItem>
+                                <MenuItem value={5} >
+                                  <div className="form--menuItem"> 
+                                    <div>
+                                      Merge Sort
+                                    </div>
+                                    <MergeIcon />
+                                  </div>
+                                </MenuItem>
+                                <MenuItem value={6} >
+                                  <div className="form--menuItem"> 
+                                    <div>
+                                      Heap Sort
+                                    </div>
+                                    <HorizontalSplitIcon />
+                                  </div>
+                                </MenuItem>
+                                <MenuItem value={7} >
+                                  <div className="form--menuItem"> 
+                                    <div>
+                                      Tim Sort
+                                    </div>
+                                    <MoreTimeIcon />
+                                  </div>
+                                </MenuItem>
+
+                              </Select>
+                            </FormControl>
+                            <div style={{width: '40%'}} className="form--slider">
+                              Elements: {sliderPosition}
+                              <Slider 
+                              className="form--slider"
+                              style={{width: '100%'}}
+                              disabled={sorting}
+                                  defaultValue={10}
+                                  aria-label="time-indicator"
+                                  size="small"
+                                  value={sliderPosition}
+                                  min={10}
+                                  step={1}
+                                  max={100}
+                                  onChange={(_, value) => setSliderPosition(value)}
+                                  sx={{
+                                      color: (window.matchMedia('(prefers-color-scheme: dark)').matches) ? '#fff' : 'rgba(0,0,0,0.87)',
+                                      height: 4,
+                                      width: 100,
+                                      '& .MuiSlider-thumb': {
+                                        width: 8,
+                                        height: 8,
+                                        transition: '0.3s cubic-bezier(.47,1.64,.41,.8)',
+                                        '&:before': {
+                                          boxShadow: '0 2px 12px 0 rgba(0,0,0,0.4)',
+                                        },
+                                        '&:hover, &.Mui-focusVisible': {
+                                          boxShadow: `0px 0px 0px 8px ${
+                                            theme.palette.mode === 'dark'
+                                              ? 'rgb(255 255 255 / 16%)'
+                                              : 'rgb(0 0 0 / 16%)'
+                                          }`,
+                                        },
+                                        '&.Mui-active': {
+                                          width: 20,
+                                          height: 20,
+                                        },
                                       },
-                                      '&:hover, &.Mui-focusVisible': {
-                                        boxShadow: `0px 0px 0px 8px ${
-                                          theme.palette.mode === 'dark'
-                                            ? 'rgb(255 255 255 / 16%)'
-                                            : 'rgb(0 0 0 / 16%)'
-                                        }`,
+                                      '& .MuiSlider-rail': {
+                                        opacity: 0.28,
                                       },
-                                      '&.Mui-active': {
-                                        width: 20,
-                                        height: 20,
-                                      },
-                                    },
-                                    '& .MuiSlider-rail': {
-                                      opacity: 0.28,
-                                    },
-                                }}
-                            />
+                                  }}
+                              />
+                            </div>
+                          </div>
+                          {/* Buttons */}
+                          <div className="form--controls">
                             <Button 
-                            disabled={sorting}
-                            sx={buttonStyle} 
-                            className="form--generateBtn" 
-                            variant="contained" 
-                            onClick={() => mergeSort(arr)}>Sort</Button>
+                              className="form--buttons"
+                              disabled={sorting}
+                              variant="contained" 
+                              onClick={changeKey}>
+                              New Array ↻</Button>
+                            <Button  style={{width: '40%'}}
+                              disabled={sorting}
+                              className="form--generateBtn" 
+                              variant="contained" 
+                              onClick={() => {
+                                handleSort();
+                              }}>
+                              Sort</Button>
+                          </div>
+
                         </div>
-                        <div className="form--info">
-                          {/* <Box sx={{ width: '100%', typography: 'body1' }}>
-                            <TabContext value={value}>
-                              <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                                <TabList onChange={handleChange} aria-label="lab API tabs example">
-                                  <Tab label="Item One" value="1" />
-                                  <Tab label="Item Two" value="2" />
-                                  <Tab label="Item Three" value="3" />
-                                </TabList>
-                              </Box>
-                              <TabPanel value="1">Item One</TabPanel>
-                              <TabPanel value="2">Item Two</TabPanel>
-                              <TabPanel value="3">Item Three</TabPanel>
-                            </TabContext>
-                          </Box> */}
-                        </div>
-                    </div>
+
+                          <Divider className="darkMode" />
+                          <div className="form--controlsTitle">Info <InfoIcon fontSize="large" /></div>
+                          <Divider className="darkMode" />
+                          <div className="form--info">
+                            Description, 
+                            Pseudocode
+                            Time/Space Complexity
+                            Implementations
+                          </div>
+
+                </div>
+                <Divider className="darkMode" />
                 <div className="sorting--box">
                      <div className="visualizer--container">
                       <div className="visualizer--bars">
                         {arr.map((value, index) => (
                           <div className="bar--stack">
+                            <div className="visualizer--barValues">
+                            {arrSize < 35 && value}
+                            </div>
                             <div
-                              className="visualizer--bar"
+                              className="visualizer--bar transition"
                               key={index}
                               style={{
                                 height: `${value}px`,
