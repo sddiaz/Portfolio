@@ -167,6 +167,8 @@ function Sorting() {
             barTwoStyle.backgroundColor = color;
           }, i * speed);
         }
+        // Certain algorithms place elements in 
+        // the final position each iteration.
         else if (animationType == "Final Position") {
           const barStyle = arrayBars[animationValues].style;
           const color = 'green';
@@ -175,21 +177,21 @@ function Sorting() {
             barStyle.backgroundColor = color;
           }, i * speed);
         }
-        // The Swap animation is used for bubble sort, selection sort, insertion sort. 
+        // The Swap animation is used for bubble sort, selection sort.
         else if (animationType == "Swap") {
             setTimeout(() => {
               const [barOneIndex, barTwoIndex] = animationValues;
               // Swap!
               const barOneStyle = arrayBars[barOneIndex].style;
               const barTwoStyle = arrayBars[barTwoIndex].style;
-              let tempHeight = barValues[barOneIndex].innerHTML;
-              barOneStyle.height = `${barValues[barTwoIndex].innerHTML}px`;
-              barTwoStyle.height = `${tempHeight}px`;
+              let tempHeight = arrayBars[barOneIndex].style.height;
+              barOneStyle.height = `${arrayBars[barTwoIndex].style.height}`;
+              barTwoStyle.height = `${tempHeight}`;
               
               // Swap the values (text) too!
               if (arrSize < 35) {
                 barValues[barOneIndex].innerHTML = barValues[barTwoIndex].innerHTML.toString();
-                barValues[barTwoIndex].innerHTML = tempHeight.toString();
+                barValues[barTwoIndex].innerHTML = tempHeight.toString().slice(0, -3);
               }
           }, i * speed);
         }
@@ -205,7 +207,7 @@ function Sorting() {
           }, i * speed);
         }
       }
-      // Set all colors to green when done. 
+      // Set all colors to green when done (looks fancy :). 
       setTimeout(() => {
         for (let i = 0; i < arrayBars.length; i++) {
           setTimeout(() => {
