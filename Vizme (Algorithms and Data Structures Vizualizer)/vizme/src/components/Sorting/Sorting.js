@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Box, Button, Divider, FormControl, InputLabel, MenuItem, OutlinedInput, Select, Slider, Tab, Tabs } from "@mui/material";
 import { createTheme, useTheme } from '@mui/material/styles';
-import { getBubbleSortAnimations, getInsertionSortAnimations, getMergeSortAnimations, getSelectionSortAnimations } from "./Algorithms/SortingAlgorithms";
+import { getBubbleSortAnimations, getInsertionSortAnimations, getMergeSortAnimations, getQuickSortAnimations, getSelectionSortAnimations } from "./Algorithms/SortingAlgorithms";
 
 import BubbleChartIcon from '@mui/icons-material/BubbleChart';
 import SwipeIcon from '@mui/icons-material/Swipe';
@@ -28,6 +28,7 @@ function Sorting() {
     const [mediaDark, setMediaDark] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches);
     const [tabOrientation, setTabOrientation] = useState('horizontal');
     const [estimatedRuntime, setEstimatedRuntime] = useState(null);
+
     const theme = useTheme();
     // Reset array after Slider Changes
     const changeKey = () => {

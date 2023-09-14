@@ -82,10 +82,56 @@ function insertionSortHelper(array, animations){
   }
 }
 
-//   Quick Sort
+// Quick Sort
 export function getQuickSortAnimations(array) {
-    const animations = [];
+  const animations = [];
+  quickSortHelper(array, 0, array.length - 1, animations);
+  return animations;
 }
+
+function quickSortHelper(
+  array,
+  startIdx,
+  endIdx,
+  animations
+) {
+  if (startIdx >= endIdx) return;
+
+  const pivotIdx = partition(array, startIdx, endIdx, animations);
+  quickSortHelper(array, startIdx, pivotIdx - 1, animations);
+  quickSortHelper(array, pivotIdx + 1, endIdx, animations);
+}
+
+function partition(array, startIdx, endIdx, animations) {
+  const pivotValue = array[endIdx];
+  let pivotIdx = startIdx;
+
+  for (let i = startIdx; i < endIdx; i++) {
+    // Push animations for color change
+    animations.push({"Color Change": [i, pivotIdx] });
+    animations.push({"Color Revert": [i, pivotIdx] });
+
+    if (array[i] < pivotValue) {
+      // Swap array[i] and array[pivotIdx]
+      animations.push({"Color Change": [i, pivotIdx] });
+      animations.push({"Color Revert": [i, pivotIdx] });
+      animations.push({ "Swap": [i, pivotIdx] });
+      [array[i], array[pivotIdx]] = [array[pivotIdx], array[i]];
+      pivotIdx++;
+    }
+  }
+
+  // Swap pivotValue with array[pivotIdx]
+  animations.push({"Swap": [endIdx, pivotIdx] });
+  [array[endIdx], array[pivotIdx]] = [array[pivotIdx], array[endIdx]];
+
+  // Revert the color change animation
+  animations.push({"Color Revert": [endIdx, pivotIdx] });
+  animations.push({"Final Position": pivotIdx});
+  return pivotIdx;
+}
+// Merge Sort remains the same
+
 
 //   Merge Sort
 export function getMergeSortAnimations(array) {
@@ -96,7 +142,7 @@ export function getMergeSortAnimations(array) {
   }
   
 function mergeSortHelper(
-    mainArray,
+    array,
     startIdx,
     endIdx,
     helperArray,
@@ -104,13 +150,13 @@ function mergeSortHelper(
   ) {
     if (startIdx === endIdx) return;
     const middleIdx = Math.floor((startIdx + endIdx) / 2);
-    mergeSortHelper(helperArray, startIdx, middleIdx, mainArray, animations);
-    mergeSortHelper(helperArray, middleIdx + 1, endIdx, mainArray, animations);
-    doMerge(mainArray, startIdx, middleIdx, endIdx, helperArray, animations);
+    mergeSortHelper(helperArray, startIdx, middleIdx, array, animations);
+    mergeSortHelper(helperArray, middleIdx + 1, endIdx, array, animations);
+    doMerge(array, startIdx, middleIdx, endIdx, helperArray, animations);
   }
   
 function doMerge(
-    mainArray,
+    array,
     startIdx,
     middleIdx,
     endIdx,
@@ -129,25 +175,25 @@ function doMerge(
         // We overwrite the value at index k in the original array with the
         // value at index i in the auxiliary array.
         animations.push({"Overwrite": [k, auxiliaryArray[i]]});
-        mainArray[k++] = auxiliaryArray[i++];
+        array[k++] = auxiliaryArray[i++];
       } else {
         // We overwrite the value at index k in the original array with the
         // value at index j in the auxiliary array.
         animations.push({"Overwrite": [k, auxiliaryArray[j]]});
-        mainArray[k++] = auxiliaryArray[j++];
+        array[k++] = auxiliaryArray[j++];
       }
     }
     while (i <= middleIdx) {
       animations.push({"Color Change": [i, i]});
       animations.push({"Color Revert": [i, i]});
       animations.push({"Overwrite": [k, auxiliaryArray[i]]});
-      mainArray[k++] = auxiliaryArray[i++];
+      array[k++] = auxiliaryArray[i++];
     }
     while (j <= endIdx) {
       animations.push({"Color Change": [j, j]});
       animations.push({"Color Revert": [j, j]});
       animations.push({"Overwrite": [k, auxiliaryArray[j]]});
-      mainArray[k++] = auxiliaryArray[j++];
+      array[k++] = auxiliaryArray[j++];
     }
   }
 
