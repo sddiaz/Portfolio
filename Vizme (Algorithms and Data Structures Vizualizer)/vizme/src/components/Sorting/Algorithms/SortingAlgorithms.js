@@ -130,9 +130,8 @@ function partition(array, startIdx, endIdx, animations) {
   animations.push({"Final Position": pivotIdx});
   return pivotIdx;
 }
-// Merge Sort remains the same
 
-
+// Credit to @AlgoExpert for this wonderful implementation of Merge Sort :)
 //   Merge Sort
 export function getMergeSortAnimations(array) {
     const animations = [];
@@ -148,10 +147,12 @@ function mergeSortHelper(
     helperArray,
     animations,
   ) {
+    // Recursively Divide our array until we have subarrays of size 1 (startIdx == endIdx)
     if (startIdx === endIdx) return;
     const middleIdx = Math.floor((startIdx + endIdx) / 2);
     mergeSortHelper(helperArray, startIdx, middleIdx, array, animations);
     mergeSortHelper(helperArray, middleIdx + 1, endIdx, array, animations);
+    // Merge our recursively formed arrays, comparing 2 values at a time as we do so. 
     doMerge(array, startIdx, middleIdx, endIdx, helperArray, animations);
   }
   
@@ -167,18 +168,12 @@ function doMerge(
     let i = startIdx;
     let j = middleIdx + 1;
     while (i <= middleIdx && j <= endIdx) {
-      // These are the values that we're comparing; we push them once
-      // to change their color.
       animations.push({"Color Change": [i, j]});
       animations.push({"Color Revert": [i, j]});
       if (auxiliaryArray[i] <= auxiliaryArray[j]) {
-        // We overwrite the value at index k in the original array with the
-        // value at index i in the auxiliary array.
         animations.push({"Overwrite": [k, auxiliaryArray[i]]});
         array[k++] = auxiliaryArray[i++];
       } else {
-        // We overwrite the value at index k in the original array with the
-        // value at index j in the auxiliary array.
         animations.push({"Overwrite": [k, auxiliaryArray[j]]});
         array[k++] = auxiliaryArray[j++];
       }
@@ -200,8 +195,60 @@ function doMerge(
 //   Heap Sort
 export function getHeapSortAnimations(array) {
     const animations = [];
+    heapSortHelper(array, animations); 
+    return animations; 
+}
+function heapSortHelper(array, animations) {
+    // Construct a heap from our array
+    let n = array.length;
+    for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
+        heapify(array, n, i, animations);
+    }        
+
+    // Extract each element from heap
+    // and put the element in it's final position (i)
+    // at the end of the array. 
+    // re-heapify our new array. 
+    for (let i = n - 1; i >= 0; i--) {
+        animations.push({"Color Change": [i, 0]});
+        animations.push({"Color Revert": [i, 0]});
+        var temp = array[0];
+        array[0] = array[i];
+        array[i] = temp; 
+        animations.push({"Swap": [0, i]});
+        animations.push({"Final Position": i});
+        animations.push({})
+        heapify(array, i, 0, animations);
+    }
+}
+function heapify(arr, N, i, animations)
+{
+    // Initialize largest as root
+    var largest = i;
+    var left = 2 * i + 1; // left = 2*i + 1
+    var right = 2 * i + 2; // right = 2*i + 2
+
+    // Set largest to the largest of child nodes
+    // (left and right)
+    if (left < N && arr[left] > arr[largest])
+        largest = left;
+    if (right < N && arr[right] > arr[largest])
+        largest = right;
+
+    // If largest is not root
+    // Swap largest and root. 
+    if (largest != i) {
+        var swap = arr[i];
+        arr[i] = arr[largest];
+        arr[largest] = swap;
+        animations.push({"Swap": [largest, i]});
+        // Recursively heapify the affected sub-tree
+        heapify(arr, N, largest, animations);
+    }
 }
 //   Tim Sort
 export function getTimSortAnimations(array) {
     const animations = [];
+
+    return animations;
 }

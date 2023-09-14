@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Box, Button, Divider, FormControl, InputLabel, MenuItem, OutlinedInput, Select, Slider, Tab, Tabs } from "@mui/material";
 import { createTheme, useTheme } from '@mui/material/styles';
-import { getBubbleSortAnimations, getInsertionSortAnimations, getMergeSortAnimations, getQuickSortAnimations, getSelectionSortAnimations } from "./Algorithms/SortingAlgorithms";
+import { getBubbleSortAnimations, getHeapSortAnimations, getInsertionSortAnimations, getMergeSortAnimations, getQuickSortAnimations, getSelectionSortAnimations, getTimSortAnimations } from "./Algorithms/SortingAlgorithms";
 
 import BubbleChartIcon from '@mui/icons-material/BubbleChart';
 import SwipeIcon from '@mui/icons-material/Swipe';
@@ -212,7 +212,7 @@ function Sorting() {
       setTimeout(() => {
         for (let i = 0; i < arrayBars.length; i++) {
           setTimeout(() => {
-            arrayBars[i].style.backgroundColor = 'green';
+            arrayBars[i].style.backgroundColor = '#06a605';
           }, (i * speed - 1));
         }
       
