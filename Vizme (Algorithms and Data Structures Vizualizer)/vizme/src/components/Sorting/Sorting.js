@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Box, Button, Divider, FormControl, InputLabel, MenuItem, OutlinedInput, Select, Slider, Tab, Tabs } from "@mui/material";
-import { createTheme, useTheme } from '@mui/material/styles';
-import { getBubbleSortAnimations, getHeapSortAnimations, getInsertionSortAnimations, getMergeSortAnimations, getQuickSortAnimations, getSelectionSortAnimations, getTimSortAnimations } from "./Algorithms/SortingAlgorithms";
+import { Button, Divider, FormControl, InputLabel, MenuItem, Select, Slider } from "@mui/material";
+import { useTheme } from '@mui/material/styles';
+import { getBubbleSortAnimations, getHeapSortAnimations, getInsertionSortAnimations, getMergeSortAnimations, getQuickSortAnimations, getRadixSortAnimations, getSelectionSortAnimations, getTimSortAnimations } from "./Algorithms/SortingAlgorithms";
 
 import BubbleChartIcon from '@mui/icons-material/BubbleChart';
 import SwipeIcon from '@mui/icons-material/Swipe';
@@ -10,8 +10,10 @@ import BoltIcon from '@mui/icons-material/Bolt';
 import MergeIcon from '@mui/icons-material/Merge';
 import HorizontalSplitIcon from '@mui/icons-material/HorizontalSplit';
 import MoreTimeIcon from '@mui/icons-material/MoreTime';
+import SwitchAccessShortcutIcon from '@mui/icons-material/SwitchAccessShortcut';
 import SettingsIcon from '@mui/icons-material/Settings';
 import InfoIcon from '@mui/icons-material/Info';
+
 
 function Sorting() {    
 
@@ -25,17 +27,12 @@ function Sorting() {
     const [resetKey, setResetKey] = useState(0.0);
     const [sliderPosition, setSliderPosition] = useState(10);
     const [tabValue, setTabValue] = useState(1);
-    const [mediaDark, setMediaDark] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches);
-    const [tabOrientation, setTabOrientation] = useState('horizontal');
     const [estimatedRuntime, setEstimatedRuntime] = useState(null);
 
     const theme = useTheme();
     // Reset array after Slider Changes
     const changeKey = () => {
         setResetKey((prevKey) => prevKey + .1);
-    }
-    let dividerStyle = {
-      background: (window.matchMedia('(prefers-color-scheme: dark)').matches) ? '#fff' : 'rgba(0,0,0,0.87)',
     }
     
 
@@ -50,11 +47,12 @@ function Sorting() {
     }, []);
     // Handle State Changes on Slider Change
     useEffect(() => {
-        handleResize(); // Update width when arrSize changes
-        setSpeed(1000/arrSize);
-        resetArray();
+        handleResize(); // Update bar width 
+        setSpeed(1000/arrSize); // Update animation speed
+        resetArray(); // Generate new array
     }, [arrSize]);
-
+    // The 'resetKey' changes when various events occur in our program
+    // this resets our array (on array size change, when we select a new algorithm, etc)
     useEffect(() => {
         resetArray();
     }, [resetKey]);
@@ -71,9 +69,8 @@ function Sorting() {
           chooseSort();
         }
     }, [sorting]);
-
+    // Generate a new array
     function resetArray() {
-      let arrayBars = document.getElementsByClassName('')
       const newArr = [];
       for (let i = 0; i < arrSize; i++) {
           // We use window.innerHeight/2 as the maximum height to keep bars from overflowing into our UI.
@@ -82,21 +79,16 @@ function Sorting() {
       setArr(newArr);
       resetStyling();
     }
-
+    // Set width of bars according to screen width.
     function handleResize() {
         const newWidth = window.innerWidth < 1024 ? 
             (window.innerWidth * 0.85) / arrSize :
             (window.innerWidth * 0.9 * 0.75) / arrSize;
-        if (window.innerWidth < 1024) {
-          setTabOrientation("horizontal");
-        }
-        else {
-          setTabOrientation("vertical");
-        }
         setWidth(newWidth);
     }
 
     function handleTabChange(event) {
+      resetArray();
       setTabValue(event.target.value);
     }
 
@@ -141,6 +133,12 @@ function Sorting() {
             animations = getTimSortAnimations(arr);
             handleAnimations(animations);
           break;
+        
+        case 8:
+            animations = getRadixSortAnimations(arr);
+            handleAnimations(animations);
+          break;
+
       }
     }
 
@@ -151,7 +149,7 @@ function Sorting() {
       let arrayBars = document.getElementsByClassName('visualizer--bar');
       let barValues = document.getElementsByClassName('visualizer--barValues');
 
-      // Run Animations (Either Height Change / Color Change)
+      // Run Animations (Either Overwrite / Color Change / Swap)
       for (let i = 0; i < animations.length; i++) {
         const animationObject = animations[i];
         const animationType = Object.keys(animationObject)[0]; // Obtain the type of the current animation.
@@ -192,7 +190,7 @@ function Sorting() {
               // Swap the values (text) too!
               if (arrSize < 35) {
                 barValues[barOneIndex].innerHTML = barValues[barTwoIndex].innerHTML.toString();
-                barValues[barTwoIndex].innerHTML = tempHeight.toString().slice(0, -3);
+                barValues[barTwoIndex].innerHTML = tempHeight.toString().slice(0, -2);
               }
           }, i * speed);
         }
@@ -311,6 +309,14 @@ function Sorting() {
                                       Tim Sort
                                     </div>
                                     <MoreTimeIcon />
+                                  </div>
+                                </MenuItem>
+                                <MenuItem value={8} >
+                                  <div className="form--menuItem"> 
+                                    <div>
+                                      Radix Sort
+                                    </div>
+                                    <SwitchAccessShortcutIcon />
                                   </div>
                                 </MenuItem>
 

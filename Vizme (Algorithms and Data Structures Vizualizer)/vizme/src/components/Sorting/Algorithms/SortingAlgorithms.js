@@ -1,5 +1,8 @@
 // The main thing to learn from this section is that we are not returning any arrays,
 // but rather an array of animations of varying types for each algorithm :)
+// The code for each sorting algorithm is readily available online, the tricky part
+// lies in placing the animations at the proper point in each algorithm to properly 
+// visualize it. 
 
 //   Bubble Sort
 export function getBubbleSortAnimations(array) {
@@ -153,15 +156,15 @@ function mergeSortHelper(
     mergeSortHelper(helperArray, startIdx, middleIdx, array, animations);
     mergeSortHelper(helperArray, middleIdx + 1, endIdx, array, animations);
     // Merge our recursively formed arrays, comparing 2 values at a time as we do so. 
-    doMerge(array, startIdx, middleIdx, endIdx, helperArray, animations);
+    merge(array, startIdx, middleIdx, endIdx, helperArray, animations);
   }
   
-function doMerge(
+function merge(
     array,
     startIdx,
     middleIdx,
     endIdx,
-    auxiliaryArray,
+    helperArray,
     animations,
   ) {
     let k = startIdx;
@@ -170,25 +173,25 @@ function doMerge(
     while (i <= middleIdx && j <= endIdx) {
       animations.push({"Color Change": [i, j]});
       animations.push({"Color Revert": [i, j]});
-      if (auxiliaryArray[i] <= auxiliaryArray[j]) {
-        animations.push({"Overwrite": [k, auxiliaryArray[i]]});
-        array[k++] = auxiliaryArray[i++];
+      if (helperArray[i] <= helperArray[j]) {
+        animations.push({"Overwrite": [k, helperArray[i]]});
+        array[k++] = helperArray[i++];
       } else {
-        animations.push({"Overwrite": [k, auxiliaryArray[j]]});
-        array[k++] = auxiliaryArray[j++];
+        animations.push({"Overwrite": [k, helperArray[j]]});
+        array[k++] = helperArray[j++];
       }
     }
     while (i <= middleIdx) {
       animations.push({"Color Change": [i, i]});
       animations.push({"Color Revert": [i, i]});
-      animations.push({"Overwrite": [k, auxiliaryArray[i]]});
-      array[k++] = auxiliaryArray[i++];
+      animations.push({"Overwrite": [k, helperArray[i]]});
+      array[k++] = helperArray[i++];
     }
     while (j <= endIdx) {
       animations.push({"Color Change": [j, j]});
       animations.push({"Color Revert": [j, j]});
-      animations.push({"Overwrite": [k, auxiliaryArray[j]]});
-      array[k++] = auxiliaryArray[j++];
+      animations.push({"Overwrite": [k, helperArray[j]]});
+      array[k++] = helperArray[j++];
     }
   }
 
@@ -246,9 +249,113 @@ function heapify(arr, N, i, animations)
         heapify(arr, N, largest, animations);
     }
 }
+
 //   Tim Sort
 export function getTimSortAnimations(array) {
     const animations = [];
-
+    timSortHelper(array, animations);
     return animations;
+}
+// Merge function merges the sorted runs
+function timSortHelper(array, animations)
+{ 
+
+  let n = array.length;
+  let minRun = 8; // length of subarrays to be sorted with insertion sort. 
+
+    // Sort subarrays of size 'run'. 
+    for(let i = 0; i < n; i += minRun)
+    {
+        tim_insertionSort(array, i, Math.min((i + minRun - 1), (n - 1)), animations);
+    }
+
+    for(let size = minRun; size < n; size = 2 * size)
+    {
+        
+        for(let left = 0; left < n;
+                          left += 2 * size)
+        {
+
+            let mid = left + size - 1;
+            let right = Math.min((left + 2 * size - 1),
+                                    (n - 1));
+            if(mid < right)
+                merge(array, left, mid, right, array.slice(), animations);
+        }
+    }
+}
+// special insertion sort for a subarray of varying indices.
+function tim_insertionSort(array,left,right, animations)
+{
+    for(let i = left + 1; i <= right; i++)
+    {
+        let temp = array[i];
+        let j = i - 1;
+        animations.push({"Color Change": [i, j]});
+        animations.push({"Color Revert": [i, j]});
+        while (j >= left && array[j] > temp)
+        {
+          animations.push({"Color Change": [i, j]});
+          animations.push({"Color Revert": [i, j]});
+          animations.push({"Overwrite": [j + 1, array[j]]});
+            array[j + 1] = array[j];
+            j--;
+        }
+        array[j + 1] = temp;
+    }
+}
+
+//    Radix Sort
+export function getRadixSortAnimations(array) {
+  const animations = [];
+  radixSortHelper(array, animations);
+  return animations;
+}
+// Iterate through each digit position (from least significant to most significant)
+// of the largest number in the array and sort the numbers based on 
+function radixSortHelper(array, animations) {
+  // Determine the maximum number of digits in the largest number in the array.
+  const maxDigits = Math.max(...array);
+
+
+  for (let k = 0; k < maxDigits; k++) {
+    // Create buckets to hold numbers based on their current digit at position 'k'
+    const buckets = Array.from({ length: 10 }, () => []);
+    
+    // Check if the array is already sorted in ascending order to optimize and avoid unnecessary sorting
+    if (isSortedAscending(array)) {
+      return;  
+    }
+
+    // Place each number in the appropriate bucket based on its current digit at position 'k'
+    for (let i = 0; i < array.length; i++) {
+      const digit = getDigit(array[i], k);
+      animations.push({"Color Change": [i, digit]});
+      animations.push({"Color Revert": [i, digit]});
+      buckets[digit].push(array[i]);
+    }
+
+    // Collect the numbers from the buckets back into the array
+    let idx = 0;
+    for (let i = 0; i < buckets.length; i++) {
+      const bucket = buckets[i];
+      for (let j = 0; j < bucket.length; j++) {
+        array[idx++] = bucket[j];
+        animations.push({"Overwrite": [idx - 1, bucket[j]]});
+      }
+    }
+  }
+  return array;  // Return the sorted array
+}
+// This function extracts the digit at a specified place from a given number.
+function getDigit(num, place) {
+  return Math.floor(Math.abs(num) / Math.pow(10, place)) % 10;
+}
+function isSortedAscending(array){
+  for (let i = 1; i < array.length; i++) {
+     if (array[i] < array[i - 1]) {
+        return false; 
+     }
+  }
+  return true; 
 }
