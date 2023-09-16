@@ -1,0 +1,58 @@
+{
+    "BubbleSort": {
+        "ID": "BubbleSort", 
+        "Description": "Bubble Sort ",
+        "Pseudocode": "",
+        "Performance": "",
+        "FurtherLearning": ""
+    },
+    "SelectionSort": {
+        "ID": "SelectionSort", 
+        "Description": "Selection Sort",
+        "Pseudocode": "",
+        "Performance": "",
+        "FurtherLearning": ""
+    },
+    "InsertionSort": {
+        "ID": "InsertionSort", 
+        "Description": "Insertion Sort",
+        "Pseudocode": "",
+        "Performance": "",
+        "FurtherLearning": ""
+    },
+    "QuickSort": {
+        "ID": "QuickSort", 
+        "Description": "Quick Sort",
+        "Pseudocode": "",
+        "Performance": "",
+        "FurtherLearning": ""
+    },
+    "MergeSort": {
+        "ID": "MergeSort", 
+        "Description": "Merge Sort",
+        "Pseudocode": "",
+        "Performance": "",
+        "FurtherLearning": ""
+    },
+    "HeapSort": {
+        "ID": "HeapSort", 
+        "Description": "Heap Sort",
+        "Pseudocode": "",
+        "Performance": "",
+        "FurtherLearning": ""
+    },
+    "TimSort": {
+        "ID": "TimSort", 
+        "Description": "TimSort",
+        "Pseudocode": "",
+        "Performance": "",
+        "FurtherLearning": ""
+    },
+    "RadixSort": {
+        "ID": "RadixSort", 
+        "Description": "Radix Sort",
+        "Pseudocode": "",
+        "Performance": "",
+        "FurtherLearning": ""
+    }
+}

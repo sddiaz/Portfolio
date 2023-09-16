@@ -9,7 +9,7 @@ export function getBubbleSortAnimations(array) {
     const animations = [];
     bubbleSortHelper(array, animations);
     return animations;
-}
+  }
 function bubbleSortHelper(array, animations) {
     let n = array.length;
     for (let i = 0; i < n; i++) {
@@ -18,9 +18,8 @@ function bubbleSortHelper(array, animations) {
             animations.push({"Color Change": [j, j + 1]});
             // Animate the values we are comparing to revert their color. 
             animations.push({"Color Revert": [j, j + 1]});
-            
+            // Swap larger value to front when comparing.
             if (array[j] > array[j + 1]) {
-                // Swap values when comparing.
                 let temp = array[j];
                 array[j] = array[j + 1];
                 array[j + 1] = temp;
@@ -30,19 +29,20 @@ function bubbleSortHelper(array, animations) {
         }
         animations.push({"Final Position": n - i - 1});
     }
-}
+  } 
 
 //   Selection Sort
 export function getSelectionSortAnimations(array) {
     const animations = [];
     selectionSortHelper(array, animations);
     return animations; 
-}
+  }
 function selectionSortHelper(array, animations) {
-  for (let i = 0; i < array.length; i++) {
+  let n = array.length;
+  for (let i = 0; i < n; i++) {
     let min = i; 
     // Turn the initial minimum color. 
-    for (let j = i + 1; j < array.length; j++) {
+    for (let j = i + 1; j < n; j++) {
       if (array[j] < array[min]) {
           min = j; 
       }
@@ -59,20 +59,24 @@ function selectionSortHelper(array, animations) {
     // Make our item green if we know it's in the right spot.
     animations.push({"Final Position": i});
   }
-}
+  }
 
 //   Insertion Sort
 export function getInsertionSortAnimations(array) {
     const animations = [];
     insertionSortHelper(array, animations);
     return animations; 
-}
+  }
 function insertionSortHelper(array, animations){
-  for (let i = 1; i < array.length; i++) {
+  let n = array.length; 
+  for (let i = 1; i < n; i++) {
     let key = array[i];
     let j = i - 1;
     animations.push({"Color Change": [i, j]});
     animations.push({"Color Revert": [i, j]});
+    // Insert our current element into the 
+    // proper position in the sorted 
+    // subarray
     while (j >= 0 && array[j] > key) {
         animations.push({"Color Change": [i, j]});
         animations.push({"Color Revert": [i, j]});
@@ -83,14 +87,14 @@ function insertionSortHelper(array, animations){
     array[j + 1] = key;
     animations.push({"Overwrite": [j + 1, key]});
   }
-}
+  }
 
 // Quick Sort
 export function getQuickSortAnimations(array) {
   const animations = [];
   quickSortHelper(array, 0, array.length - 1, animations);
   return animations;
-}
+  }
 
 function quickSortHelper(
   array,
@@ -99,11 +103,13 @@ function quickSortHelper(
   animations
 ) {
   if (startIdx >= endIdx) return;
-
+  // Partition array, putting elements lower than 
+  // pivot to it's left, elements greater than pivot
+  // to it's right, and repeat recursively. 
   const pivotIdx = partition(array, startIdx, endIdx, animations);
   quickSortHelper(array, startIdx, pivotIdx - 1, animations);
   quickSortHelper(array, pivotIdx + 1, endIdx, animations);
-}
+  }
 
 function partition(array, startIdx, endIdx, animations) {
   const pivotValue = array[endIdx];
@@ -132,7 +138,7 @@ function partition(array, startIdx, endIdx, animations) {
   animations.push({"Color Revert": [endIdx, pivotIdx] });
   animations.push({"Final Position": pivotIdx});
   return pivotIdx;
-}
+  }
 
 // Credit to @AlgoExpert for this wonderful implementation of Merge Sort :)
 //   Merge Sort
@@ -200,7 +206,7 @@ export function getHeapSortAnimations(array) {
     const animations = [];
     heapSortHelper(array, animations); 
     return animations; 
-}
+  }
 function heapSortHelper(array, animations) {
     // Construct a heap from our array
     let n = array.length;
@@ -223,7 +229,7 @@ function heapSortHelper(array, animations) {
         animations.push({})
         heapify(array, i, 0, animations);
     }
-}
+  }
 function heapify(arr, N, i, animations)
 {
     // Initialize largest as root
@@ -248,20 +254,20 @@ function heapify(arr, N, i, animations)
         // Recursively heapify the affected sub-tree
         heapify(arr, N, largest, animations);
     }
-}
+  }
 
 //   Tim Sort
 export function getTimSortAnimations(array) {
     const animations = [];
     timSortHelper(array, animations);
     return animations;
-}
+  }
 // Merge function merges the sorted runs
 function timSortHelper(array, animations)
 { 
 
   let n = array.length;
-  let minRun = 8; // length of subarrays to be sorted with insertion sort. 
+  let minRun = 15; // length of subarrays to be sorted with insertion sort. 
 
     // Sort subarrays of size 'run'. 
     for(let i = 0; i < n; i += minRun)
@@ -283,7 +289,7 @@ function timSortHelper(array, animations)
                 merge(array, left, mid, right, array.slice(), animations);
         }
     }
-}
+  } 
 // special insertion sort for a subarray of varying indices.
 function tim_insertionSort(array,left,right, animations)
 {
@@ -303,14 +309,14 @@ function tim_insertionSort(array,left,right, animations)
         }
         array[j + 1] = temp;
     }
-}
+  }
 
 //    Radix Sort
 export function getRadixSortAnimations(array) {
   const animations = [];
   radixSortHelper(array, animations);
   return animations;
-}
+  }
 // Iterate through each digit position (from least significant to most significant)
 // of the largest number in the array and sort the numbers based on 
 function radixSortHelper(array, animations) {
@@ -346,11 +352,15 @@ function radixSortHelper(array, animations) {
     }
   }
   return array;  // Return the sorted array
-}
+  }
 // This function extracts the digit at a specified place from a given number.
 function getDigit(num, place) {
   return Math.floor(Math.abs(num) / Math.pow(10, place)) % 10;
-}
+  }
+// Check if our array is already sorted
+// To prevent further animations 
+// This is very slow in practice.. don't do this
+// in your code!!!
 function isSortedAscending(array){
   for (let i = 1; i < array.length; i++) {
      if (array[i] < array[i - 1]) {
@@ -358,4 +368,4 @@ function isSortedAscending(array){
      }
   }
   return true; 
-}
+  }   

@@ -27,9 +27,6 @@ function Welcome() {
                         3000,
                         'For Curious Minds..',
                         3000,
-                        () => {
-                        console.log('Sequence completed');
-                        },
                     ]}
                     wrapper="span"
                     cursor={true}

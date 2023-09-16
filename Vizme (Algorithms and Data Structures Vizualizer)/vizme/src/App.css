@@ -34,7 +34,7 @@
   }
 }
 .transition {
-  transition: 0.1s ease;
+  transition: background 0.1s ease, height 0.1s ease;
 }
 .hidden {
   display: none;
@@ -384,6 +384,10 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+.form--menu {
+  color: var(--accent) !important;
+  background: transparent !important;
 }
 .form--menuItem {
   display: flex; 
