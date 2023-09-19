@@ -1,28 +1,28 @@
 {
     "BubbleSort": {
         "ID": "BubbleSort", 
-        "Description": "Bubble Sort ",
-        "Pseudocode": "",
-        "Performance": "",
-        "FurtherLearning": ""
+        "Description": "The infamous Bubble Sort. This is the first sorting algorithm (and often one of the first algorithms, period) that many new programmers, data scientists, computer engineers and the like encounter in their early journies. The idea is simple, easy to implement, yet inefficient: compare each element in the array to every other element, swapping whichever is larger over to the right (assuming we are sorting an ascending order). This causes the largest elements in the array to 'bubble up' and shift to the rightmost section of the array after each iteration.",
+        "Pseudocode": "Bubble Sort PseudoCode",
+        "Performance": "Bubble Sort Performance",
+        "FurtherLearning": "Bubble Sort a"
     },
     "SelectionSort": {
         "ID": "SelectionSort", 
-        "Description": "Selection Sort",
+        "Description": "Selection Sort is another quite simple algorithm. It works by repeatedly cycling through the array, each time 'selecting' the smallest element, and placing it at the beginning of the array. It's even more inefficient than Bubble Sort when you take into consideration the best case scenario, since, no matter what, you will have to cycle through the array N times, where N is the size of the array. This act of repeatedly finding the smallest element is computationally expensive, especially as the size of the array increases. In comparison to more efficient sorting algorithms like Merge Sort or Quick Sort, Selection Sort's quadratic time complexity limits its utility for sorting large or frequently updated datasets. However, its straightforward logic and ease of implementation still make it a valuable teaching tool for understanding sorting algorithms.",
         "Pseudocode": "",
         "Performance": "",
         "FurtherLearning": ""
     },
     "InsertionSort": {
         "ID": "InsertionSort", 
-        "Description": "Insertion Sort",
+        "Description": "Insertion Sort is most likely one of the most used sorting algorithms in the real world. Imagine trying to sort a deck of cards. In one hand, you'll keep your sorted cards (starting with 1 single card), and as you inspect new cards in the unsorted deck, you place them into your sorted hand in it's respective position. Insertion Sort operates the same way, wherein we keep track of a sorted array on the left-hand side, inserting new elements into the sorted array as they come. This algorithm is actually quite efficient for arrays of small sizes (Fewer than 10-20 elements), even faster than Logarithmic functions like Quick Sort.",
         "Pseudocode": "",
         "Performance": "",
         "FurtherLearning": ""
     },
     "QuickSort": {
         "ID": "QuickSort", 
-        "Description": "Quick Sort",
+        "Description": "Quick Sort is an efficient and highly performant Logarithmic sorting algorithm, widely utilized in programming language libraries for its exceptional speed, such as Java's Array.sort(). The algorithm operates by strategically selecting a pivot element from the array and partitioning the data. All elements smaller than the pivot are placed to its left, while those larger are positioned to its right. This pivot + sort procedure is then recursively called on the remaining halves of the array, until the entire array is sorted. One interesting note is that there are varying methods for selecting pivots, such as selecting the first element, last element, or a random element. Often times, selecting a random element as the pivot results in the best performance.",
         "Pseudocode": "",
         "Performance": "",
         "FurtherLearning": ""

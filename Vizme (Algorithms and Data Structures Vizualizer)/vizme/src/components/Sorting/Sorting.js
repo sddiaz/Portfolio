@@ -23,7 +23,7 @@ function Sorting() {
 
     const [arr, setArr] = useState([]);
     const [arrSize, setArrSize] = useState(10);
-    const [width, setWidth] = useState(0);
+    const [width, setWidth] = useState(window.innerWidth);
     const [sorting, setSorting] = useState(false);
     const [speed, setSpeed] = useState(100);
     const [resetKey, setResetKey] = useState(0.0);
@@ -89,7 +89,7 @@ function Sorting() {
     function handleResize() {
         const newWidth = window.innerWidth < 1024 ? 
             (window.innerWidth * 0.85) / arrSize :
-            (window.innerWidth * 0.9 * 0.75) / arrSize;
+            (window.innerWidth * 0.9 * 0.66) / arrSize;
         setWidth(newWidth);
     }
 
@@ -108,42 +108,42 @@ function Sorting() {
     function chooseSort() {
       let animations;
       switch (tabValue) {
-        case 1:
+        case 'BubbleSort':
             animations = getBubbleSortAnimations(arr);
             handleAnimations(animations);
           break;
       
-        case 2:
+        case 'SelectionSort':
             animations = getSelectionSortAnimations(arr);
             handleAnimations(animations);
           break;
         
-        case 3:
+        case 'InsertionSort':
             animations = getInsertionSortAnimations(arr);
             handleAnimations(animations);
           break;
 
-        case 4:
+        case 'QuickSort':
             animations = getQuickSortAnimations(arr);
             handleAnimations(animations);
           break;
           
-        case 5:
+        case 'MergeSort':
             animations = getMergeSortAnimations(arr);
             handleAnimations(animations);
           break;
 
-        case 6:
+        case 'HeapSort':
             animations = getHeapSortAnimations(arr);
             handleAnimations(animations); 
           break;
 
-        case 7:
+        case 'TimSort':
             animations = getTimSortAnimations(arr);
             handleAnimations(animations);
           break;
         
-        case 8:
+        case 'RadixSort':
             animations = getRadixSortAnimations(arr);
             handleAnimations(animations);
           break;
@@ -196,11 +196,11 @@ function Sorting() {
               barOneStyle.height = `${arrayBars[barTwoIndex].style.height}`;
               barTwoStyle.height = `${tempHeight}`;
               
-              // Swap the values (text) too!
-              if (arrSize < 35) {
-                barValues[barOneIndex].innerHTML = barValues[barTwoIndex].innerHTML.toString();
-                barValues[barTwoIndex].innerHTML = tempHeight.toString().slice(0, -2);
-              }
+              // // Swap the values (text) too!
+              // if (arrSize < 35) {
+              //   barValues[barOneIndex].innerHTML = barValues[barTwoIndex].innerHTML.toString();
+              //   barValues[barTwoIndex].innerHTML = tempHeight.toString().slice(0, -2);
+              // }
           }, i * speed);
         }
         // The Overwrite animation is used for merge sort, 
@@ -209,9 +209,9 @@ function Sorting() {
                 const [barOneIndex, newHeight] = animationValues;
                 const barOneStyle = arrayBars[barOneIndex].style;
                 barOneStyle.height = `${newHeight}px`;
-                if (arrSize < 35) {
-                  barValues[barOneIndex].innerHTML = newHeight.toString();
-                }
+                // if (arrSize < 35) {
+                //   barValues[barOneIndex].innerHTML = newHeight.toString();
+                // }
           }, i * speed);
         }
       }
@@ -409,6 +409,8 @@ function Sorting() {
                   <div className="form--controlsTitle">Learn <InfoIcon fontSize="large" /></div>
                   <Divider className="darkMode" />
                   <div className="form--info">
+                    <div className="form--header">
+                      <div style={{width: '33%'}}> 
                       <Button
                           className="form--menu"
                           aria-controls={open ? 'basic-menu' : undefined}
@@ -433,21 +435,28 @@ function Sorting() {
                         <MenuItem onClick={() => handleMenuItemClick('Further Learning')}>Further Learning</MenuItem>
 
                       </Menu> 
+                      </div>
+                      <div style={{textAlign: 'center', width: '33%', fontFamily: 'monospace', fontSize: '18px', fontWeight: 'bolder'}}>
+                      {menuValue}
+                      </div>
+                      <div style={{width: '35%'}}>
+                        
+                      </div>
+                    </div>
                       {arrayOfObjects &&
                       arrayOfObjects.map(item => (
-                        <Description key={item.ID} page={tabValue} info={item} />
+                        <Description key={item.ID} page={tabValue} info={item} menuValue={menuValue} />
                       ))}           
                   </div>
 
                 </div>
-                <Divider className="darkMode" />
+                <Divider className="darkmode" />
                 <div className="sorting--box">
                      <div className="visualizer--container">
                       <div className="visualizer--bars">
                         {arr.map((value, index) => (
                           <div className="bar--stack">
                             <div className="visualizer--barValues">
-                            {arrSize < 35 && value}
                             </div>
                             <div
                               className="visualizer--bar transition"
