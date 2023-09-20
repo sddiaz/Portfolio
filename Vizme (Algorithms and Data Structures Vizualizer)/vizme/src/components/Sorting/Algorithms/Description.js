@@ -109,7 +109,8 @@ function Description({page, info, menuValue}) {
                     <div className="graph--title">
                             Growth Visualization
                     </div>
-                    <QuadraticFunctionChart page={page} info={info} />
+                    {info.Performance != null && 
+                    <QuadraticFunctionChart page={page} info={info.Performance} />}
                 </div>
             </div>
             <div className={menuValue == 'FurtherLearning' ? 'description--furtherLearning' : 'hidden'}>
