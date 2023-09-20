@@ -23,7 +23,7 @@
 @keyframes glowAnimation {
   0% {
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-    background-position: 0% 50%;
+    background-position: 0% 0;
   }
   50% {
     box-shadow: 0 0 20px rgba(230, 0, 255, 0.7);
@@ -329,7 +329,7 @@ body {
   transition: transform 0.3s ease-in-out !important;
 }
 .form--generateBtn:hover {
-  transform: scale(1.1) !important
+  transform: scale(1.025) !important
 }
 .form--info {
   height: 50%;
@@ -408,22 +408,73 @@ body {
 .sorting--descriptionContainer {
   width: 100%;
   max-height: 120%;
-  font-size: 25px !important;
-  overflow: hidden;
+  font-size: 20px !important;
+  overflow: scroll;
 }
 .description--main {
   font-family: monospace;
   text-align: center;
+  font-size: 24px !important;
   height: 100%;
-  overflow: scroll;
 }
 .description--pseudocode {
   font-family: monospace;
   font-weight: bold;
   font-size: 17px;
-  height: 100%;
-  overflow: scroll;
+  max-height: 100%;
 }
+.description--performance {
+
+}
+/* Performance Grid + Graph */
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 15px;
+  font-family: monospace;
+}
+.grid-row {
+  display: flex;
+  flex-direction: row;
+}
+.grid-item {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid var(--main);
+  background-color: transparent;
+}
+.header {
+  color: var(--main);
+  font-weight: bold;
+  background-color: var(--accent);
+}
+.graph {
+  height: 400px; 
+  width: 100%;
+  color: white !important;
+  font-family: 'monospace';
+}
+.graph--title {
+  font-family: monospace;
+  font-size: 15px;
+  border: 1px solid var(--accent);
+  border-radius: 15px;
+  background: var(--main);
+  padding: 5px;
+  margin: 10px;
+  box-shadow: 3px 4px 0px var(--accent);
+}
+.graph-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
 /* Graphs */
 
 /* Data Structures */
@@ -454,13 +505,22 @@ body {
     align-items: center;
   }
   .sorting--descriptionContainer {
-    height: 250px;
+    max-height: 250px;
+    overflow: hidden;
   }
   .description--main {
     font-family: monospace;
     font-size: 20px;
-    font-weight: 300;
-    text-align: center;
+    max-height: 250px;
+    overflow: scroll;
   }
+  .description--pseudocode {
+    max-height: 250px;
+    overflow: scroll;
+  }
+  .description--performance {
+    max-height: 250px;
+    overflow: scroll;
+  } 
 }
 

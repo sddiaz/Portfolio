@@ -31,6 +31,7 @@ function Sorting() {
     const [tabValue, setTabValue] = useState('BubbleSort');
     const [anchorEl, setAnchorEl] = useState(null);
     const [menuValue, setMenuValue] = useState('Description');
+    // Algorithm Information as an Array.
     const arrayOfObjects = Object.keys(algorithmData).map(key => ({
       ...algorithmData[key]
     }));
@@ -430,13 +431,13 @@ function Sorting() {
                         }}
                       >
                         <MenuItem onClick={() => handleMenuItemClick('Description')}>Description</MenuItem>
-                        <MenuItem onClick={() => handleMenuItemClick('Pseudocode')}>Pseudocode</MenuItem>
+                        <MenuItem onClick={() => handleMenuItemClick('Implementation')}>Implementation</MenuItem>
                         <MenuItem onClick={() => handleMenuItemClick('Performance')}>Performance</MenuItem>
                         <MenuItem onClick={() => handleMenuItemClick('Further Learning')}>Further Learning</MenuItem>
 
                       </Menu> 
                       </div>
-                      <div style={{textAlign: 'center', width: '33%', fontFamily: 'monospace', fontSize: '18px', fontWeight: 'bolder'}}>
+                      <div style={{textAlign: 'center', width: '33%', fontFamily: 'monospace', fontSize: '20px', fontWeight: 'bolder', verticalAlign: 'center'}}>
                       {menuValue}
                       </div>
                       <div style={{width: '35%'}}>
