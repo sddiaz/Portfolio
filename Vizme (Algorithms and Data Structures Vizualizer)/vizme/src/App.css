@@ -274,8 +274,8 @@ body {
 }
 /* Sorting + Visualizer */
 .sorting--container {
-  width: 90%;
-  height: 90%;
+  width: 90vw;
+  height: 90vh;
   display: flex;
   justify-content: center;
   border: 1px solid var(--accent);
@@ -283,7 +283,7 @@ body {
   radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.15), var(--main));
 }
 .sorting--description {
-  max-height: 90%;
+  height: 100%;
   width: 33.33%;
   box-shadow: 0 0 1px rgba(0, 0, 0, 1);
 }
@@ -296,9 +296,6 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-}
-.form--controlsTitle > * {
-  margin: 10px;
 }
 .form--controls {
   width: 100%;
