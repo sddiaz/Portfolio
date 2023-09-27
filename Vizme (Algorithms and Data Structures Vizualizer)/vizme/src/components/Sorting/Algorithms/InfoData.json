@@ -10,15 +10,36 @@
         "Performance": {
             "AverageCase": {
                 "Time": "O(n²)",
-                "Space": "O(1)"
+                "Space": "O(1)",
+                "Data": [
+                    { "x": 1, "y": 1 },
+                    { "x": 2, "y": 4 },
+                    { "x": 3, "y": 9 },
+                    { "x": 4, "y": 16 },
+                    { "x": 5, "y": 25 }
+                ]
             },
             "WorstCase": {
                 "Time": "O(n²)",
-                "Space": "O(1)"
+                "Space": "O(1)",
+                "Data": [
+                    { "x": 1, "y": 1 },
+                    { "x": 2, "y": 4 },
+                    { "x": 3, "y": 9 },
+                    { "x": 4, "y": 16 },
+                    { "x": 5, "y": 25 }
+                ]
             },
             "BestCase": {
                 "Time": "O(n)",
-                "Space": "O(1)"
+                "Space": "O(1)",
+                "Data": [
+                    { "x": 1, "y": 1 },
+                    { "x": 2, "y": 2 },
+                    { "x": 3, "y": 3 },
+                    { "x": 4, "y": 4 },
+                    { "x": 5, "y": 5 }
+                ]
             }
         },
         "FurtherLearning": ""
@@ -34,15 +55,36 @@
         "Performance": {
             "AverageCase": {
                 "Time": "O(n²)",
-                "Space": "O(1)"
+                "Space": "O(1)",
+                "Data": [
+                    { "x": 1, "y": 1 },
+                    { "x": 2, "y": 4 },
+                    { "x": 3, "y": 9 },
+                    { "x": 4, "y": 16 },
+                    { "x": 5, "y": 25 }
+                ]
             },
             "WorstCase": {
                 "Time": "O(n²)",
-                "Space": "O(1)"
+                "Space": "O(1)",
+                "Data": [
+                    { "x": 1, "y": 1 },
+                    { "x": 2, "y": 4 },
+                    { "x": 3, "y": 9 },
+                    { "x": 4, "y": 16 },
+                    { "x": 5, "y": 25 }
+                ]
             },
             "BestCase": {
                 "Time": "O(n²)",
-                "Space": "O(1)"
+                "Space": "O(1)", 
+                "Data": [
+                    { "x": 1, "y": 1 },
+                    { "x": 2, "y": 4 },
+                    { "x": 3, "y": 9 },
+                    { "x": 4, "y": 16 },
+                    { "x": 5, "y": 25 }
+                ]
             }
         },
         "FurtherLearning": ""
@@ -58,15 +100,36 @@
         "Performance": {
             "AverageCase": {
                 "Time": "O(n²)",
-                "Space": "O(1)"
+                "Space": "O(1)", 
+                "Data": [
+                    { "x": 1, "y": 1 },
+                    { "x": 2, "y": 4 },
+                    { "x": 3, "y": 9 },
+                    { "x": 4, "y": 16 },
+                    { "x": 5, "y": 25 }
+                ]
             },
             "WorstCase": {
                 "Time": "O(n²)",
-                "Space": "O(1)"
+                "Space": "O(1)", 
+                "Data": [
+                    { "x": 1, "y": 1 },
+                    { "x": 2, "y": 4 },
+                    { "x": 3, "y": 9 },
+                    { "x": 4, "y": 16 },
+                    { "x": 5, "y": 25 }
+                ]
             },
             "BestCase": {
                 "Time": "O(n)",
-                "Space": "O(1)"
+                "Space": "O(1)", 
+                "Data": [
+                    { "x": 1, "y": 1 },
+                    { "x": 2, "y": 2 },
+                    { "x": 3, "y": 3 },
+                    { "x": 4, "y": 4 },
+                    { "x": 5, "y": 5 }
+                ]
             }
         },
         "FurtherLearning": ""
@@ -82,15 +145,36 @@
         "Performance": {
             "AverageCase": {
                 "Time": "O(n log n)",
-                "Space": "O(log n)"
+                "Space": "O(log n)",
+                "Data": [
+                    { "x": 1, "y": 0 },
+                    { "x": 2, "y": 0.602060 },
+                    { "x": 3, "y": 1.431364 },
+                    { "x": 4, "y": 2.408240 },
+                    { "x": 5, "y": 3.494850 }
+                ]
             },
             "WorstCase": {
                 "Time": "O(n²)",
-                "Space": "O(log n)"
+                "Space": "O(log n)",
+                "Data": [
+                    { "x": 1, "y": 1 },
+                    { "x": 2, "y": 4 },
+                    { "x": 3, "y": 9 },
+                    { "x": 4, "y": 16 },
+                    { "x": 5, "y": 25 }
+                ]
             },
             "BestCase": {
                 "Time": "O(n log n)",
-                "Space": "O(log n)"
+                "Space": "O(log n)",
+                "Data": [
+                    { "x": 1, "y": 0 },
+                    { "x": 2, "y": 0.602060 },
+                    { "x": 3, "y": 1.431364 },
+                    { "x": 4, "y": 2.408240 },
+                    { "x": 5, "y": 3.494850 }
+                ]
             }
         },
         "FurtherLearning": ""
@@ -106,22 +190,43 @@
         "Performance": {
             "AverageCase": {
                 "Time": "O(n log n)",
-                "Space": "O(n)"
+                "Space": "O(n)",
+                "Data": [
+                    { "x": 1, "y": 0 },
+                    { "x": 2, "y": 0.602060 },
+                    { "x": 3, "y": 1.431364 },
+                    { "x": 4, "y": 2.408240 },
+                    { "x": 5, "y": 3.494850 }
+                ]
             },
             "WorstCase": {
                 "Time": "O(n log n)",
-                "Space": "O(n)"
+                "Space": "O(n)",
+                "Data": [
+                    { "x": 1, "y": 0 },
+                    { "x": 2, "y": 0.602060 },
+                    { "x": 3, "y": 1.431364 },
+                    { "x": 4, "y": 2.408240 },
+                    { "x": 5, "y": 3.494850 }
+                ]
             },
             "BestCase": {
                 "Time": "O(n log n)",
-                "Space": "O(n)"
+                "Space": "O(n)",
+                "Data": [
+                    { "x": 1, "y": 0 },
+                    { "x": 2, "y": 0.602060 },
+                    { "x": 3, "y": 1.431364 },
+                    { "x": 4, "y": 2.408240 },
+                    { "x": 5, "y": 3.494850 }
+                ]
             }
         },
         "FurtherLearning": ""
     },
     "HeapSort": {
         "ID": "HeapSort", 
-        "Description": "Heap Sort is the first algorithm many Computer Scientists learn that utilize a separate data structure to accomplish it's sorting: the Heap. The Heap is a tree-based structure that satisfies the Heap property. A Heap is usually implemented as a complete binary tree, where the value of each node is either always greater than or always less than the values of its children, depending on whether it's a Max Heap or a Min Heap. Heaps are primarily used to efficiently implement priority queues, where the highest (or lowest) priority element can be quickly accessed and removed. This is how our Heap Sort method is accomplished. We first form a Heap from the array, and continuously select the top element, insert it into it's respective position, and reform ('Heapify') our Heap.",
+        "Description": "Heap Sort is the first algorithm many Computer Scientists learn that utilizes a separate data structure to accomplish it's sorting: the Heap. The Heap is (often) a tree-based structure (in our case, we implemented it with an array) that satisfies the Heap property. A Heap is usually implemented as a complete binary tree, where the value of each node is either always greater than or always less than the values of its children, depending on whether it's a Max Heap or a Min Heap. Heaps are primarily used to efficiently implement priority queues, where the highest (or lowest) priority element can be quickly accessed and removed. This is how our Heap Sort method is accomplished. We first form a Heap from the array, and continuously select the top element, insert it into it's respective position, and reform ('Heapify') our Heap.",
         "Pseudocode": {
             "JavaScript": "function heapify(arr, n, i) {\n  let largest = i;\n  const left = 2 * i + 1;\n  const right = 2 * i + 2;\n\n  if (left < n && arr[left] > arr[largest])\n    largest = left;\n\n  if (right < n && arr[right] > arr[largest])\n    largest = right;\n\n  if (largest !== i) {\n    [arr[i], arr[largest]] = [arr[largest], arr[i]];\n    heapify(arr, n, largest);\n  }\n}\n\nfunction heapSort(arr) {\n  const n = arr.length;\n\n  for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {\n    heapify(arr, n, i);\n  }\n\n  for (let i = n - 1; i > 0; i--) {\n    [arr[0], arr[i]] = [arr[i], arr[0]];\n    heapify(arr, i, 0);\n  }\n\n  return arr;\n}",
             "CPP": "void heapify(int arr[], int n, int i) {\n  int largest = i;\n  int left = 2 * i + 1;\n  int right = 2 * i + 2;\n\n  if (left < n && arr[left] > arr[largest])\n    largest = left;\n\n  if (right < n && arr[right] > arr[largest])\n    largest = right;\n\n  if (largest != i) {\n    swap(arr[i], arr[largest]);\n    heapify(arr, n, largest);\n  }\n}\n\nvoid heapSort(int arr[], int n) {\n  for (int i = n / 2 - 1; i >= 0; i--)\n    heapify(arr, n, i);\n\n  for (int i = n - 1; i > 0; i--) {\n    swap(arr[0], arr[i]);\n    heapify(arr, i, 0);\n  }\n}",
@@ -130,15 +235,36 @@
         "Performance": {
             "AverageCase": {
                 "Time": "O(n log n)",
-                "Space": "O(1)"
+                "Space": "O(1)",
+                "Data": [
+                    { "x": 1, "y": 0 },
+                    { "x": 2, "y": 0.602060 },
+                    { "x": 3, "y": 1.431364 },
+                    { "x": 4, "y": 2.408240 },
+                    { "x": 5, "y": 3.494850 }
+                ]
             },
             "WorstCase": {
                 "Time": "O(n log n)",
-                "Space": "O(1)"
+                "Space": "O(1)",
+                "Data": [
+                    { "x": 1, "y": 0 },
+                    { "x": 2, "y": 0.602060 },
+                    { "x": 3, "y": 1.431364 },
+                    { "x": 4, "y": 2.408240 },
+                    { "x": 5, "y": 3.494850 }
+                ]
             },
             "BestCase": {
                 "Time": "O(n log n)",
-                "Space": "O(1)"
+                "Space": "O(1)",
+                "Data": [
+                    { "x": 1, "y": 0 },
+                    { "x": 2, "y": 0.602060 },
+                    { "x": 3, "y": 1.431364 },
+                    { "x": 4, "y": 2.408240 },
+                    { "x": 5, "y": 3.494850 }
+                ]
             }
         },
         "FurtherLearning": ""
@@ -154,15 +280,36 @@
         "Performance": {
             "AverageCase": {
                 "Time": "O(n log n)",
-                "Space": "O(n)"
+                "Space": "O(n)",
+                "Data": [
+                    { "x": 1, "y": 0 },
+                    { "x": 2, "y": 0.602060 },
+                    { "x": 3, "y": 1.431364 },
+                    { "x": 4, "y": 2.408240 },
+                    { "x": 5, "y": 3.494850 }
+                ]
             },
             "WorstCase": {
                 "Time": "O(n log n)",
-                "Space": "O(n)"
+                "Space": "O(n)",
+                "Data": [
+                    { "x": 1, "y": 0 },
+                    { "x": 2, "y": 0.602060 },
+                    { "x": 3, "y": 1.431364 },
+                    { "x": 4, "y": 2.408240 },
+                    { "x": 5, "y": 3.494850 }
+                ]
             },
             "BestCase": {
                 "Time": "O(n)",
-                "Space": "O(n)"
+                "Space": "O(n)",
+                "Data": [
+                    { "x": 1, "y": 1 },
+                    { "x": 2, "y": 2 },
+                    { "x": 3, "y": 3 },
+                    { "x": 4, "y": 4 },
+                    { "x": 5, "y": 5 }
+                ]
             }
         },
         "FurtherLearning": ""
@@ -178,15 +325,36 @@
         "Performance": {
             "AverageCase": {
                 "Time": "O(nk)",
-                "Space": "O(n + k)"
+                "Space": "O(n + k)",
+                "Data": [
+                    { "x": 1, "y": 1 },
+                    { "x": 2, "y": 2 },
+                    { "x": 3, "y": 3 },
+                    { "x": 4, "y": 4 },
+                    { "x": 5, "y": 5 }
+                ]
             },
             "WorstCase": {
                 "Time": "O(nk)",
-                "Space": "O(n + k)"
+                "Space": "O(n + k)",
+                "Data": [
+                    { "x": 1, "y": 1 },
+                    { "x": 2, "y": 2 },
+                    { "x": 3, "y": 3 },
+                    { "x": 4, "y": 4 },
+                    { "x": 5, "y": 5 }
+                ]
             },
             "BestCase": {
                 "Time": "O(nk)",
-                "Space": "O(n + k)"
+                "Space": "O(n + k)",
+                "Data": [
+                    { "x": 1, "y": 1 },
+                    { "x": 2, "y": 2 },
+                    { "x": 3, "y": 3 },
+                    { "x": 4, "y": 4 },
+                    { "x": 5, "y": 5 }
+                ]
             }
         },
         "FurtherLearning": ""

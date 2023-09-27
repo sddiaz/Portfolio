@@ -283,10 +283,9 @@ body {
   radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.15), var(--main));
 }
 .sorting--description {
-  max-height: 100%;
+  max-height: 90%;
   width: 33.33%;
   box-shadow: 0 0 1px rgba(0, 0, 0, 1);
-
 }
 .form--controlsTitle {
   color: var(--accent);

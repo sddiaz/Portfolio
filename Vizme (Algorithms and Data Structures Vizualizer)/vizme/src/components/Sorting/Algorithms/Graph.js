@@ -4,75 +4,38 @@ import { ResponsiveLine } from '@nivo/line';
 function QuadraticFunctionChart({page, info}) {
 
     const [gridData, setGridData] = useState(null);
-    const [currentInfo, setCurrentInfo] = useState(null);
     const rootStyles = getComputedStyle(document.documentElement);
     const accentColor = rootStyles.getPropertyValue('--accent');
 
-    // Varying Functions for each Algorithm
-    const dataOptions = [
-      {
-        id: 'O(n log n)',
-        data: [
-            { x: 1, y: 0 },
-            { x: 2, y: 0.602060 },
-            { x: 3, y: 1.431364 },
-            { x: 4, y: 2.408240 },
-            { x: 5, y: 3.494850 },
-        ],
-      },
-      {
-        id: 'O(n)',
-        data: [
-          { x: 1, y: 1 },
-          { x: 2, y: 2 },
-          { x: 3, y: 3 },
-          { x: 4, y: 4 },
-          { x: 5, y: 5 },
-        ],
-      },
-      {
-        id: 'O(n²)',
-        data: [
-          { x: 1, y: 1 },
-          { x: 2, y: 4 },
-          { x: 3, y: 9 },
-          { x: 4, y: 16 },
-          { x: 5, y: 25 },
-        ],
-      },
-    ];
-
     useEffect(() => {
-        if (info.Performance != null && page != null) {
-            for (const key in info) {
-                if (info[key].ID == page) {
-                    setCurrentInfo(info[key]);
-                    break;
-                }
-            }
-        }
-    }, [info])   
-
-    useEffect(() => {
-        if (currentInfo != null) {
+        if (info != null) {
+            console.log(JSON.stringify(info));
             setGridData([
                   {
                     id: 'Average Case',
-                    data: dataOptions.find(option => option.id === currentInfo.Performance.AverageCase.Time).data
+                    data: info.AverageCase.Data
                   },
                   {
                     id: 'Worst Case',
-                    data: dataOptions.find(option => option.id === currentInfo.Performance.WorstCase.Time).data
+                    data: info.WorstCase.Data
                   },
                   {
                     id: 'Best Case',
-                    data: dataOptions.find(option => option.id === currentInfo.Performance.BestCase.Time).data
+                    data: info.BestCase.Data
                   }
                 ]
             )
         }
-    }, [currentInfo]);
+    }, [info]);
 
+    function findObjectById(info, desiredID) {
+        for (let i = 0; i < info.length; i++) {
+            if (info[i].ID === desiredID) {
+                return info[i];
+            }
+        }
+        return null;
+    }
 
     const theme = {
         "background": "transparent",
@@ -137,7 +100,7 @@ function QuadraticFunctionChart({page, info}) {
     // ... and so on for other variables
     return (
         <div className='graph'>
-        {gridData != null && 
+        {info.ID == page && 
         <ResponsiveLine
             data={gridData}
             margin={{ right: 60, bottom: 50, left: 60 }}
@@ -166,12 +129,13 @@ function QuadraticFunctionChart({page, info}) {
             }}
             colors={{ scheme: 'pink_yellowGreen' }}
             theme={theme}
+            enableCrosshair={false}
+            enableSlices={false}
             enableGridX={false}
             enableGridY={false}
-            lineWidth={3}
+            lineWidth={5}
             enablePoints={false}
             enableArea={false}
-            useMesh={false}
             legends={[
                 {
                     anchor: 'bottom-right',
