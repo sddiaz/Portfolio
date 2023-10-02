@@ -41,12 +41,11 @@
                     { "x": 5, "y": 5 }
                 ]
             }
-        },
-        "FurtherLearning": ""
+        }
     },
     "SelectionSort": {
         "ID": "SelectionSort", 
-        "Description": "Selection Sort is another quite simple algorithm. It works by repeatedly cycling through the array, each time 'selecting' the smallest element, and placing it at the beginning of the array. It's even more inefficient than Bubble Sort when you take into consideration the best case scenario, since, no matter what, you will have to cycle through the array N times, where N is the size of the array. This act of repeatedly finding the smallest element is computationally expensive, especially as the size of the array increases. In comparison to more efficient sorting algorithms like Merge Sort or Quick Sort, Selection Sort's quadratic time complexity limits its utility for sorting large or frequently updated datasets. However, its straightforward logic and ease of implementation still make it a valuable teaching tool for understanding sorting algorithms.",
+        "Description": "Selection Sort is another quite simple algorithm. It works by repeatedly cycling through the array, each time 'selecting' the smallest element and placing it at the beginning of the array. It's even more inefficient than Bubble Sort when you take into consideration the best case scenario, since, no matter what, you will have to cycle through the array N times, where N is the size of the array. This act of repeatedly finding the smallest element is computationally expensive, especially as the size of the array increases. In comparison to more efficient sorting algorithms like Merge Sort or Quick Sort, Selection Sort's quadratic time complexity limits its utility for sorting large or frequently updated datasets. However, its straightforward logic and ease of implementation still make it a valuable teaching tool for understanding sorting algorithms.",
         "Pseudocode": {
             "JavaScript": "function selectionSort(arr) {\n  const n = arr.length;\n  for (let i = 0; i < n-1; i++) {\n    let minIndex = i;\n    for (let j = i+1; j < n; j++) {\n      if (arr[j] < arr[minIndex])\n        minIndex = j;\n    }\n    [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];\n  }\n  return arr;\n}",
             "CPP": "void selectionSort(int arr[], int n) {\n  for (int i = 0; i < n-1; i++) {\n    int minIndex = i;\n    for (int j = i+1; j < n; j++) {\n      if (arr[j] < arr[minIndex])\n        minIndex = j;\n    }\n    swap(arr[i], arr[minIndex]);\n  }\n}",
@@ -86,8 +85,7 @@
                     { "x": 5, "y": 25 }
                 ]
             }
-        },
-        "FurtherLearning": ""
+        }
     },
     "InsertionSort": {
         "ID": "InsertionSort", 
@@ -131,8 +129,7 @@
                     { "x": 5, "y": 5 }
                 ]
             }
-        },
-        "FurtherLearning": ""
+        }
     },
     "QuickSort": {
         "ID": "QuickSort", 
@@ -176,12 +173,11 @@
                     { "x": 5, "y": 3.494850 }
                 ]
             }
-        },
-        "FurtherLearning": ""
+        }
     },
     "MergeSort": {
         "ID": "MergeSort", 
-        "Description": "Merge Sort is the second of our Logarithmic Sorting algorithms, and most likely the most well-known Divide-and-Conquere algorithm. It can be implemented iteratively or recursively, with the recursive methods being more popular. The algorithm recursively divides the given input until we have N subarrays, where N is the size of the initial array. This is our 'divide' step. Then, each subarray is merged and ordered sequentially as the merging process ensues. By the end, we have all of our sorted subarrays merged, to form our sorted array. It's highly efficient, and a joy to visualize as well, as the steps of the Algorithm become apparent as the visualization proceeds. Press 'Sort' to get started :)",
+        "Description": "Merge Sort is the second of our Logarithmic Sorting algorithms, and most likely the most well-known Divide-and-Conquer algorithm. It can be implemented iteratively or recursively, with the recursive methods being more popular. The algorithm recursively divides the given input until we have N subarrays, where N is the size of the initial array. This is our 'divide' step. Then, each subarray is merged and ordered sequentially as the merging process ensues. By the end, we have all of our sorted subarrays merged, to form our sorted array. It's highly efficient, and a joy to visualize as well, as the steps of the Algorithm become apparent as the visualization proceeds. Press 'Sort' to get started :)",
         "Pseudocode": {
             "JavaScript": "function mergeSort(arr) {\n  if (arr.length <= 1) return arr;\n  const mid = Math.floor(arr.length / 2);\n  const left = arr.slice(0, mid);\n  const right = arr.slice(mid);\n  return merge(mergeSort(left), mergeSort(right));\n}\n\nfunction merge(left, right) {\n  let result = [];\n  let i = 0, j = 0;\n  while (i < left.length && j < right.length) {\n    if (left[i] < right[j]) {\n      result.push(left[i]);\n      i++;\n    } else {\n      result.push(right[j]);\n      j++;\n    }\n  }\n  return result.concat(left.slice(i)).concat(right.slice(j));\n}",
             "CPP": "void merge(int arr[], int left, int mid, int right) {\n  int n1 = mid - left + 1;\n  int n2 = right - mid;\n  int L[n1], R[n2];\n  for (int i = 0; i < n1; i++)\n    L[i] = arr[left + i];\n  for (int j = 0; j < n2; j++)\n    R[j] = arr[mid + 1 + j];\n  int i = 0, j = 0, k = left;\n  while (i < n1 && j < n2) {\n    if (L[i] <= R[j]) {\n      arr[k] = L[i];\n      i++;\n    } else {\n      arr[k] = R[j];\n      j++;\n    }\n    k++;\n  }\n  while (i < n1) {\n    arr[k] = L[i];\n    i++;\n    k++;\n  }\n  while (j < n2) {\n    arr[k] = R[j];\n    j++;\n    k++;\n  }\n}\n\nvoid mergeSort(int arr[], int left, int right) {\n  if (left < right) {\n    int mid = left + (right - left) / 2;\n    mergeSort(arr, left, mid);\n    mergeSort(arr, mid + 1, right);\n    merge(arr, left, mid, right);\n  }\n}",
@@ -221,8 +217,7 @@
                     { "x": 5, "y": 3.494850 }
                 ]
             }
-        },
-        "FurtherLearning": ""
+        }
     },
     "HeapSort": {
         "ID": "HeapSort", 
@@ -266,8 +261,7 @@
                     { "x": 5, "y": 3.494850 }
                 ]
             }
-        },
-        "FurtherLearning": ""
+        }
     },
     "TimSort": {
         "ID": "TimSort", 
@@ -311,12 +305,11 @@
                     { "x": 5, "y": 5 }
                 ]
             }
-        },
-        "FurtherLearning": ""
+        }
     },
     "RadixSort": {
         "ID": "RadixSort", 
-        "Description": "Radix Sort is a non-comparative sorting algorithm that operates by distributing elements into buckets based on their individual digits. It processes the digits of the elements from the least significant to the most significant, effectively sorting the elements based on each digit's value. Radix Sort is particularly efficient for sorting integers or strings of the same length, making it a suitable choice for specific data type. Each pass involves distributing the elements into buckets according to the digit being considered, and then collecting them back in the order of the buckets. This process is repeated until all digits have been processed, resulting in a fully sorted array. Radix Sort's time complexity is influenced by the number of digits or characters in the elements being sorted and the range of digits. It often achieves a linear time complexity for integer data types, making it a powerful sorting technique for particular use cases.",
+        "Description": "Radix Sort is a non-comparative sorting algorithm that operates by distributing elements into buckets based on their individual digits. It processes the digits of the elements from the least significant to the most significant, effectively sorting the elements based on each digit's value. Radix Sort is particularly efficient for sorting integers or strings of the same length, making it a suitable choice for such data types. Each pass involves distributing the elements into buckets according to the digit being considered, and then collecting them back in the order of the buckets. This process is repeated until all digits have been processed, resulting in a fully sorted array. Radix Sort's time complexity is influenced by the number of digits or characters in the elements being sorted and the range of digits. It often achieves a linear time complexity for integer data types, making it a powerful sorting technique for particular use cases.",
         "Pseudocode": {
             "JavaScript": "function getMax(arr) {\n  let max = arr[0];\n  for (let i = 1; i < arr.length; i++) {\n    if (arr[i] > max) {\n      max = arr[i];\n    }\n  }\n  return max;\n}\n\nfunction countSort(arr, exp) {\n  const output = new Array(arr.length).fill(0);\n  const count = new Array(10).fill(0);\n\n  for (let i = 0; i < arr.length; i++) {\n    count[Math.floor(arr[i] / exp) % 10]++;\n  }\n\n  for (let i = 1; i < 10; i++) {\n    count[i] += count[i - 1];\n  }\n\n  for (let i = arr.length - 1; i >= 0; i--) {\n    output[count[Math.floor(arr[i] / exp) % 10] - 1] = arr[i];\n    count[Math.floor(arr[i] / exp) % 10]--;\n  }\n\n  for (let i = 0; i < arr.length; i++) {\n    arr[i] = output[i];\n  }\n}\n\nfunction radixSort(arr) {\n  const max = getMax(arr);\n  for (let exp = 1; Math.floor(max / exp) > 0; exp *= 10) {\n    countSort(arr, exp);\n  }\n  return arr;\n}",
             "CPP": "void countSort(int arr[], int n, int exp) {\n  int output[n];\n  int count[10] = {0};\n\n  for (int i = 0; i < n; i++)\n    count[(arr[i] / exp) % 10]++;\n\n  for (int i = 1; i < 10; i++)\n    count[i] += count[i - 1];\n\n  for (int i = n - 1; i >= 0; i--) {\n    output[count[(arr[i] / exp) % 10] - 1] = arr[i];\n    count[(arr[i] / exp) % 10]--;\n  }\n\n  for (int i = 0; i < n; i++)\n    arr[i] = output[i];\n}\n\nint getMax(int arr[], int n) {\n  int max = arr[0];\n  for (int i = 1; i < n; i++)\n    if (arr[i] > max)\n      max = arr[i];\n  return max;\n}\n\nvoid radixSort(int arr[], int n) {\n  int max = getMax(arr, n);\n\n  for (int exp = 1; max / exp > 0; exp *= 10)\n    countSort(arr, n, exp);\n}",
@@ -356,7 +349,6 @@
                     { "x": 5, "y": 5 }
                 ]
             }
-        },
-        "FurtherLearning": ""
+        }
     }
 }

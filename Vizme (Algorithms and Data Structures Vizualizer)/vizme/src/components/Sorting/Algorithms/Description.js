@@ -113,9 +113,6 @@ function Description({page, info, menuValue}) {
                     <QuadraticFunctionChart page={page} info={info.Performance} />}
                 </div>
             </div>
-            <div className={menuValue == 'FurtherLearning' ? 'description--furtherLearning' : 'hidden'}>
-                {info.FurtherLearning}
-            </div>
         </div>
     );
 

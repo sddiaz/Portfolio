@@ -265,8 +265,14 @@ function Sorting() {
                   {/* Select + Slider */}
                   <div className="form--controls">
                     <FormControl style={{width: '40%'}}>
-                      <InputLabel color="secondary" className="form--inputLabel">Algorithms</InputLabel>
+                      <InputLabel 
+                        style={sorting ? {opacity: 0.25, pointerEvents: 'none'} : {}}
+                        color="secondary" 
+                        className="form--inputLabel">
+                          Algorithms
+                      </InputLabel>
                       <Select
+                        style={sorting ? {opacity: 0.25, pointerEvents: 'none'} : {}}
                         className="form--select"
                         variant="filled"
                         value={tabValue}
@@ -341,11 +347,13 @@ function Sorting() {
 
                       </Select>
                     </FormControl>
-                    <div style={{width: '40%'}} className="form--slider">
+                    <div 
+                    style={sorting ? {opacity: 0.25, pointerEvents: 'none', width: '40%'} : {width: '40%'}}
+                    className="form--slider">
                       Elements: {sliderPosition}
                       <Slider       
-                        className="form--slider"
-                          style={{width: '100%'}}
+                          className="form--slider"
+                          style={sorting ? {opacity: 0.25, pointerEvents: 'none', width: '100%'} : {width: '100%'}}
                           disabled={sorting}
                           defaultValue={10}
                           aria-label="time-indicator"
@@ -390,13 +398,13 @@ function Sorting() {
                   {/* Buttons */}
                   <div className="form--controls">
                     <Button 
+                      style={sorting ? {opacity: 0.25, pointerEvents: 'none'} : {}}
                       className="form--buttons"
-                      disabled={sorting}
                       variant="contained" 
                       onClick={changeKey}>
                       New Array ↻</Button>
-                    <Button  style={{width: '40%'}}
-                      disabled={sorting}
+                    <Button  
+                      style={sorting ? {width: '40%', opacity: 0.25, pointerEvents: 'none'} : {width: '40%'}}
                       className="form--generateBtn" 
                       variant="contained" 
                       onClick={() => {
@@ -433,7 +441,6 @@ function Sorting() {
                         <MenuItem onClick={() => handleMenuItemClick('Description')}>Description</MenuItem>
                         <MenuItem onClick={() => handleMenuItemClick('Implementation')}>Implementation</MenuItem>
                         <MenuItem onClick={() => handleMenuItemClick('Performance')}>Performance</MenuItem>
-                        <MenuItem onClick={() => handleMenuItemClick('Further Learning')}>Further Learning</MenuItem>
 
                       </Menu> 
                       </div>

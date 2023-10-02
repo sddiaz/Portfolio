@@ -400,6 +400,10 @@ body {
 .darkMode {
   background: var(--accent) !important;
 }
+.customDisabled {
+  pointer-events: none; 
+  opacity: .1;
+}
 /* Sorting -- Description */
 .sorting--descriptionContainer {
   width: 100%;
@@ -418,9 +422,6 @@ body {
   font-weight: bold;
   font-size: 17px;
   max-height: 100%;
-}
-.description--performance {
-
 }
 /* Performance Grid + Graph */
 .grid-container {
