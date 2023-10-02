@@ -485,7 +485,7 @@ body {
 @media (max-width: 1024px) {
   .sorting--container {
     flex-direction: column;
-    height: 150%;
+    height: 133.33%;
   }
   .sorting--description {
     width: 100%;

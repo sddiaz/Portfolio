@@ -3,40 +3,12 @@ import { ResponsiveLine } from '@nivo/line';
 
 function QuadraticFunctionChart({page, info}) {
 
+    //#region Variables 
+    
+    const [width, setWidth] = useState(window.innerWidth);
     const [gridData, setGridData] = useState(null);
     const rootStyles = getComputedStyle(document.documentElement);
     const accentColor = rootStyles.getPropertyValue('--accent');
-
-    useEffect(() => {
-        if (info != null) {
-            console.log(JSON.stringify(info));
-            setGridData([
-                  {
-                    id: 'Average Case',
-                    data: info.AverageCase.Data
-                  },
-                  {
-                    id: 'Worst Case',
-                    data: info.WorstCase.Data
-                  },
-                  {
-                    id: 'Best Case',
-                    data: info.BestCase.Data
-                  }
-                ]
-            )
-        }
-    }, [info]);
-
-    function findObjectById(info, desiredID) {
-        for (let i = 0; i < info.length; i++) {
-            if (info[i].ID === desiredID) {
-                return info[i];
-            }
-        }
-        return null;
-    }
-
     const theme = {
         "background": "transparent",
         "text": {},
@@ -97,13 +69,61 @@ function QuadraticFunctionChart({page, info}) {
         "annotations": {},
         "tooltip": {}
     }
-    // ... and so on for other variables
+
+    //#endregion
+    
+    //#region Methods
+
+    useEffect(() => {
+        if (info != null && gridData == null) {
+            console.log(JSON.parse(JSON.stringify(info)));
+            setGridData([
+                  {
+                    id: 'Average Case',
+                    data: info.AverageCase.Data
+                  },
+                  {
+                    id: 'Worst Case',
+                    data: info.WorstCase.Data
+                  },
+                  {
+                    id: 'Best Case',
+                    data: info.BestCase.Data
+                  }
+                ]
+            )
+        }
+    }, [info]);
+
+    function findObjectById(info, desiredID) {
+        for (let i = 0; i < info.length; i++) {
+            if (info[i].ID === desiredID) {
+                return info[i];
+            }
+        }
+        return null;
+    }
+
+    function handleResize() {
+        setWidth(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    //#endregion
+    
+    //#region Component
+
     return (
         <div className='graph'>
-        {info.ID == page && 
+        {gridData && 
         <ResponsiveLine
             data={gridData}
-            margin={{ right: 60, bottom: 50, left: 60 }}
+            margin={
+                width < 1024 ? 
+                { right: 100, bottom: 100, left: 100, top: 10 }
+                : { right: 50, top: 10, bottom: 50, left: 50}
+            }
             xScale={{ type: 'linear', min: 1 }}
             yScale={{ type: 'linear', min: 'auto', max: 'auto', stacked: false, reverse: false }}
             curve="monotoneX"
@@ -129,13 +149,14 @@ function QuadraticFunctionChart({page, info}) {
             }}
             colors={{ scheme: 'pink_yellowGreen' }}
             theme={theme}
-            enableCrosshair={false}
+            enableCrosshair={true}
             enableSlices={false}
             enableGridX={false}
             enableGridY={false}
             lineWidth={5}
             enablePoints={false}
-            enableArea={false}
+            pointBorderWidth={10}
+            animate
             legends={[
                 {
                     anchor: 'bottom-right',
@@ -165,6 +186,8 @@ function QuadraticFunctionChart({page, info}) {
         />}
         </div>
     )
+
+    //#endregion
 };
 
 export default QuadraticFunctionChart;

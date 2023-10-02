@@ -89,7 +89,7 @@ function Sorting() {
     // Set width of bars according to screen width.
     function handleResize() {
         const newWidth = window.innerWidth < 1024 ? 
-            (window.innerWidth * 0.85) / arrSize :
+            (window.innerWidth * 0.6) / arrSize :
             (window.innerWidth * 0.9 * 0.66) / arrSize;
         setWidth(newWidth);
     }
