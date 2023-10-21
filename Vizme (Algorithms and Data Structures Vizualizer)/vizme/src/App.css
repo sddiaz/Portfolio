@@ -287,6 +287,14 @@ body {
   width: 33.33%;
   box-shadow: 0 0 1px rgba(0, 0, 0, 1);
 }
+.sorting--topHalf {
+  max-height: 33%; 
+  overflow: auto;
+}
+.sorting--bottomHalf {
+  max-height: 65%;
+  overflow: scroll;
+}
 .form--controlsTitle {
   color: var(--accent);
   font-weight: bolder;
@@ -328,7 +336,6 @@ body {
   transform: scale(1.025) !important
 }
 .form--info {
-  height: 50%;
   width: 100%;
 }
 .form--nav {
@@ -407,15 +414,13 @@ body {
 /* Sorting -- Description */
 .sorting--descriptionContainer {
   width: 100%;
-  max-height: 120%;
   font-size: 20px !important;
-  overflow: scroll;
+  max-height: 100%;
 }
 .description--main {
   font-family: monospace;
   text-align: center;
   font-size: 24px !important;
-  height: 100%;
 }
 .description--pseudocode {
   font-family: monospace;

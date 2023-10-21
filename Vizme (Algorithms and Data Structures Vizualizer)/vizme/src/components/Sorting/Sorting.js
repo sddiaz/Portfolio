@@ -259,202 +259,204 @@ function Sorting() {
         <div className="sorting">
             <div className="sorting--container">
                 <div className="sorting--description">
-
-                  <div className="form--controlsTitle">Controls <SettingsIcon fontSize="large" /></div>
-                  <Divider className="darkMode" />
-                  {/* Select + Slider */}
-                  <div className="form--controls">
-                    <FormControl style={{width: '40%'}}>
-                      <InputLabel 
-                        style={sorting ? {opacity: 0.25, pointerEvents: 'none'} : {}}
-                        color="secondary" 
-                        className="form--inputLabel">
-                          Algorithms
-                      </InputLabel>
-                      <Select
-                        style={sorting ? {opacity: 0.25, pointerEvents: 'none'} : {}}
-                        className="form--select"
-                        variant="filled"
-                        value={tabValue}
-                        label="Algorithm"
-                        onChange={handleTabChange}
-                        color="secondary"
-                      >
-                        <MenuItem value={'BubbleSort'} >
-                          <div className="form--menuItem"> 
-                            <div>
-                              Bubble Sort
-                            </div>
-                            <BubbleChartIcon />
-                          </div>
-                        </MenuItem>
-                        <MenuItem value={'SelectionSort'} >
-                          <div className="form--menuItem"> 
-                            <div>
-                              Selection Sort
-                            </div>
-                            <SwipeIcon />
-                          </div>
-                        </MenuItem>
-                        <MenuItem value={'InsertionSort'} >
-                          <div className="form--menuItem"> 
-                            <div>
-                              Insertion Sort
-                            </div>
-                            <StyleIcon />
-                          </div>
-                        </MenuItem>
-                        <MenuItem value={'QuickSort'} >
-                          <div className="form--menuItem"> 
-                            <div>
-                              Quick Sort
-                            </div>
-                            <BoltIcon />
-                          </div>
-                        </MenuItem>
-                        <MenuItem value={'MergeSort'} >
-                          <div className="form--menuItem"> 
-                            <div>
-                              Merge Sort
-                            </div>
-                            <MergeIcon />
-                          </div>
-                        </MenuItem>
-                        <MenuItem value={'HeapSort'} >
-                          <div className="form--menuItem"> 
-                            <div>
-                              Heap Sort
-                            </div>
-                            <HorizontalSplitIcon />
-                          </div>
-                        </MenuItem>
-                        <MenuItem value={'TimSort'} >
-                          <div className="form--menuItem"> 
-                            <div>
-                              Tim Sort
-                            </div>
-                            <MoreTimeIcon />
-                          </div>
-                        </MenuItem>
-                        <MenuItem value={'RadixSort'} >
-                          <div className="form--menuItem"> 
-                            <div>
-                              Radix Sort
-                            </div>
-                            <SwitchAccessShortcutIcon />
-                          </div>
-                        </MenuItem>
-
-                      </Select>
-                    </FormControl>
-                    <div 
-                    style={sorting ? {opacity: 0.25, pointerEvents: 'none', width: '40%'} : {width: '40%'}}
-                    className="form--slider">
-                      Elements: {sliderPosition}
-                      <Slider       
-                          className="form--slider"
-                          style={sorting ? {opacity: 0.25, pointerEvents: 'none', width: '100%'} : {width: '100%'}}
-                          disabled={sorting}
-                          defaultValue={10}
-                          aria-label="time-indicator"
-                          size="small"
-                          value={sliderPosition}
-                          min={10}
-                          step={1}
-                          max={100}
-                          onChange={(_, value) => setSliderPosition(value)}
-                          sx={{
-                              color: (window.matchMedia('(prefers-color-scheme: dark)').matches) ? '#fff' : 'rgba(0,0,0,0.87)',
-                              height: 4,
-                              width: 100,
-                              '& .MuiSlider-thumb': {
-                                pointerEvents: `all !important`,
-                                width: 8,
-                                height: 8,
-                                transition: '0.3s cubic-bezier(.47,1.64,.41,.8)',
-                                '&:before': {
-                                  boxShadow: '0 2px 12px 0 rgba(0,0,0,0.4)',
-                                },
-                                '&:hover, &.Mui-focusVisible': {
-                                  boxShadow: `0px 0px 0px 8px ${
-                                    theme.palette.mode === 'dark'
-                                      ? 'rgb(255 255 255 / 16%)'
-                                      : 'rgb(0 0 0 / 16%)'
-                                  }`,
-                                },
-                                '&.Mui-active': {
-                                  width: 20,
-                                  height: 20,
-                                },
-                              },
-                              '&.MuiSlider-rail': {
-                                opacity: 0.28,
-                                pointerEvents: `none !important`,
-                              }
-                          }}
-                      />
-                    </div>
-                  </div>
-                  {/* Buttons */}
-                  <div className="form--controls">
-                    <Button 
-                      style={sorting ? {opacity: 0.25, pointerEvents: 'none'} : {}}
-                      className="form--buttons"
-                      variant="contained" 
-                      onClick={changeKey}>
-                      New Array ↻</Button>
-                    <Button  
-                      style={sorting ? {width: '40%', opacity: 0.25, pointerEvents: 'none'} : {width: '40%'}}
-                      className="form--generateBtn" 
-                      variant="contained" 
-                      onClick={() => {
-                        handleSort();
-                      }}>
-                      Sort</Button>
-                  </div>
-
-
-                  <Divider className="darkMode" />
-                  <div className="form--controlsTitle">Learn <InfoIcon fontSize="large" /></div>
-                  <Divider className="darkMode" />
-                  <div className="form--info">
-                    <div className="form--header">
-                      <div style={{width: '33%'}}> 
-                      <Button
-                          className="form--menu"
-                          aria-controls={open ? 'basic-menu' : undefined}
-                          aria-haspopup="true"
-                          aria-expanded={open ? 'true' : undefined}
-                          onClick={menuClick}
+                    <div className="form--controlsTitle">Controls <SettingsIcon fontSize="large" /></div>
+                    <Divider className="darkMode" />
+                  <div className="sorting--topHalf">
+                    {/* Select + Slider */}
+                    <div className="form--controls">
+                      <FormControl style={{width: '40%'}}>
+                        <InputLabel 
+                          style={sorting ? {opacity: 0.25, pointerEvents: 'none'} : {}}
+                          color="secondary" 
+                          className="form--inputLabel">
+                            Algorithms
+                        </InputLabel>
+                        <Select
+                          style={sorting ? {opacity: 0.25, pointerEvents: 'none'} : {}}
+                          className="form--select"
+                          variant="filled"
+                          value={tabValue}
+                          label="Algorithm"
+                          onChange={handleTabChange}
+                          color="secondary"
                         >
-                        <MenuIcon />
-                      </Button>
-                      <Menu
-                        id="basic-menu"
-                        anchorEl={anchorEl}
-                        open={open}
-                        onClose={menuClose}
-                        MenuListProps={{
-                          'aria-labelledby': 'basic-button',
-                        }}
-                      >
-                        <MenuItem onClick={() => handleMenuItemClick('Description')}>Description</MenuItem>
-                        <MenuItem onClick={() => handleMenuItemClick('Implementation')}>Implementation</MenuItem>
-                        <MenuItem onClick={() => handleMenuItemClick('Performance')}>Performance</MenuItem>
+                          <MenuItem value={'BubbleSort'} >
+                            <div className="form--menuItem"> 
+                              <div>
+                                Bubble Sort
+                              </div>
+                              <BubbleChartIcon />
+                            </div>
+                          </MenuItem>
+                          <MenuItem value={'SelectionSort'} >
+                            <div className="form--menuItem"> 
+                              <div>
+                                Selection Sort
+                              </div>
+                              <SwipeIcon />
+                            </div>
+                          </MenuItem>
+                          <MenuItem value={'InsertionSort'} >
+                            <div className="form--menuItem"> 
+                              <div>
+                                Insertion Sort
+                              </div>
+                              <StyleIcon />
+                            </div>
+                          </MenuItem>
+                          <MenuItem value={'QuickSort'} >
+                            <div className="form--menuItem"> 
+                              <div>
+                                Quick Sort
+                              </div>
+                              <BoltIcon />
+                            </div>
+                          </MenuItem>
+                          <MenuItem value={'MergeSort'} >
+                            <div className="form--menuItem"> 
+                              <div>
+                                Merge Sort
+                              </div>
+                              <MergeIcon />
+                            </div>
+                          </MenuItem>
+                          <MenuItem value={'HeapSort'} >
+                            <div className="form--menuItem"> 
+                              <div>
+                                Heap Sort
+                              </div>
+                              <HorizontalSplitIcon />
+                            </div>
+                          </MenuItem>
+                          <MenuItem value={'TimSort'} >
+                            <div className="form--menuItem"> 
+                              <div>
+                                Tim Sort
+                              </div>
+                              <MoreTimeIcon />
+                            </div>
+                          </MenuItem>
+                          <MenuItem value={'RadixSort'} >
+                            <div className="form--menuItem"> 
+                              <div>
+                                Radix Sort
+                              </div>
+                              <SwitchAccessShortcutIcon />
+                            </div>
+                          </MenuItem>
 
-                      </Menu> 
-                      </div>
-                      <div style={{textAlign: 'center', width: '33%', fontFamily: 'monospace', fontSize: '20px', fontWeight: 'bolder', verticalAlign: 'center'}}>
-                      {menuValue}
-                      </div>
-                      <div style={{width: '35%'}}>
-                        
+                        </Select>
+                      </FormControl>
+                      <div 
+                      style={sorting ? {opacity: 0.25, pointerEvents: 'none', width: '40%'} : {width: '40%'}}
+                      className="form--slider">
+                        Elements: {sliderPosition}
+                        <Slider       
+                            className="form--slider"
+                            style={sorting ? {opacity: 0.25, pointerEvents: 'none', width: '100%'} : {width: '100%'}}
+                            disabled={sorting}
+                            defaultValue={10}
+                            aria-label="time-indicator"
+                            size="small"
+                            value={sliderPosition}
+                            min={10}
+                            step={1}
+                            max={100}
+                            onChange={(_, value) => setSliderPosition(value)}
+                            sx={{
+                                color: (window.matchMedia('(prefers-color-scheme: dark)').matches) ? '#fff' : 'rgba(0,0,0,0.87)',
+                                height: 4,
+                                width: 100,
+                                '& .MuiSlider-thumb': {
+                                  pointerEvents: `all !important`,
+                                  width: 8,
+                                  height: 8,
+                                  transition: '0.3s cubic-bezier(.47,1.64,.41,.8)',
+                                  '&:before': {
+                                    boxShadow: '0 2px 12px 0 rgba(0,0,0,0.4)',
+                                  },
+                                  '&:hover, &.Mui-focusVisible': {
+                                    boxShadow: `0px 0px 0px 8px ${
+                                      theme.palette.mode === 'dark'
+                                        ? 'rgb(255 255 255 / 16%)'
+                                        : 'rgb(0 0 0 / 16%)'
+                                    }`,
+                                  },
+                                  '&.Mui-active': {
+                                    width: 20,
+                                    height: 20,
+                                  },
+                                },
+                                '&.MuiSlider-rail': {
+                                  opacity: 0.28,
+                                  pointerEvents: `none !important`,
+                                }
+                            }}
+                        />
                       </div>
                     </div>
-                      {arrayOfObjects &&
-                      arrayOfObjects.map(item => (
-                        <Description key={item.ID} page={tabValue} info={item} menuValue={menuValue} />
-                      ))}           
+                    {/* Buttons */}
+                    <div className="form--controls">
+                      <Button 
+                        style={sorting ? {opacity: 0.25, pointerEvents: 'none'} : {}}
+                        className="form--buttons"
+                        variant="contained" 
+                        onClick={changeKey}>
+                        New Array ↻</Button>
+                      <Button  
+                        style={sorting ? {width: '40%', opacity: 0.25, pointerEvents: 'none'} : {width: '40%'}}
+                        className="form--generateBtn" 
+                        variant="contained" 
+                        onClick={() => {
+                          handleSort();
+                        }}>
+                        Sort</Button>
+                    </div>
+                  </div>
+
+                    <Divider className="darkMode" />
+                    <div className="form--controlsTitle">Learn <InfoIcon fontSize="large" /></div>
+                    <Divider className="darkMode" />
+                  <div className="sorting--bottomHalf">
+                    <div className="form--info">
+                      <div className="form--header">
+                        <div style={{width: '33%'}}> 
+                        <Button
+                            className="form--menu"
+                            aria-controls={open ? 'basic-menu' : undefined}
+                            aria-haspopup="true"
+                            aria-expanded={open ? 'true' : undefined}
+                            onClick={menuClick}
+                          >
+                          <MenuIcon />
+                        </Button>
+                        <Menu
+                          id="basic-menu"
+                          anchorEl={anchorEl}
+                          open={open}
+                          onClose={menuClose}
+                          MenuListProps={{
+                            'aria-labelledby': 'basic-button',
+                          }}
+                        >
+                          <MenuItem onClick={() => handleMenuItemClick('Description')}>Description</MenuItem>
+                          <MenuItem onClick={() => handleMenuItemClick('Implementation')}>Implementation</MenuItem>
+                          <MenuItem onClick={() => handleMenuItemClick('Performance')}>Performance</MenuItem>
+
+                        </Menu> 
+                        </div>
+                        <div style={{textAlign: 'center', width: '33%', fontFamily: 'monospace', fontSize: '20px', fontWeight: 'bolder', verticalAlign: 'center'}}>
+                        {menuValue}
+                        </div>
+                        <div style={{width: '35%'}}>
+                          
+                        </div>
+                      </div>
+                        {arrayOfObjects &&
+                        arrayOfObjects.map(item => (
+                          <Description key={item.ID} page={tabValue} info={item} menuValue={menuValue} />
+                        ))}           
+                    </div>
                   </div>
 
                 </div>
