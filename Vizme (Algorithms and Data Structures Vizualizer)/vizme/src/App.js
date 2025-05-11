@@ -30,7 +30,7 @@ function App() {
       <div className="sectionContainer">
         <DataStructures className="child" />
       </div>
-      <div className="sectionContainer">
+      <div>
         <Footer className="child" />
       </div>
     </div>

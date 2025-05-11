@@ -482,6 +482,7 @@ function Sorting() {
                     </div>
                 </div>
             </div>
+            Sorting Visualizer
         </div>
     );
 
